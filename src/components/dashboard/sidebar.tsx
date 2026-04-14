@@ -2,12 +2,13 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { LayoutDashboard, Terminal, Settings, LogOut } from "lucide-react"
+import { LayoutDashboard, Terminal, Settings, LogOut, Brain } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { signOut } from "@/lib/actions"
 
 const navItems = [
   { href: "/", label: "Command Center", icon: LayoutDashboard },
+  { href: "/memory", label: "Memory Stack", icon: Brain },
   { href: "/logs", label: "System Logs", icon: Terminal },
   { href: "/settings", label: "Settings", icon: Settings },
 ]

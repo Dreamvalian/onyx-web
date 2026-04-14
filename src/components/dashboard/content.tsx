@@ -464,7 +464,7 @@ export function DashboardContent() {
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm font-medium">Skills & Plugins</CardTitle>
             <span className="text-xs text-neutral-400">
-              {loading ? "—" : `${(data?.skills ?? []).length} installed`}
+              {loading ? "—" : `${(data?.skills ?? []).length + (data?.plugins ?? []).length} installed`}
             </span>
           </div>
         </CardHeader>
@@ -473,20 +473,26 @@ export function DashboardContent() {
             <div className="flex justify-center py-4">
               <RefreshCw className="h-5 w-5 animate-spin text-neutral-400" />
             </div>
-          ) : (data?.skills ?? []).length === 0 ? (
-            <p className="text-sm text-neutral-500">No skills found</p>
+          ) : ((data?.skills ?? []).length === 0 && (data?.plugins ?? []).length === 0) ? (
+            <p className="text-sm text-neutral-500">No skills or plugins found</p>
           ) : (
             <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto">
               {(data?.skills ?? []).map((s) => (
                 <Badge
-                  key={`${s.source}-${s.name}`}
+                  key={`skill-${s.name}`}
                   variant="secondary"
                   className="text-xs"
                 >
                   {s.name}
-                  {s.source === "openclaw" && (
-                    <span className="ml-1 opacity-60">OC</span>
-                  )}
+                </Badge>
+              ))}
+              {(data?.plugins ?? []).map((p) => (
+                <Badge
+                  key={`plugin-${p.name}`}
+                  variant="outline"
+                  className="text-xs"
+                >
+                  {p.name}
                 </Badge>
               ))}
             </div>

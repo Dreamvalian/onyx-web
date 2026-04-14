@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Navbar } from "@/components/landing/navbar"
+import { ConditionalNavbar } from "@/components/conditional-navbar"
 export const metadata: Metadata = {
   title: "Onyx — Koala's AI Assistant",
   description: "Onyx is Koala's 24/7 AI assistant and original character. Terse. Direct. Always online.",
@@ -26,7 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
+          <ConditionalNavbar />
           <main>{children}</main>
         </ThemeProvider>
       </body>

@@ -23,19 +23,23 @@ export async function GET() {
       return NextResponse.json({ servers: [], count: 0 })
     }
 
-    // Parse table output: name | status | transport
+    // Parse table output: space-separated columns
+    // Layout: Name | Transport | Tools | Status
     const lines = output.split("\n")
     const servers: McpServer[] = []
     let parsing = false
     for (const line of lines) {
       if (line.includes("Name")) { parsing = true; continue }
-      if (!parsing || !line.trim() || line.includes("Add one with")) break
-      const cols = line.split("│").map((c: string) => c.trim()).filter(Boolean)
-      if (cols.length >= 2) {
+      if (!parsing) continue
+      if (!line.trim()) continue
+      if (line.includes("Add one with")) break
+      if (line.includes("─")) continue // skip separator lines
+      const cols = line.trim().split(/\s{2,}/).filter(Boolean)
+      if (cols.length >= 4) {
         servers.push({
           name: cols[0],
-          status: cols[1] === "●" ? "running" : cols[1] ?? "unknown",
-          transport: cols[2] ?? "—",
+          transport: cols[1] ?? "—",
+          status: cols[3]?.includes("enabled") ? "running" : cols[3] ?? "unknown",
         })
       }
     }

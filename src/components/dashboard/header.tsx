@@ -1,7 +1,7 @@
 "use client"
 
 import { useTheme } from "next-themes"
-import { Moon, Sun, Menu } from "lucide-react"
+import { Moon, Sun, Menu, Brain } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Sheet } from "@/components/ui/sheet"
@@ -18,6 +18,7 @@ interface HeaderProps {
 
 const navItems = [
   { href: "/", label: "Command Center", icon: LayoutDashboard },
+  { href: "/memory", label: "Memory Stack", icon: Brain },
   { href: "/logs", label: "System Logs", icon: Terminal },
   { href: "/settings", label: "Settings", icon: Settings },
 ]

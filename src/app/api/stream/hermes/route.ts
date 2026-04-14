@@ -93,7 +93,7 @@ async function getHermesData(): Promise<HermesData> {
       }
     })(),
 
-    // Skills and Plugins from hermes
+    // Skills and Plugins from hermes (directories only, no loose files)
     (async () => {
       try {
         const hermesHome = process.env.HERMES_HOME ?? "/root/.hermes"
@@ -102,7 +102,12 @@ async function getHermesData(): Promise<HermesData> {
 
         const skills = existsSync(skillsDir)
           ? (await readdir(skillsDir))
-              .filter((n) => !n.startsWith("."))
+              .filter((n) => {
+                if (n.startsWith(".")) return false
+                if (n.endsWith(".md") || n.endsWith(".txt") || n.endsWith(".json")) return false
+                if (["CLAUDE.md", "EXAMPLES.md", "LICENSE", "README.md", "CHANGELOG.md"].includes(n)) return false
+                return true
+              })
               .map((n) => ({ name: n, type: "skill" as const }))
           : []
 
