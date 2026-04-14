@@ -295,11 +295,12 @@ function ArchitectureDiagram({ tiers }: { tiers: TierData[] }) {
                 </span>
               </div>
               {i < sorted.length - 1 && (
-                <div className="flex flex-col items-center gap-0.5 px-1">
+                <div className="flex items-center gap-1 px-1 self-center">
                   <span className="text-neutral-300 dark:text-neutral-600 text-sm">→</span>
                   <span className="text-[9px] text-neutral-400 whitespace-nowrap">
                     {flowSteps[i]?.label ?? ""}
                   </span>
+                  <span className="text-neutral-300 dark:text-neutral-600 text-sm">→</span>
                 </div>
               )}
             </div>
