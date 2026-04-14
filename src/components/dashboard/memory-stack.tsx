@@ -166,6 +166,21 @@ function TierCard({ tier }: { tier: TierData }) {
                 ? "Overnight Synthesis"
                 : "Memory Layer"}
             </p>
+            <p className="text-[11px] text-neutral-500 mt-1 leading-relaxed">
+                {tier.tier === 2
+                ? "Primary write target. Stores conclusions, identity facts, and orchestrates all other tiers. Every session reads and writes here."
+                : tier.tier === 3
+                ? "Structured facts with trust scores, injected every turn via prefetch. Fast lookup for things the agent needs to know right now."
+                : tier.tier === 4
+                ? "Verbatim conversation text stored in ChromaDB. Exact recall of what was said — the raw material other tiers process."
+                : tier.tier === 5
+                ? "Behavioral patterns from interactions. Learns what happened and why, feeds improvement signals to Dojo."
+                : tier.tier === 6
+                ? "Analyzes session logs, patches skills, closes gaps. The hands of the brain — turns insight into action."
+                : tier.tier === 7
+                ? "Nightly 10-step pipeline. Enriches entities, promotes facts between tiers, consolidates patterns while Koala sleeps."
+                : ""}
+            </p>
           </div>
         </div>
         <StatusLabel status={tier.status} />
@@ -222,6 +237,25 @@ function TierCard({ tier }: { tier: TierData }) {
 
 function ArchitectureDiagram({ tiers }: { tiers: TierData[] }) {
   const sorted = [...tiers].sort((a, b) => a.tier - b.tier)
+
+  const tierDescriptions: Record<number, string> = {
+    2: "Core brain",
+    3: "Fact injection",
+    4: "Raw capture",
+    5: "Pattern extraction",
+    6: "Skill patching",
+    7: "Nightly consolidation",
+  }
+
+  const flowSteps = [
+    { from: "Session", to: "MemPalace", label: "verbatim capture" },
+    { from: "MemPalace", to: "Hindsight", label: "pattern extraction" },
+    { from: "Hindsight", to: "Holographic", label: "structured facts" },
+    { from: "Holographic", to: "Dojo", label: "improvement signals" },
+    { from: "Dojo", to: "Dream Cycle", label: "overnight run" },
+    { from: "Dream Cycle", to: "Honcho", label: "enriched conclusions" },
+  ]
+
   return (
     <Card>
       <CardHeader>
@@ -229,13 +263,17 @@ function ArchitectureDiagram({ tiers }: { tiers: TierData[] }) {
           <Cpu className="h-4 w-4" />
           Architecture Flow
         </CardTitle>
+        <p className="text-xs text-neutral-500 mt-1">
+          Live interaction data flows down, knowledge flows back up
+        </p>
       </CardHeader>
-      <CardContent>
-        <div className="flex items-center justify-between gap-1 overflow-x-auto pb-2">
+      <CardContent className="space-y-5">
+        {/* Flow diagram — horizontal chain */}
+        <div className="flex items-center justify-between gap-0.5 overflow-x-auto pb-2">
           {sorted.map((tier, i) => (
-            <div key={tier.name} className="flex items-center gap-1 shrink-0">
+            <div key={tier.name} className="flex items-center gap-0.5 shrink-0">
               <div
-                className={`flex flex-col items-center gap-1.5 p-2 rounded-lg min-w-[80px] ${
+                className={`flex flex-col items-center gap-1 p-2.5 rounded-lg min-w-[90px] ${
                   tier.status === "healthy"
                     ? "bg-green-500/5 border border-green-200 dark:border-green-900"
                     : tier.status === "degraded"
@@ -252,14 +290,45 @@ function ArchitectureDiagram({ tiers }: { tiers: TierData[] }) {
                     T{tier.tier}
                   </span>
                 )}
+                <span className="text-[10px] text-neutral-500 text-center leading-tight">
+                  {tierDescriptions[tier.tier] ?? ""}
+                </span>
               </div>
               {i < sorted.length - 1 && (
-                <span className="text-neutral-300 dark:text-neutral-600 text-xs">
-                  →
-                </span>
+                <div className="flex flex-col items-center gap-0.5 px-1">
+                  <span className="text-neutral-300 dark:text-neutral-600 text-sm">→</span>
+                  <span className="text-[9px] text-neutral-400 whitespace-nowrap">
+                    {flowSteps[i]?.label ?? ""}
+                  </span>
+                </div>
               )}
             </div>
           ))}
+        </div>
+
+        {/* Flow description list */}
+        <div className="border-t border-neutral-100 dark:border-neutral-800 pt-4">
+          <p className="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-2">Data Flow</p>
+          <div className="grid gap-1.5">
+            {flowSteps.map((step, i) => (
+              <div key={i} className="flex items-center gap-2 text-xs text-neutral-500">
+                <span className="font-medium text-neutral-600 dark:text-neutral-400">{step.from}</span>
+                <span className="text-neutral-300 dark:text-neutral-600">→</span>
+                <span className="font-medium text-neutral-600 dark:text-neutral-400">{step.to}</span>
+                <span className="text-neutral-400">— {step.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Promotion rules */}
+        <div className="border-t border-neutral-100 dark:border-neutral-800 pt-4">
+          <p className="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-2">Promotion Rules</p>
+          <div className="grid gap-1.5 text-xs text-neutral-500">
+            <div><span className="font-medium text-neutral-600 dark:text-neutral-400">MemPalace → Holographic:</span> repeated 3+ times → extract as structured fact</div>
+            <div><span className="font-medium text-neutral-600 dark:text-neutral-400">Hindsight → Dojo:</span> failure pattern repeats → train to improve</div>
+            <div><span className="font-medium text-neutral-600 dark:text-neutral-400">Dream → Honcho:</span> nightly enrichment → write enriched conclusions</div>
+          </div>
         </div>
       </CardContent>
     </Card>
