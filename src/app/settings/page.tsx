@@ -5,59 +5,20 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
-import { Moon, Sun, Bell, Key } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Bell, Key } from "lucide-react"
 import { Toggle } from "@/components/ui/toggle"
 
 export default function SettingsPage() {
-  const { theme, setTheme } = useTheme()
   const [notifications, setNotifications] = useState(true)
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Settings</h1>
-        <p className="mt-1 text-sm text-neutral-500">
+        <h1 className="font-serif-display text-2xl">Settings</h1>
+        <p className="mt-1 text-sm text-[#7a7068]">
           Manage your preferences and configurations
         </p>
       </div>
-
-      {/* Appearance */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Sun className="h-4 w-4" />
-            Appearance
-          </CardTitle>
-          <CardDescription>Customize how Hermes looks</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="font-medium">Theme</p>
-              <p className="text-sm text-neutral-500">Choose light or dark mode</p>
-            </div>
-            <div className="flex gap-2">
-              <Button
-                variant={theme === "light" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setTheme("light")}
-              >
-                <Sun className="mr-2 h-4 w-4" />
-                Light
-              </Button>
-              <Button
-                variant={theme === "dark" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setTheme("dark")}
-              >
-                <Moon className="mr-2 h-4 w-4" />
-                Dark
-              </Button>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
 
       {/* Notifications */}
       <Card>
@@ -91,7 +52,7 @@ export default function SettingsPage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="font-medium">OpenAI / Anthropic</p>
-              <p className="text-sm text-neutral-500">Configure your AI provider</p>
+              <p className="text-sm text-[#7a7068]">Configure your AI provider</p>
             </div>
             <Button variant="outline" size="sm">
               Configure
@@ -101,7 +62,7 @@ export default function SettingsPage() {
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="font-medium">Redis</p>
-              <p className="text-sm text-neutral-500">Connected at localhost:6379</p>
+              <p className="text-sm text-[#7a7068]">Connected at localhost:6379</p>
             </div>
             <Badge variant="secondary">Connected</Badge>
           </div>
@@ -109,9 +70,9 @@ export default function SettingsPage() {
       </Card>
 
       {/* Danger Zone */}
-      <Card className="border-red-200 dark:border-red-900">
+      <Card className="border-red-900">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-red-600 dark:text-red-400">
+          <CardTitle className="flex items-center gap-2 text-red-400">
             Danger Zone
           </CardTitle>
           <CardDescription>Irreversible actions</CardDescription>
@@ -120,7 +81,7 @@ export default function SettingsPage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="font-medium">Clear all logs</p>
-              <p className="text-sm text-neutral-500">
+              <p className="text-sm text-[#7a7068]">
                 Permanently delete all command history
               </p>
             </div>

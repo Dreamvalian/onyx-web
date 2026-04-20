@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #0d0b08;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Noise texture */
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+  /* Border accent lines */
+  .border-top, .border-bottom {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    height: 1px;
+    background: #2a2520;
+  }
+  .border-top { top: 60px; }
+  .border-bottom { bottom: 60px; }
+  .content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  /* Crystal SVG inline */
+  .crystal {
+    margin: 0 auto 40px;
+    width: 120px;
+    height: 160px;
+  }
+  .title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 96px;
+    color: #e8e0d4;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .title span {
+    color: #94a99b;
+  }
+  .subtitle {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 24px;
+    color: #7a7068;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  .tagline {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    color: #5c5449;
+    margin-top: 32px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="border-top"></div>
+  <div class="border-bottom"></div>
+  <div class="content">
+    <svg class="crystal" viewBox="320 100 160 200" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="400,120 460,160 460,240 400,280 340,240 340,160" fill="#1A1714" stroke="#94A99B" stroke-width="2" stroke-linejoin="round"/>
+      <polyline points="340,160 400,200 460,160" fill="none" stroke="#94A99B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="340,240 400,200 460,240" fill="none" stroke="#94A99B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="400,120 400,200 400,280" fill="none" stroke="#94A99B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polygon points="380,130 420,145 420,165 400,180 380,165 380,145" fill="#A3B5AA" fill-opacity="0.3" stroke="#A3B5AA" stroke-width="1" stroke-linejoin="round"/>
+    </svg>
+    <div class="title"><span>Onyx</span></div>
+    <div class="subtitle">Koala's 24/7 AI agent</div>
+    <div class="tagline">Sharp · Secure · Always-on</div>
+  </div>
+</body>
+</html>

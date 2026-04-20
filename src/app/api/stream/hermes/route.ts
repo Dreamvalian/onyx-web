@@ -13,7 +13,8 @@ interface HermesData {
   model: string
   provider: string
   toolsets: string[]
-  skills: { name: string; type: "skill" | "plugin" }[]
+  skills: { name: string; source: string }[]
+  plugins: { name: string; source: string }[]
   cron_jobs: CronJob[]
   heartbeat: Record<string, unknown> | null
   now: string
@@ -108,13 +109,13 @@ async function getHermesData(): Promise<HermesData> {
                 if (["CLAUDE.md", "EXAMPLES.md", "LICENSE", "README.md", "CHANGELOG.md"].includes(n)) return false
                 return true
               })
-              .map((n) => ({ name: n, type: "skill" as const }))
+              .map((n) => ({ name: n, source: "skill" }))
           : []
 
         const plugins = existsSync(pluginsDir)
           ? (await readdir(pluginsDir))
               .filter((n) => !n.startsWith("."))
-              .map((n) => ({ name: n, type: "plugin" as const }))
+              .map((n) => ({ name: n, source: "plugin" }))
           : []
 
         return { skills, plugins }

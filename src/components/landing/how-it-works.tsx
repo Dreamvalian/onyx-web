@@ -1,65 +1,88 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle, UserPlus, Sparkles } from "lucide-react"
+import { Terminal, ArrowRight, CheckCircle2 } from "lucide-react"
 
 const steps = [
-  {
-    number: "01",
-    title: "Say Hello",
-    description:
-      "Drop into Koala's Discord and ping Onyx. No invite needed — Onyx is already there.",
-    icon: MessageCircle,
-  },
-  {
-    number: "02",
-    title: "Get Assistance",
-    description:
-      "Ask questions, kick off automations, delegate research or coding tasks.",
-    icon: UserPlus,
-  },
-  {
-    number: "03",
-    title: "Watch it Work",
-    description:
-      "Onyx runs tasks, reports back, and keeps the conversation going.",
-    icon: Sparkles,
-  },
+ {
+ number: "01",
+ title: "Delegate",
+ description:
+ "Drop a task in Discord. Research, code, automation, whatever. Onyx picks it up — no special syntax, no command prefixes. Just say what you need.",
+ examples: ["research the latest on DSPy", "fix the nginx config on port 443", "summarize this arXiv paper"],
+ },
+ {
+ number: "02",
+ title: "Watch it work",
+ description:
+ "Onyx assesses the task, picks the right approach, spawns sub-agents if needed. Reports progress in real-time. Asks before doing anything expensive or irreversible.",
+ examples: null,
+ },
+ {
+ number: "03",
+ title: "Get results",
+ description:
+ "Done. Onyx delivers conclusions, not just data. Saves learnings as skills. Updates memory. Moves on to the next thing. You didn't have to micromanage any of it.",
+ examples: null,
+ },
 ]
 
 export function HowItWorks() {
-  return (
-    <section className="py-20">
-      <div className="mx-auto max-w-5xl px-4">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            How to talk to Onyx
-          </h2>
-        </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-3 md:gap-6">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.4 }}
-              className="relative flex flex-col items-center text-center"
-            >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
-                <step.icon className="h-6 w-6 text-neutral-600 dark:text-neutral-400" />
-              </div>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-neutral-400">
-                Step {step.number}
-              </p>
-              <h3 className="mt-2 text-lg font-bold">{step.title}</h3>
-              <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
-                {step.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+ return (
+ <section className="py-20">
+ <div className="mx-auto max-w-5xl px-4">
+ <div className="text-center">
+ <h2 className="font-serif-display text-3xl md:text-4xl">
+ How it actually works
+ </h2>
+ <p className="mx-auto mt-4 max-w-xl text-[#7a7068]">
+ No signup flow. No onboarding. Just ping Onyx in Discord.
+ </p>
+ </div>
+ <div className="mt-12 space-y-12 md:space-y-16">
+ {steps.map((step, index) => (
+ <motion.div
+ key={step.number}
+ initial={{ opacity: 0, y: 20 }}
+ whileInView={{ opacity: 1, y: 0 }}
+ viewport={{ once: true }}
+ transition={{ delay: index * 0.1, duration: 0.4 }}
+ className="flex flex-col items-start gap-4 md:flex-row md:gap-8"
+ >
+ {/* Step number */}
+ <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#2a2520] font-mono text-lg font-bold text-[#94a99b]">
+ {step.number}
+ </div>
+ {/* Content */}
+ <div className="flex-1">
+ <h3 className="font-serif-display text-xl">{step.title}</h3>
+ <p className="mt-2 text-[#a89e8f]">
+ {step.description}
+ </p>
+ {step.examples && (
+ <div className="mt-3 flex flex-wrap gap-2">
+ {step.examples.map((ex) => (
+ <span
+ key={ex}
+ className="inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-mono text-xs border-[#2a2520] bg-[#1a1714] text-[#7a7068]"
+ >
+ <Terminal className="h-3 w-3 text-[#94a99b]" />
+ {ex}
+ </span>
+ ))}
+ </div>
+ )}
+ </div>
+ {/* Arrow connector (except last) */}
+ {index < steps.length - 1 && (
+ <div className="hidden md:block">
+ <ArrowRight className="h-5 w-5 text-[#3a352e]" />
+ </div>
+ )}
+ </motion.div>
+ ))}
+ </div>
+ </div>
+ </section>
+ )
 }

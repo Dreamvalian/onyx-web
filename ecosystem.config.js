@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "hermes-web",
       script: "server.js",
-      cwd: "/root/claw-landing-new/.next/standalone",
+      cwd: "/root/onyx-web/.next/standalone",
       env: {
         NODE_ENV: "production",
         PORT: "3000",

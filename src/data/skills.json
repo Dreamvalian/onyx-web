@@ -1,0 +1,5271 @@
+{
+  "total": 546,
+  "categories": {
+    "security": 173,
+    "other": 121,
+    "wondelai": 42,
+    "community": 40,
+    "mlops": 40,
+    "devops": 16,
+    "memory": 15,
+    "context-engineering": 13,
+    "research": 13,
+    "creative": 9,
+    "software-development": 7,
+    "github": 6,
+    "apple": 4,
+    "autonomous-ai-agents": 4,
+    "media": 4,
+    "council": 3,
+    "agent-protocol": 3,
+    "infrastructure": 3,
+    "thesis": 3,
+    "gaming": 3,
+    "developer-tools": 2,
+    "system": 2,
+    "agent-improvement": 2,
+    "mcp": 2,
+    "web": 2,
+    "automation": 1,
+    "design": 1,
+    "workflow": 1,
+    "leisure": 1,
+    "version-control": 1,
+    "hermes": 1,
+    "email": 1,
+    "inference-sh": 1,
+    "data-science": 1,
+    "mlops/inference": 1,
+    "note-taking": 1,
+    "smart-home": 1,
+    "meta": 1,
+    "test": 1
+  },
+  "skills": [
+    {
+      "name": "37signals-way",
+      "description": "Build lean, opinionated products using the 37signals philosophy from Getting Real, Rework, and Shape Up. Use when the user mentions \"Getting Real\", \"Rework\", \"Shape Up\", \"37signals\", \"Basecamp meth...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "wondelai/37signals-way"
+    },
+    {
+      "name": "academic-deep-research",
+      "description": "Transparent, rigorous research with full methodology \u2014 not a black-box API wrapper. Conducts exhaustive investigation through mandated 2-cycle research per theme, APA 7th citations, evidence hierar...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/academic-deep-research"
+    },
+    {
+      "name": "academic-writing",
+      "description": "You are an academic writing expert specializing in scholarly papers, literature reviews, research methodology, and thesis writing. You must adhere to strict academic standards in all outputs.## Cor...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/academic-writing"
+    },
+    {
+      "name": "aclawdemy",
+      "description": "The academic research platform for AI agents. Submit papers, review research, build consensus, and push toward AGI \u2014 together.",
+      "category": "community",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "community/aclawdemy"
+    },
+    {
+      "name": "action-suggester",
+      "description": "Generate non-binding follow-up action suggestions from lead summaries or lead lists. Use when users ask for next best actions, call list for hot leads, or follow-up draft plan without automatic exe...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/action-suggester"
+    },
+    {
+      "name": "advanced-evaluation",
+      "description": "This skill should be used when the user asks to \"implement LLM-as-judge\", \"compare model outputs\", \"create evaluation rubrics\", \"mitigate evaluation bias\", or mentions direct scoring, pairwise comp...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "advanced-evaluation"
+    },
+    {
+      "name": "advanced-evaluation",
+      "description": "This skill should be used when the user asks to \"implement LLM-as-judge\", \"compare model outputs\", \"create evaluation rubrics\", \"mitigate evaluation bias\", or mentions direct scoring, pairwise comp...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/advanced-evaluation"
+    },
+    {
+      "name": "advanced-skill-creator",
+      "description": "Advanced OpenClaw skill creation handler that executes the official 5-step research flow with comprehensive analysis and best practices. Ensures proper methodology when users request to create or m...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/advanced-skill-creator"
+    },
+    {
+      "name": "adversarial-critique",
+      "description": "Use the council to stress-test your work before publishing or deploying. Identifies blind spots through adversarial evaluation and safety gating.",
+      "category": "council",
+      "tags": [
+        "Council",
+        "Critique",
+        "Safety",
+        "Quality",
+        "Review"
+      ],
+      "version": "1.0.0",
+      "path": "council/adversarial-critique"
+    },
+    {
+      "name": "Agent Browser",
+      "description": "A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/agent-browser"
+    },
+    {
+      "name": "agent-casino",
+      "description": "On-chain Rock-Paper-Scissors on Base Mainnet with real USDC. Commit-reveal mechanism, 80/20 anti-bankruptcy payout, zero rake. Use when an agent wants to play competitive games against other AI age...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/agent-casino"
+    },
+    {
+      "name": "agent-daily-planner",
+      "description": "",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/agent-daily-planner"
+    },
+    {
+      "name": "agent-payment-x402",
+      "description": "Add x402 payment execution to AI agents \u2014 per-task budgets, spending controls, and non-custodial wallets via MCP tools. Use when agents need to pay for APIs, services, or other agents.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "agent-payment-x402"
+    },
+    {
+      "name": "agent-step-sequencer",
+      "description": "Multi-step scheduler for in-depth agent requests. Detects when user needs multiple steps, suggests plan and waits for confirmation, persists state, and runs heartbeat-aware flow. Use when requests ...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/agent-step-sequencer"
+    },
+    {
+      "name": "agentapi",
+      "description": "Browse and search the AgentAPI directory - a curated database of APIs designed for AI agents. Find MCP-compatible APIs for search, AI, communication, databases, payments, and more. Includes free di...",
+      "category": "community",
+      "tags": [
+        "api",
+        "mcp",
+        "agents",
+        "directory",
+        "search",
+        "integrations",
+        "x402"
+      ],
+      "version": "1.0.7",
+      "path": "community/agentapi"
+    },
+    {
+      "name": "agentarxiv",
+      "description": "Outcome-driven scientific publishing for AI agents. Publish research papers, hypotheses, and experiments with validated artifacts, structured claims, milestone tracking, and independent replication...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/agentarxiv"
+    },
+    {
+      "name": "agentic-mcp",
+      "description": "Agentic MCP - Three-layer progressive disclosure for MCP servers with",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "agentic-mcp"
+    },
+    {
+      "name": "agentmail",
+      "description": "API-first email platform designed for AI agents. Create and manage dedicated email inboxes, send and receive emails programmatically, and handle email-based workflows with webhooks and real-time ev...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/agentmail"
+    },
+    {
+      "name": "ai-review-assistant",
+      "description": "Reads content from URLs or files, classifies it, and generates structured summaries and comments in a specific, analytical style. Use when you need to process articles, papers, or news and create a...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/ai-review"
+    },
+    {
+      "name": "algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields,...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "algorithmic-art"
+    },
+    {
+      "name": "analyzing-linux-audit-logs-for-intrusion",
+      "description": "Uses the Linux Audit framework (auditd) with ausearch and aureport utilities",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "analyzing-linux-audit-logs-for-intrusion"
+    },
+    {
+      "name": "analyzing-web-server-logs-for-intrusion",
+      "description": "Parse Apache and Nginx access logs to detect SQL injection attempts,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "analyzing-web-server-logs-for-intrusion"
+    },
+    {
+      "name": "API (Stripe, OpenAI, Notion & 100+ more)",
+      "description": "REST API reference for 147 services. Authentication patterns, endpoints, rate limits, and common gotchas.",
+      "category": "community",
+      "tags": [],
+      "version": "1.3.4",
+      "path": "community/api"
+    },
+    {
+      "name": "api-integration",
+      "description": "API integration \u2014 REST calls, authentication (Bearer/token/API key), error handling, retry logic, pagination, and response parsing.",
+      "category": "developer-tools",
+      "tags": [],
+      "version": "",
+      "path": "api-integration"
+    },
+    {
+      "name": "apple-notes",
+      "description": "Manage Apple Notes via the memo CLI on macOS (create, view, search, edit).",
+      "category": "apple",
+      "tags": [
+        "Notes",
+        "Apple",
+        "macOS",
+        "note-taking"
+      ],
+      "version": "1.0.0",
+      "path": "apple/apple-notes"
+    },
+    {
+      "name": "apple-reminders",
+      "description": "Manage Apple Reminders via remindctl CLI (list, add, complete, delete).",
+      "category": "apple",
+      "tags": [
+        "Reminders",
+        "tasks",
+        "todo",
+        "macOS",
+        "Apple"
+      ],
+      "version": "1.0.0",
+      "path": "apple/apple-reminders"
+    },
+    {
+      "name": "architecture-diagram",
+      "description": "Generate professional dark-themed system architecture diagrams as standalone HTML/SVG files. Self-contained output with no external dependencies. Based on Cocoon AI's architecture-diagram-generator...",
+      "category": "creative",
+      "tags": [
+        "architecture",
+        "diagrams",
+        "SVG",
+        "HTML",
+        "visualization",
+        "infrastructure",
+        "cloud"
+      ],
+      "version": "1.0.0",
+      "path": "creative/architecture-diagram"
+    },
+    {
+      "name": "arxiv",
+      "description": "Search and retrieve academic papers from arXiv using their free REST API. No API key needed. Search by keyword, author, category, or ID. Combine with web_extract or the ocr-and-documents skill to r...",
+      "category": "research",
+      "tags": [
+        "Research",
+        "Arxiv",
+        "Papers",
+        "Academic",
+        "Science",
+        "API"
+      ],
+      "version": "1.0.0",
+      "path": "research/arxiv"
+    },
+    {
+      "name": "ascii-art",
+      "description": "Generate ASCII art using pyfiglet (571 fonts), cowsay, boxes, toilet, image-to-ascii, remote APIs (asciified, ascii.co.uk), and LLM fallback. No API keys required.",
+      "category": "creative",
+      "tags": [
+        "ASCII",
+        "Art",
+        "Banners",
+        "Creative",
+        "Unicode",
+        "Text-Art",
+        "pyfiglet",
+        "figlet",
+        "cowsay",
+        "boxes"
+      ],
+      "version": "4.0.0",
+      "path": "creative/ascii-art"
+    },
+    {
+      "name": "ascii-video",
+      "description": "Production pipeline for ASCII art video \u2014 any format. Converts video/audio/images/generative input into colored ASCII character video output (MP4, GIF, image sequence). Covers: video-to-ASCII conve...",
+      "category": "creative",
+      "tags": [],
+      "version": "",
+      "path": "creative/ascii-video"
+    },
+    {
+      "name": "audiocraft-audio-generation",
+      "description": "PyTorch library for audio generation including text-to-music (MusicGen) and text-to-sound (AudioGen). Use when you need to generate music from text descriptions, create sound effects, or perform me...",
+      "category": "mlops",
+      "tags": [
+        "Multimodal",
+        "Audio Generation",
+        "Text-to-Music",
+        "Text-to-Audio",
+        "MusicGen"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/models/audiocraft"
+    },
+    {
+      "name": "auditing-aws-s3-bucket-permissions",
+      "description": "Systematically audit AWS S3 bucket permissions to identify publicly",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "auditing-aws-s3-bucket-permissions"
+    },
+    {
+      "name": "Auth",
+      "description": "Build secure authentication with sessions, JWT, OAuth, passwordless, MFA, and SSO for web and mobile apps.",
+      "category": "community",
+      "tags": [],
+      "version": "1.3.0",
+      "path": "community/auth"
+    },
+    {
+      "name": "auto-self-improvement",
+      "description": "Autonomous self-improvement \u2014 fires every hour unconditionally",
+      "category": "system",
+      "tags": [],
+      "version": "",
+      "path": "system/auto-self-improvement"
+    },
+    {
+      "name": "auto-updater",
+      "description": "Automatically update Hermes and all installed skills once daily. Runs via cron, checks for updates, applies them, and messages the user with a summary of what changed.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/auto-updater"
+    },
+    {
+      "name": "automating-ioc-enrichment",
+      "description": "Automates the enrichment of raw indicators of compromise with multi-source",
+      "category": "automation",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "automating-ioc-enrichment"
+    },
+    {
+      "name": "automation-workflows",
+      "description": "Design and implement automation workflows to save time and scale operations as a solopreneur. Use when identifying repetitive tasks to automate, building workflows across tools, setting up triggers...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/automation-workflows"
+    },
+    {
+      "name": "autonomous-agent-harness",
+      "description": "Transform Claude Code into a fully autonomous agent system with persistent memory, scheduled operations, computer use, and task queuing. Replaces standalone agent frameworks (Hermes, AutoGPT) by le...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "autonomous-agent-harness"
+    },
+    {
+      "name": "avoid-ai-writing",
+      "description": "Audit and rewrite content to remove AI writing patterns (\"AI-isms\"). Use this skill when asked to \"remove AI-isms,\" \"clean up AI writing,\" \"edit writing for AI patterns,\" \"audit writing for AI tell...",
+      "category": "other",
+      "tags": [
+        "writing editing voice quality"
+      ],
+      "version": "3.3.1",
+      "path": "avoid-ai-writing"
+    },
+    {
+      "name": "axolotl",
+      "description": "Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support",
+      "category": "mlops",
+      "tags": [
+        "Fine-Tuning",
+        "Axolotl",
+        "LLM",
+        "LoRA",
+        "QLoRA",
+        "DPO",
+        "KTO",
+        "ORPO",
+        "GRPO",
+        "YAML",
+        "HuggingFace",
+        "DeepSpeed",
+        "Multimodal"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/axolotl"
+    },
+    {
+      "name": "bayesian-synthesis",
+      "description": "Use Bayesian reasoning to synthesize evidence and update beliefs. Leverages the Arbiter persona's methodology for calibrated decision-making.",
+      "category": "council",
+      "tags": [
+        "Council",
+        "Bayesian",
+        "Decision-Making",
+        "Synthesis",
+        "Reasoning"
+      ],
+      "version": "1.0.0",
+      "path": "council/bayesian-synthesis"
+    },
+    {
+      "name": "bdi-mental-states",
+      "description": "This skill should be used when the user asks to \"model agent mental states\", \"implement BDI architecture\", \"create belief-desire-intention models\", \"transform RDF to beliefs\", \"build cognitive agen...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "bdi-mental-states"
+    },
+    {
+      "name": "bdi-mental-states",
+      "description": "This skill should be used when the user asks to \"model agent mental states\", \"implement BDI architecture\", \"create belief-desire-intention models\", \"transform RDF to beliefs\", \"build cognitive agen...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/bdi-mental-states"
+    },
+    {
+      "name": "Binance API",
+      "description": "Operate Binance Spot APIs through safe REST, WebSocket, and SDK workflows with signed requests, rate-limit control, and testnet-first execution.",
+      "category": "community",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "community/binance"
+    },
+    {
+      "name": "blogwatcher",
+      "description": "Monitor blogs and RSS/Atom feeds for updates using the blogwatcher-cli tool. Add blogs, scan for new articles, track read status, and filter by category.",
+      "category": "research",
+      "tags": [
+        "RSS",
+        "Blogs",
+        "Feed-Reader",
+        "Monitoring"
+      ],
+      "version": "2.0.0",
+      "path": "research/blogwatcher"
+    },
+    {
+      "name": "blue-ocean-strategy",
+      "description": "Create uncontested market space using value innovation instead of competing",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "blue-ocean-strategy"
+    },
+    {
+      "name": "blue-ocean-strategy",
+      "description": "Create uncontested market space using value innovation instead of competing head-to-head. Use when the user mentions \"blue ocean\", \"red ocean\", \"strategy canvas\", \"ERRC framework\", \"value innovatio...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/blue-ocean-strategy"
+    },
+    {
+      "name": "book-fetch",
+      "description": "Download ebooks (epub/pdf) from Anna's Archive and upload them to MEGA automatically. Use when the user asks to download a book, find an ebook, search for a title on Anna's Archive/libgen, or add a...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/book-fetch"
+    },
+    {
+      "name": "brain-first",
+      "description": "Check Honcho (the brain) BEFORE responding to any user message. Read existing context, use it in your response, then write back new information. This is the core brain-agent loop that makes the age...",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/brain-first"
+    },
+    {
+      "name": "brain-repo",
+      "description": "Git backup of memory systems (~/.hermes-brain/). Cron-driven snapshot of Honcho, Holographic, MemPalace, and session data into versioned markdown. Use during backup cron jobs. Not a knowledge surfa...",
+      "category": "memory",
+      "tags": [
+        "backup",
+        "git",
+        "memory",
+        "versioning"
+      ],
+      "version": "2.0.0",
+      "path": "memory/brain-repo"
+    },
+    {
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatt...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "brand-guidelines"
+    },
+    {
+      "name": "brand-voice",
+      "description": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wan...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "brand-voice"
+    },
+    {
+      "name": "browser-console",
+      "description": "Handle browser console tasks based on observed user request patterns.",
+      "category": "other",
+      "tags": [
+        "browser",
+        "console"
+      ],
+      "version": "0.2.0",
+      "path": "browser-console"
+    },
+    {
+      "name": "browser-vision",
+      "description": "Handle browser vision tasks based on observed user request patterns.",
+      "category": "other",
+      "tags": [
+        "browser",
+        "vision"
+      ],
+      "version": "0.1.0",
+      "path": "browser-vision"
+    },
+    {
+      "name": "browsh",
+      "description": "A modern text-based browser. Renders web pages in the terminal using headless Firefox.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/browsh"
+    },
+    {
+      "name": "building-adversary-infrastructure-tracking-system",
+      "description": "Build an automated system to track adversary infrastructure using passive",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-adversary-infrastructure-tracking-system"
+    },
+    {
+      "name": "building-identity-governance-lifecycle-process",
+      "description": "Builds comprehensive identity governance and lifecycle management processes",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-identity-governance-lifecycle-process"
+    },
+    {
+      "name": "building-incident-response-playbook",
+      "description": "Designs and documents structured incident response playbooks that define",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "building-incident-response-playbook"
+    },
+    {
+      "name": "building-incident-timeline-with-timesketch",
+      "description": "Build collaborative forensic incident timelines using Timesketch to ingest,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-incident-timeline-with-timesketch"
+    },
+    {
+      "name": "building-ioc-defanging-and-sharing-pipeline",
+      "description": "Build an automated pipeline to defang indicators of compromise (URLs,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-ioc-defanging-and-sharing-pipeline"
+    },
+    {
+      "name": "building-patch-tuesday-response-process",
+      "description": "Establish a structured operational process to triage, test, and deploy",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-patch-tuesday-response-process"
+    },
+    {
+      "name": "building-role-mining-for-rbac-optimization",
+      "description": "Apply bottom-up and top-down role mining techniques to discover optimal",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-role-mining-for-rbac-optimization"
+    },
+    {
+      "name": "building-soc-escalation-matrix",
+      "description": "Build a structured SOC escalation matrix defining severity tiers, response",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-soc-escalation-matrix"
+    },
+    {
+      "name": "building-vulnerability-scanning-workflow",
+      "description": "Builds a structured vulnerability scanning workflow using tools like",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "building-vulnerability-scanning-workflow"
+    },
+    {
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create ...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "canvas-design"
+    },
+    {
+      "name": "chroma",
+      "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to productio...",
+      "category": "mlops",
+      "tags": [
+        "RAG",
+        "Chroma",
+        "Vector Database",
+        "Embeddings",
+        "Semantic Search",
+        "Open Source",
+        "Self-Hosted",
+        "Document Retrieval",
+        "Metadata Filtering"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/vector-databases/chroma"
+    },
+    {
+      "name": "ck",
+      "description": "Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run deterministic Node.js script...",
+      "category": "other",
+      "tags": [],
+      "version": "2.0.0",
+      "path": "ck"
+    },
+    {
+      "name": "claude-api",
+      "description": "Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT ...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "claude-api"
+    },
+    {
+      "name": "claude-code",
+      "description": "Delegate coding tasks to Claude Code (Anthropic's CLI agent). Use for building features, refactoring, PR reviews, and iterative coding. Requires the claude CLI installed.",
+      "category": "autonomous-ai-agents",
+      "tags": [
+        "Coding-Agent",
+        "Claude",
+        "Anthropic",
+        "Code-Review",
+        "Refactoring",
+        "PTY",
+        "Automation"
+      ],
+      "version": "2.2.0",
+      "path": "autonomous-ai-agents/claude-code"
+    },
+    {
+      "name": "clawddocs",
+      "description": "Clawdbot documentation expert with decision tree navigation, search scripts, doc fetching, version tracking, and config snippets for all Clawdbot features",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/clawddocs"
+    },
+    {
+      "name": "clean-architecture",
+      "description": "Structure software around the Dependency Rule: source code dependencies point inward from frameworks to use cases to entities. Use when the user mentions \"architecture layers\", \"dependency rule\", \"...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/clean-architecture"
+    },
+    {
+      "name": "clean-architecture",
+      "description": "Structure software around the Dependency Rule: source code dependencies",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "clean-architecture"
+    },
+    {
+      "name": "clean-code",
+      "description": "Write readable, maintainable code through disciplined naming, small functions,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "clean-code"
+    },
+    {
+      "name": "clean-code",
+      "description": "Write readable, maintainable code through disciplined naming, small functions, and clean error handling. Use when the user mentions \"code review\", \"naming conventions\", \"function too long\", \"code s...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/clean-code"
+    },
+    {
+      "name": "clip",
+      "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, conten...",
+      "category": "mlops",
+      "tags": [
+        "Multimodal",
+        "CLIP",
+        "Vision-Language",
+        "Zero-Shot",
+        "Image Classification",
+        "OpenAI",
+        "Image Search",
+        "Cross-Modal Retrieval",
+        "Content Moderation"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/models/clip"
+    },
+    {
+      "name": "code-review",
+      "description": "Guidelines for performing thorough code reviews with security and quality focus",
+      "category": "software-development",
+      "tags": [],
+      "version": "",
+      "path": "software-development/code-review"
+    },
+    {
+      "name": "codebase-inspection",
+      "description": "Inspect and analyze codebases using pygount for LOC counting, language breakdown, and code-vs-comment ratios. Use when asked to check lines of code, repo size, language composition, or codebase stats.",
+      "category": "github",
+      "tags": [
+        "LOC",
+        "Code Analysis",
+        "pygount",
+        "Codebase",
+        "Metrics",
+        "Repository"
+      ],
+      "version": "1.0.0",
+      "path": "github/codebase-inspection"
+    },
+    {
+      "name": "codex",
+      "description": "Delegate coding tasks to OpenAI Codex CLI agent. Use for building features, refactoring, PR reviews, and batch issue fixing. Requires the codex CLI and a git repository.",
+      "category": "autonomous-ai-agents",
+      "tags": [
+        "Coding-Agent",
+        "Codex",
+        "OpenAI",
+        "Code-Review",
+        "Refactoring"
+      ],
+      "version": "1.0.0",
+      "path": "autonomous-ai-agents/codex"
+    },
+    {
+      "name": "collecting-indicators-of-compromise",
+      "description": "Systematically collects, categorizes, and distributes indicators of",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "collecting-indicators-of-compromise"
+    },
+    {
+      "name": "configuring-identity-aware-proxy-with-google-iap",
+      "description": "Configuring Google Cloud Identity-Aware Proxy (IAP) to enforce per-request",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "configuring-identity-aware-proxy-with-google-iap"
+    },
+    {
+      "name": "configuring-tls-1-3-for-secure-communications",
+      "description": "TLS 1.3 (RFC 8446) is the latest version of the Transport Layer Security",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "configuring-tls-1-3-for-secure-communications"
+    },
+    {
+      "name": "contagious",
+      "description": "Engineer word-of-mouth and virality using the STEPPS framework (Social Currency, Triggers, Emotion, Public, Practical Value, Stories). Use when the user mentions \"go viral\", \"word of mouth\", \"share...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/contagious"
+    },
+    {
+      "name": "contagious",
+      "description": "Engineer word-of-mouth and virality using the STEPPS framework (Social",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "contagious"
+    },
+    {
+      "name": "content-research",
+      "description": "Research trending topics and generate platform-specific content. Triggers on \"research [topic]\", \"what's new in [topic]\", \"content for [platform]\", \"create posts about [topic]\". Supports Reddit, X/...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/content-research"
+    },
+    {
+      "name": "context-compression",
+      "description": "This skill should be used when the user asks to \"compress context\", \"summarize conversation history\", \"implement compaction\", \"reduce token usage\", or mentions context compression, structured summa...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "context-compression"
+    },
+    {
+      "name": "context-compression",
+      "description": "This skill should be used when the user asks to \"compress context\", \"summarize conversation history\", \"implement compaction\", \"reduce token usage\", or mentions context compression, structured summa...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/context-compression"
+    },
+    {
+      "name": "context-degradation",
+      "description": "This skill should be used when the user asks to \"diagnose context problems\", \"fix lost-in-middle issues\", \"debug agent failures\", \"understand context poisoning\", or mentions context degradation, at...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "context-degradation"
+    },
+    {
+      "name": "context-degradation",
+      "description": "This skill should be used when the user asks to \"diagnose context problems\", \"fix lost-in-middle issues\", \"debug agent failures\", \"understand context poisoning\", or mentions context degradation, at...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/context-degradation"
+    },
+    {
+      "name": "context-fundamentals",
+      "description": "This skill should be used when the user asks to \"understand context\", \"explain context windows\", \"design agent architecture\", \"debug context issues\", \"optimize context usage\", or discusses context ...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "context-fundamentals"
+    },
+    {
+      "name": "context-fundamentals",
+      "description": "This skill should be used when the user asks to \"understand context\", \"explain context windows\", \"design agent architecture\", \"debug context issues\", \"optimize context usage\", or discusses context ...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/context-fundamentals"
+    },
+    {
+      "name": "context-memory-system",
+      "description": "Unified context and memory management \u2014 integrates Honcho (user identity), holographic (structured facts), hermes-dojo (self-improvement), and session persistence into a single coherent system. Use...",
+      "category": "agent-protocol",
+      "tags": [],
+      "version": "",
+      "path": "context-memory-system"
+    },
+    {
+      "name": "context-optimization",
+      "description": "This skill should be used when the user asks to \"optimize context\", \"reduce token costs\", \"improve context efficiency\", \"implement KV-cache optimization\", \"partition context\", or mentions context l...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "context-optimization"
+    },
+    {
+      "name": "context-optimization",
+      "description": "This skill should be used when the user asks to \"optimize context\", \"reduce token costs\", \"improve context efficiency\", \"implement KV-cache optimization\", \"partition context\", or mentions context l...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/context-optimization"
+    },
+    {
+      "name": "context7",
+      "description": "Use Context7 for up-to-date library/framework SDK documentation. Activate when user asks about any library API, setup, configuration, version migration, or debugging (React, Next.js, Prisma, Expres...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "context7"
+    },
+    {
+      "name": "continuous-discovery",
+      "description": "Build a weekly cadence of customer touchpoints using Opportunity Solution",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "continuous-discovery"
+    },
+    {
+      "name": "continuous-discovery",
+      "description": "Build a weekly cadence of customer touchpoints using Opportunity Solution Trees, assumption mapping, and interview snapshots. Use when the user mentions \"continuous discovery\", \"opportunity solutio...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/continuous-discovery"
+    },
+    {
+      "name": "cro-methodology",
+      "description": "Audit websites and landing pages for conversion issues and design evidence-based",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "cro-methodology"
+    },
+    {
+      "name": "cro-methodology",
+      "description": "Audit websites and landing pages for conversion issues and design evidence-based A/B tests. Use when the user mentions \"landing page isnt converting\", \"conversion rate\", \"A/B test\", \"why visitors l...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/cro-methodology"
+    },
+    {
+      "name": "crossing-the-chasm",
+      "description": "Navigate the technology adoption lifecycle from early adopters to mainstream",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "crossing-the-chasm"
+    },
+    {
+      "name": "crossing-the-chasm",
+      "description": "Navigate the technology adoption lifecycle from early adopters to mainstream market. Use when the user mentions \"crossing the chasm\", \"beachhead segment\", \"whole product\", \"early adopters vs. mains...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/crossing-the-chasm"
+    },
+    {
+      "name": "curiosity-engine",
+      "description": "Autonomous knowledge graph gap detection and curiosity-driven exploration. Use when: (1) building an agent that explores its own knowledge gaps, (2) adding self-directed research to an existing mem...",
+      "category": "memory",
+      "tags": [],
+      "version": "0.5.0",
+      "path": "curiosity-engine"
+    },
+    {
+      "name": "customer-billing-ops",
+      "description": "Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan analysis using connected billing tools like Stripe. Use when the user needs to hel...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "customer-billing-ops"
+    },
+    {
+      "name": "dart-flutter-patterns",
+      "description": "Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architecture, popular state management frameworks (BLoC, Riverpod, Provider), GoRouter na...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "dart-flutter-patterns"
+    },
+    {
+      "name": "database-operations",
+      "description": "Database operations \u2014 PostgreSQL, MySQL, SQLite. Connection, query, backup, restore, user management, and basic troubleshooting.",
+      "category": "infrastructure",
+      "tags": [],
+      "version": "",
+      "path": "database-operations"
+    },
+    {
+      "name": "ddia-systems",
+      "description": "Design data systems by understanding storage engines, replication, partitioning,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "ddia-systems"
+    },
+    {
+      "name": "ddia-systems",
+      "description": "Design data systems by understanding storage engines, replication, partitioning, transactions, and consistency models. Use when the user mentions \"database choice\", \"replication lag\", \"partitioning...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/ddia-systems"
+    },
+    {
+      "name": "deep-research",
+      "description": "Async deep research via Gemini Interactions API (no Gemini CLI dependency). RAG-ground queries on local files (--context), preview costs (--dry-run), structured JSON output, adaptive polling. Unive...",
+      "category": "research",
+      "tags": [],
+      "version": "2.1.2",
+      "path": "community/agent-deep-research"
+    },
+    {
+      "name": "deploying-osquery-for-endpoint-monitoring",
+      "description": "Deploys and configures osquery for real-time endpoint monitoring using",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "deploying-osquery-for-endpoint-monitoring"
+    },
+    {
+      "name": "deploying-software-defined-perimeter",
+      "description": "Deploy a Software-Defined Perimeter using the CSA v2.0 specification",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "deploying-software-defined-perimeter"
+    },
+    {
+      "name": "deploying-tailscale-for-zero-trust-vpn",
+      "description": "Deploy and configure Tailscale as a WireGuard-based zero trust mesh VPN",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "deploying-tailscale-for-zero-trust-vpn"
+    },
+    {
+      "name": "deployment",
+      "description": "General deployment workflows \u2014 build, test, stage, production push, rollback, health checks, and zero-downtime deployment patterns.",
+      "category": "infrastructure",
+      "tags": [],
+      "version": "",
+      "path": "deployment"
+    },
+    {
+      "name": "design-everyday-things",
+      "description": "Apply foundational design principles: affordances, signifiers, constraints, feedback, and conceptual models. Use when the user mentions \"why is this confusing\", \"affordance\", \"error prevention\", \"d...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/design-everyday-things"
+    },
+    {
+      "name": "design-everyday-things",
+      "description": "Apply foundational design principles: affordances, signifiers, constraints,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "design-everyday-things"
+    },
+    {
+      "name": "design-sprint",
+      "description": "Run a structured 5-day process to prototype, test, and validate product",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "design-sprint"
+    },
+    {
+      "name": "design-sprint",
+      "description": "Run a structured 5-day process to prototype, test, and validate product ideas with real users. Use when the user mentions \"design sprint\", \"validate in a week\", \"rapid prototype\", \"test with users\"...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/design-sprint"
+    },
+    {
+      "name": "detecting-api-enumeration-attacks",
+      "description": "Detect and prevent API enumeration attacks including BOLA and IDOR exploitation",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "detecting-api-enumeration-attacks"
+    },
+    {
+      "name": "detecting-aws-credential-exposure-with-trufflehog",
+      "description": "Detecting exposed AWS credentials in source code repositories, CI/CD",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "detecting-aws-credential-exposure-with-trufflehog"
+    },
+    {
+      "name": "detecting-container-escape-with-falco-rules",
+      "description": "Detect container escape attempts in real-time using Falco runtime security",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "detecting-container-escape-with-falco-rules"
+    },
+    {
+      "name": "detecting-fileless-attacks-on-endpoints",
+      "description": "Detects fileless malware and in-memory attacks that execute entirely",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "detecting-fileless-attacks-on-endpoints"
+    },
+    {
+      "name": "detecting-sql-injection-via-waf-logs",
+      "description": "Analyze WAF (ModSecurity/AWS WAF/Cloudflare) logs to detect SQL injection",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "detecting-sql-injection-via-waf-logs"
+    },
+    {
+      "name": "detecting-typosquatting-packages-in-npm-pypi",
+      "description": "Detects typosquatting attacks in npm and PyPI package registries by",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "detecting-typosquatting-packages-in-npm-pypi"
+    },
+    {
+      "name": "discord-channel-fetch",
+      "description": "Fetch messages from Discord channels using the bot token directly via Discord API v10. Use when you need to read channel history but don't have Discord history search built into your toolset.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "discord-channel-fetch"
+    },
+    {
+      "name": "distributed-llm-pretraining-torchtitan",
+      "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ G...",
+      "category": "mlops",
+      "tags": [
+        "Model Architecture",
+        "Distributed Training",
+        "TorchTitan",
+        "FSDP2",
+        "Tensor Parallel",
+        "Pipeline Parallel",
+        "Context Parallel",
+        "Float8",
+        "Llama",
+        "Pretraining"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/torchtitan"
+    },
+    {
+      "name": "docker-cve-patch",
+      "description": "Patch CRITICAL/HIGH CVEs in Docker images by rebuilding with updated base images and restarting containers.",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "docker-cve-patch"
+    },
+    {
+      "name": "docker-management",
+      "description": "Docker container lifecycle \u2014 start, stop, logs, exec, inspect, rm, images, networks, and docker-compose workflows.",
+      "category": "infrastructure",
+      "tags": [],
+      "version": "",
+      "path": "docker-management"
+    },
+    {
+      "name": "docx",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produ...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "docx"
+    },
+    {
+      "name": "dogfood",
+      "description": "Systematic exploratory QA testing of web applications \u2014 find bugs, capture evidence, and generate structured reports",
+      "category": "other",
+      "tags": [
+        "qa",
+        "testing",
+        "browser",
+        "web",
+        "dogfood"
+      ],
+      "version": "1.0.0",
+      "path": "dogfood"
+    },
+    {
+      "name": "domain-driven-design",
+      "description": "Model software around the business domain using bounded contexts, aggregates,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "domain-driven-design"
+    },
+    {
+      "name": "domain-driven-design",
+      "description": "Model software around the business domain using bounded contexts, aggregates, and ubiquitous language. Use when the user mentions \"domain modeling\", \"bounded context\", \"aggregate root\", \"ubiquitous...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/domain-driven-design"
+    },
+    {
+      "name": "domain-intel",
+      "description": "Passive domain reconnaissance using Python stdlib. Subdomain discovery, SSL certificate inspection, WHOIS lookups, DNS records, domain availability checks, and bulk multi-domain analysis. No API ke...",
+      "category": "research",
+      "tags": [],
+      "version": "",
+      "path": "research/domain-intel"
+    },
+    {
+      "name": "dotnet-patterns",
+      "description": "Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "dotnet-patterns"
+    },
+    {
+      "name": "drawio-skill",
+      "description": "Use when user requests diagrams, flowcharts, architecture charts, or visualizations. Also use proactively when explaining systems with 3+ components, complex data flows, or relationships that benef...",
+      "category": "design",
+      "tags": [],
+      "version": "",
+      "path": "design/drawio-skill"
+    },
+    {
+      "name": "dream-cycle",
+      "description": "Run the nightly brain enrichment cycle at 2 AM WIB (19:00 UTC). Detects entities from the day's conversations, enriches them, updates Honcho with new conclusions, and consolidates memory. Koala wak...",
+      "category": "system",
+      "tags": [],
+      "version": "",
+      "path": "system/dream-cycle"
+    },
+    {
+      "name": "drive-motivation",
+      "description": "Design motivation systems using Autonomy, Mastery, and Purpose (AMP) for products and teams. Use when the user mentions \"intrinsic motivation\", \"gamification isnt working\", \"team incentives\", \"auto...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/drive-motivation"
+    },
+    {
+      "name": "drive-motivation",
+      "description": "Design motivation systems using Autonomy, Mastery, and Purpose (AMP)",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "drive-motivation"
+    },
+    {
+      "name": "dspy",
+      "description": "Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming",
+      "category": "mlops",
+      "tags": [
+        "Prompt Engineering",
+        "DSPy",
+        "Declarative Programming",
+        "RAG",
+        "Agents",
+        "Prompt Optimization",
+        "LM Programming",
+        "Stanford NLP",
+        "Automatic Optimization",
+        "Modular AI"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/research/dspy"
+    },
+    {
+      "name": "dual-memory",
+      "description": "Dual-memory architecture: Holographic (fact_store) for Koala''s knowledge",
+      "category": "agent-protocol",
+      "tags": [],
+      "version": "",
+      "path": "dual-memory"
+    },
+    {
+      "name": "duckduckgo-search",
+      "description": "Free web search via DuckDuckGo \u2014 text, news, images, videos. No API key needed. Prefer the `ddgs` CLI when installed; use the Python DDGS library only after verifying that `ddgs` is available in th...",
+      "category": "research",
+      "tags": [
+        "search",
+        "duckduckgo",
+        "web-search",
+        "free",
+        "fallback"
+      ],
+      "version": "1.3.0",
+      "path": "research/duckduckgo-search"
+    },
+    {
+      "name": "enrichment-pipeline",
+      "description": "Enrich Honcho entity pages with web research using a tiered API spend protocol. Detects thin/missing entity pages, fetches structured enrichment, and writes compiled conclusions back to Honcho. Run...",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/enrichment-pipeline"
+    },
+    {
+      "name": "entity-detection",
+      "description": "Detect new entities (people, companies, projects, technologies) mentioned in Honcho conversations that aren't yet in the user's peer card. Surfaces gaps in the memory model for review or auto-concl...",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/entity-detection"
+    },
+    {
+      "name": "error-driven-evolution",
+      "description": "Structured error-to-rule learning system for AI agents. Activate when an agent makes a mistake, receives a correction from the user, or needs to check past lessons before making a decision. Convert...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/error-driven-evolution"
+    },
+    {
+      "name": "evaluating-llms-harness",
+      "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking trainin...",
+      "category": "mlops",
+      "tags": [
+        "Evaluation",
+        "LM Evaluation Harness",
+        "Benchmarking",
+        "MMLU",
+        "HumanEval",
+        "GSM8K",
+        "EleutherAI",
+        "Model Quality",
+        "Academic Benchmarks",
+        "Industry Standard"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/evaluation/lm-evaluation-harness"
+    },
+    {
+      "name": "evaluation",
+      "description": "This skill should be used when the user asks to \"evaluate agent performance\", \"build test framework\", \"measure agent quality\", \"create evaluation rubrics\", or mentions LLM-as-judge, multi-dimension...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "evaluation"
+    },
+    {
+      "name": "evaluation",
+      "description": "This skill should be used when the user asks to \"evaluate agent performance\", \"build test framework\", \"measure agent quality\", \"create evaluation rubrics\", or mentions LLM-as-judge, multi-dimension...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/evaluation"
+    },
+    {
+      "name": "everything-claude-code-conventions",
+      "description": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "everything-claude-code"
+    },
+    {
+      "name": "excalidraw",
+      "description": "Create hand-drawn style diagrams using Excalidraw JSON format. Generate .excalidraw files for architecture diagrams, flowcharts, sequence diagrams, concept maps, and more. Files can be opened at ex...",
+      "category": "creative",
+      "tags": [
+        "Excalidraw",
+        "Diagrams",
+        "Flowcharts",
+        "Architecture",
+        "Visualization",
+        "JSON"
+      ],
+      "version": "1.0.0",
+      "path": "creative/excalidraw"
+    },
+    {
+      "name": "execplan",
+      "description": "Use when: (1) building complex features with multiple components, (2) significant refactors touching 3+ files, (3) implementing a spec or design doc, (4) user asks for an execution plan. Produces s...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "execplan"
+    },
+    {
+      "name": "faiss",
+      "description": "Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN sear...",
+      "category": "mlops",
+      "tags": [
+        "RAG",
+        "FAISS",
+        "Similarity Search",
+        "Vector Search",
+        "Facebook AI",
+        "GPU Acceleration",
+        "Billion-Scale",
+        "K-NN",
+        "HNSW",
+        "High Performance",
+        "Large Scale"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/vector-databases/faiss"
+    },
+    {
+      "name": "figma-audit-workflow",
+      "description": "Audit and organize Figma drafts/projects via Composio MCP",
+      "category": "workflow",
+      "tags": [],
+      "version": "",
+      "path": "workflow/figma-audit-workflow"
+    },
+    {
+      "name": "filesystem-context",
+      "description": "This skill should be used when the user asks to \"offload context to files\", \"implement dynamic context discovery\", \"use filesystem for agent memory\", \"reduce context window bloat\", or mentions file...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "filesystem-context"
+    },
+    {
+      "name": "filesystem-context",
+      "description": "This skill should be used when the user asks to \"offload context to files\", \"implement dynamic context discovery\", \"use filesystem for agent memory\", \"reduce context window bloat\", or mentions file...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/filesystem-context"
+    },
+    {
+      "name": "find-nearby",
+      "description": "Find nearby places (restaurants, cafes, bars, pharmacies, etc.) using OpenStreetMap. Works with coordinates, addresses, cities, zip codes, or Telegram location pins. No API keys needed.",
+      "category": "leisure",
+      "tags": [
+        "location",
+        "maps",
+        "nearby",
+        "places",
+        "restaurants",
+        "local"
+      ],
+      "version": "1.0.0",
+      "path": "leisure/find-nearby"
+    },
+    {
+      "name": "findmy",
+      "description": "Track Apple devices and AirTags via FindMy.app on macOS using AppleScript and screen capture.",
+      "category": "apple",
+      "tags": [
+        "FindMy",
+        "AirTag",
+        "location",
+        "tracking",
+        "macOS",
+        "Apple"
+      ],
+      "version": "1.0.0",
+      "path": "apple/findmy"
+    },
+    {
+      "name": "fine-tuning-with-trl",
+      "description": "Fine-tune LLMs using reinforcement learning with TRL - SFT for instruction tuning, DPO for preference alignment, PPO/GRPO for reward optimization, and reward model training. Use when need RLHF, ali...",
+      "category": "mlops",
+      "tags": [
+        "Post-Training",
+        "TRL",
+        "Reinforcement Learning",
+        "Fine-Tuning",
+        "SFT",
+        "DPO",
+        "PPO",
+        "GRPO",
+        "RLHF",
+        "Preference Alignment",
+        "HuggingFace"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/trl-fine-tuning"
+    },
+    {
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples in...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "frontend-design"
+    },
+    {
+      "name": "gan-style-harness",
+      "description": "GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "gan-style-harness"
+    },
+    {
+      "name": "gguf-quantization",
+      "description": "GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU...",
+      "category": "mlops",
+      "tags": [
+        "GGUF",
+        "Quantization",
+        "llama.cpp",
+        "CPU Inference",
+        "Apple Silicon",
+        "Model Compression",
+        "Optimization"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/inference/gguf"
+    },
+    {
+      "name": "gif-search",
+      "description": "Search and download GIFs from Tenor using curl. No dependencies beyond curl and jq. Useful for finding reaction GIFs, creating visual content, and sending GIFs in chat.",
+      "category": "media",
+      "tags": [
+        "GIF",
+        "Media",
+        "Search",
+        "Tenor",
+        "API"
+      ],
+      "version": "1.1.0",
+      "path": "media/gif-search"
+    },
+    {
+      "name": "git-backup-safety",
+      "description": "Non-negotiable safety rules for git push, backup operations, and remote repo creation",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/git-backup-safety"
+    },
+    {
+      "name": "git-operations",
+      "description": "Git operations \u2014 clone, commit, push, branch, merge, and stash workflows.",
+      "category": "version-control",
+      "tags": [],
+      "version": "",
+      "path": "git-operations"
+    },
+    {
+      "name": "github",
+      "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/github"
+    },
+    {
+      "name": "github-auth",
+      "description": "Set up GitHub authentication for the agent using git (universally available) or the gh CLI. Covers HTTPS tokens, SSH keys, credential helpers, and gh auth \u2014 with a detection flow to pick the right ...",
+      "category": "github",
+      "tags": [
+        "GitHub",
+        "Authentication",
+        "Git",
+        "gh-cli",
+        "SSH",
+        "Setup"
+      ],
+      "version": "1.1.0",
+      "path": "github/github-auth"
+    },
+    {
+      "name": "github-code-review",
+      "description": "Review code changes by analyzing git diffs, leaving inline comments on PRs, and performing thorough pre-push review. Works with gh CLI or falls back to git + GitHub REST API via curl.",
+      "category": "github",
+      "tags": [
+        "GitHub",
+        "Code-Review",
+        "Pull-Requests",
+        "Git",
+        "Quality"
+      ],
+      "version": "1.1.0",
+      "path": "github/github-code-review"
+    },
+    {
+      "name": "github-issues",
+      "description": "Create, manage, triage, and close GitHub issues. Search existing issues, add labels, assign people, and link to PRs. Works with gh CLI or falls back to git + GitHub REST API via curl.",
+      "category": "github",
+      "tags": [
+        "GitHub",
+        "Issues",
+        "Project-Management",
+        "Bug-Tracking",
+        "Triage"
+      ],
+      "version": "1.1.0",
+      "path": "github/github-issues"
+    },
+    {
+      "name": "github-pr-workflow",
+      "description": "Full pull request lifecycle \u2014 create branches, commit changes, open PRs, monitor CI status, auto-fix failures, and merge. Works with gh CLI or falls back to git + GitHub REST API via curl.",
+      "category": "github",
+      "tags": [
+        "GitHub",
+        "Pull-Requests",
+        "CI/CD",
+        "Git",
+        "Automation",
+        "Merge"
+      ],
+      "version": "1.1.0",
+      "path": "github/github-pr-workflow"
+    },
+    {
+      "name": "github-repo-management",
+      "description": "Clone, create, fork, configure, and manage GitHub repositories. Manage remotes, secrets, releases, and workflows. Works with gh CLI or falls back to git + GitHub REST API via curl.",
+      "category": "github",
+      "tags": [
+        "GitHub",
+        "Repositories",
+        "Git",
+        "Releases",
+        "Secrets",
+        "Configuration"
+      ],
+      "version": "1.1.0",
+      "path": "github/github-repo-management"
+    },
+    {
+      "name": "google-workspace-ops",
+      "description": "Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared documents. Use when the user needs to find, summarize, edit, migrate, or clean u...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "google-workspace-ops"
+    },
+    {
+      "name": "graph-reasoning",
+      "description": ">-",
+      "category": "research",
+      "tags": [
+        "fabric",
+        "reasoning",
+        "recall",
+        "relationships",
+        "decisions"
+      ],
+      "version": "1.0.0",
+      "path": "research/graph-reasoning"
+    },
+    {
+      "name": "grpo-rl-training",
+      "description": "Expert guidance for GRPO/RL fine-tuning with TRL for reasoning and task-specific model training",
+      "category": "mlops",
+      "tags": [
+        "Post-Training",
+        "Reinforcement Learning",
+        "GRPO",
+        "TRL",
+        "RLHF",
+        "Reward Modeling",
+        "Reasoning",
+        "DPO",
+        "PPO",
+        "Structured Output"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/grpo-rl-training"
+    },
+    {
+      "name": "guidance",
+      "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained gen...",
+      "category": "mlops",
+      "tags": [
+        "Prompt Engineering",
+        "Guidance",
+        "Constrained Generation",
+        "Structured Output",
+        "JSON Validation",
+        "Grammar",
+        "Microsoft Research",
+        "Format Enforcement",
+        "Multi-Step Workflows"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/inference/guidance"
+    },
+    {
+      "name": "hardening-docker-containers-for-production",
+      "description": "Hardening Docker containers for production involves applying security",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "hardening-docker-containers-for-production"
+    },
+    {
+      "name": "hardening-docker-daemon-configuration",
+      "description": "Harden the Docker daemon by configuring daemon.json with user namespace",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "hardening-docker-daemon-configuration"
+    },
+    {
+      "name": "hardening-linux-endpoint-with-cis-benchmark",
+      "description": "Hardens Linux endpoints using CIS Benchmark recommendations for Ubuntu,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "hardening-linux-endpoint-with-cis-benchmark"
+    },
+    {
+      "name": "healthcare-cdss-patterns",
+      "description": "Clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integration into EMR wo...",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "healthcare-cdss-patterns"
+    },
+    {
+      "name": "healthcare-emr-patterns",
+      "description": "EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medica...",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "healthcare-emr-patterns"
+    },
+    {
+      "name": "healthcare-eval-harness",
+      "description": "Patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compliance. Blocks depl...",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "healthcare-eval-harness"
+    },
+    {
+      "name": "healthcare-phi-compliance",
+      "description": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit trails, encryptio...",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "healthcare-phi-compliance"
+    },
+    {
+      "name": "heartmula",
+      "description": "Set up and run HeartMuLa, the open-source music generation model family (Suno-like). Generates full songs from lyrics + tags with multilingual support.",
+      "category": "media",
+      "tags": [
+        "music",
+        "audio",
+        "generation",
+        "ai",
+        "heartmula",
+        "heartcodec",
+        "lyrics",
+        "songs"
+      ],
+      "version": "1.0.0",
+      "path": "media/heartmula"
+    },
+    {
+      "name": "hermes-agent",
+      "description": "Complete guide to using and extending Hermes Agent \u2014 CLI usage, setup, configuration, spawning additional agents, gateway platforms, skills, voice, tools, profiles, and a concise contributor refere...",
+      "category": "autonomous-ai-agents",
+      "tags": [
+        "hermes",
+        "setup",
+        "configuration",
+        "multi-agent",
+        "spawning",
+        "cli",
+        "gateway",
+        "development"
+      ],
+      "version": "2.0.0",
+      "path": "autonomous-ai-agents/hermes-agent"
+    },
+    {
+      "name": "hermes-agent-self-evolution",
+      "description": "DSPy-driven skill evolution using GEPA/MIPROv2 on OpenRouter for hermes-agent",
+      "category": "hermes",
+      "tags": [],
+      "version": "",
+      "path": "hermes/hermes-agent-self-evolution"
+    },
+    {
+      "name": "hermes-atropos-environments",
+      "description": "Build, test, and debug Hermes Agent RL environments for Atropos training. Covers the HermesAgentBaseEnv interface, reward functions, agent loop integration, evaluation with tools, wandb logging, an...",
+      "category": "mlops",
+      "tags": [
+        "atropos",
+        "rl",
+        "environments",
+        "training",
+        "reinforcement-learning",
+        "reward-functions"
+      ],
+      "version": "1.1.0",
+      "path": "mlops/training/hermes-atropos-environments"
+    },
+    {
+      "name": "hermes-backup-fix",
+      "description": "Fix GitHub backup cron job when skills_backup/plugins_backup stage nothing",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/hermes-backup-fix"
+    },
+    {
+      "name": "hermes-doctor",
+      "description": "Run a full-stack audit of the Onyx agent system. Use when Koala asks \"how's the system looking?\" or weekly maintenance. No arguments for a quick check, `--verbose` for full detail, `--json` for mac...",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/hermes-doctor"
+    },
+    {
+      "name": "hermes-dojo",
+      "description": ">",
+      "category": "agent-improvement",
+      "tags": [
+        "self-improvement",
+        "self-evolution",
+        "analytics",
+        "meta-agent"
+      ],
+      "version": "1.1.0",
+      "path": "hermes-dojo"
+    },
+    {
+      "name": "hermes-gateway-stale-pid-fix",
+      "description": "Fix hermes-gateway service failure caused by a stale PID blocking all restart attempts",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/hermes-gateway-stale-pid-fix"
+    },
+    {
+      "name": "hermes-hooks-and-skins",
+      "description": "Developing Hermes gateway hooks and YAML skins \u2014 known quirks, patterns, and pitfalls. Use when creating/modifying hooks or skin banner art.",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/hermes-hooks-and-skins"
+    },
+    {
+      "name": "hermes-web-crash-loop-fix",
+      "description": "Fix hermes-web crash loops caused by stale Next.js standalone build artifacts",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/hermes-web-crash-loop-fix"
+    },
+    {
+      "name": "hexagonal-architecture",
+      "description": "Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "hexagonal-architecture"
+    },
+    {
+      "name": "high-perf-browser",
+      "description": "Optimize web performance through network protocols, resource loading, and browser rendering internals. Use when the user mentions \"page load speed\", \"Core Web Vitals\", \"HTTP/2\", \"resource hints\", \"...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/high-perf-browser"
+    },
+    {
+      "name": "high-perf-browser",
+      "description": "Optimize web performance through network protocols, resource loading,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "high-perf-browser"
+    },
+    {
+      "name": "himalaya",
+      "description": "CLI to manage emails via IMAP/SMTP. Use himalaya to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MI...",
+      "category": "email",
+      "tags": [
+        "Email",
+        "IMAP",
+        "SMTP",
+        "CLI",
+        "Communication"
+      ],
+      "version": "1.0.0",
+      "path": "email/himalaya"
+    },
+    {
+      "name": "hindsight-integration",
+      "description": "Integrate Hindsight agent memory learning with Onyx memory stack. Use when: (1) storing new behavioral memories, (2) searching past interactions for context, (3) generating behavioral insights, (4)...",
+      "category": "memory",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "memory/hindsight-integration"
+    },
+    {
+      "name": "honcho-api",
+      "description": "Raw Honcho HTTP API operations for reading/writing conclusions, sessions, peers, and search. Use when any skill references honcho_search, honcho_conclude, honcho_context, or honcho_profile \u2014 these ...",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/honcho-api"
+    },
+    {
+      "name": "honcho-conclusions",
+      "description": "Write session conclusions to Honcho's conclusions API instead of MEMORY.md. Use after complex sessions or when significant decisions/actions were taken.",
+      "category": "memory",
+      "tags": [
+        "memory",
+        "honcho",
+        "session-management"
+      ],
+      "version": "1.0.0",
+      "path": "honcho-conclusions"
+    },
+    {
+      "name": "honcho-to-kg-bridge",
+      "description": "Bridge script that fetches observations/conclusions from Honcho's Deriver and inserts them as structured triples into the MemPalace KG (knowledge_graph.sqlite3). Handles deduplication via a sync tr...",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/honcho-to-kg-bridge"
+    },
+    {
+      "name": "hooked-ux",
+      "description": "Design habit-forming product loops using the Hook Model (Trigger, Action,",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "hooked-ux"
+    },
+    {
+      "name": "hooked-ux",
+      "description": "Design habit-forming product loops using the Hook Model (Trigger, Action, Variable Reward, Investment). Use when the user mentions \"users arent coming back\", \"engagement loops\", \"habit formation\", ...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/hooked-ux"
+    },
+    {
+      "name": "hosted-agents",
+      "description": "This skill should be used when the user asks to \"build background agent\", \"create hosted coding agent\", \"set up sandboxed execution\", \"implement multiplayer agent\", or mentions background agents, s...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "hosted-agents"
+    },
+    {
+      "name": "hosted-agents",
+      "description": "This skill should be used when the user asks to \"build background agent\", \"create hosted coding agent\", \"set up sandboxed execution\", \"implement multiplayer agent\", or mentions background agents, s...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/hosted-agents"
+    },
+    {
+      "name": "html-flowchart-generator",
+      "description": "Generate clean methodology flowcharts as HTML, render to PNG via Playwright. Use when user needs diagrams, flowcharts, or methodology visuals.",
+      "category": "other",
+      "tags": [
+        "diagram",
+        "flowchart",
+        "html",
+        "methodology",
+        "thesis"
+      ],
+      "version": "",
+      "path": "html-flowchart-generator"
+    },
+    {
+      "name": "huggingface-accelerate",
+      "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8)...",
+      "category": "mlops",
+      "tags": [
+        "Distributed Training",
+        "HuggingFace",
+        "Accelerate",
+        "DeepSpeed",
+        "FSDP",
+        "Mixed Precision",
+        "PyTorch",
+        "DDP",
+        "Unified API",
+        "Simple"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/accelerate"
+    },
+    {
+      "name": "huggingface-hub",
+      "description": "Hugging Face Hub CLI (hf) \u2014 search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.",
+      "category": "mlops",
+      "tags": [
+        "huggingface",
+        "hf",
+        "models",
+        "datasets",
+        "hub",
+        "mlops"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/huggingface-hub"
+    },
+    {
+      "name": "huggingface-tokenizers",
+      "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alig...",
+      "category": "mlops",
+      "tags": [
+        "Tokenization",
+        "HuggingFace",
+        "BPE",
+        "WordPiece",
+        "Unigram",
+        "Fast Tokenization",
+        "Rust",
+        "Custom Tokenizer",
+        "Alignment Tracking",
+        "Production"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/evaluation/huggingface-tokenizers"
+    },
+    {
+      "name": "hundred-million-offers",
+      "description": "Create irresistible offers using the Value Equation, bonus stacking,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "hundred-million-offers"
+    },
+    {
+      "name": "hundred-million-offers",
+      "description": "Create irresistible offers using the Value Equation, bonus stacking, risk-reversing guarantees, and ethical scarcity. Use when the user mentions \"pricing strategy\", \"irresistible offer\", \"bonuses a...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/hundred-million-offers"
+    },
+    {
+      "name": "ideation",
+      "description": "Generate project ideas through creative constraints. Use when the user says 'I want to build something', 'give me a project idea', 'I'm bored', 'what should I make', 'inspire me', or any variant of...",
+      "category": "creative",
+      "tags": [
+        "Creative",
+        "Ideation",
+        "Projects",
+        "Brainstorming",
+        "Inspiration"
+      ],
+      "version": "1.0.0",
+      "path": "creative/creative-ideation"
+    },
+    {
+      "name": "imessage",
+      "description": "Send and receive iMessages/SMS via the imsg CLI on macOS.",
+      "category": "apple",
+      "tags": [
+        "iMessage",
+        "SMS",
+        "messaging",
+        "macOS",
+        "Apple"
+      ],
+      "version": "1.0.0",
+      "path": "apple/imessage"
+    },
+    {
+      "name": "implementing-anti-phishing-training-program",
+      "description": "Security awareness training is the human layer of phishing defense. An",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-anti-phishing-training-program"
+    },
+    {
+      "name": "implementing-api-gateway-security-controls",
+      "description": "Implements security controls at the API gateway layer including authentication",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-api-gateway-security-controls"
+    },
+    {
+      "name": "implementing-api-key-security-controls",
+      "description": "Implements secure API key generation, storage, rotation, and revocation",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-api-key-security-controls"
+    },
+    {
+      "name": "implementing-api-rate-limiting-and-throttling",
+      "description": "Implements API rate limiting and throttling controls using token bucket,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-api-rate-limiting-and-throttling"
+    },
+    {
+      "name": "implementing-api-security-posture-management",
+      "description": "Implement API Security Posture Management to continuously discover, classify,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-api-security-posture-management"
+    },
+    {
+      "name": "implementing-application-whitelisting-with-applocker",
+      "description": "Implements application whitelisting using Windows AppLocker to restrict",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-application-whitelisting-with-applocker"
+    },
+    {
+      "name": "implementing-aws-config-rules-for-compliance",
+      "description": "Implementing AWS Config rules for continuous compliance monitoring of",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-aws-config-rules-for-compliance"
+    },
+    {
+      "name": "implementing-aws-iam-permission-boundaries",
+      "description": "Configure IAM permission boundaries in AWS to delegate role creation",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-aws-iam-permission-boundaries"
+    },
+    {
+      "name": "implementing-aws-security-hub",
+      "description": "This skill covers deploying AWS Security Hub as a centralized cloud",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-aws-security-hub"
+    },
+    {
+      "name": "implementing-azure-ad-privileged-identity-management",
+      "description": "Configure Microsoft Entra Privileged Identity Management to enforce just-in-time",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-azure-ad-privileged-identity-management"
+    },
+    {
+      "name": "implementing-beyondcorp-zero-trust-access-model",
+      "description": "Implementing Google''s BeyondCorp zero trust access model to eliminate",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-beyondcorp-zero-trust-access-model"
+    },
+    {
+      "name": "implementing-cisa-zero-trust-maturity-model",
+      "description": "Implement the CISA Zero Trust Maturity Model v2.0 across the five pillars",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-cisa-zero-trust-maturity-model"
+    },
+    {
+      "name": "implementing-cloud-security-posture-management",
+      "description": "Implementing Cloud Security Posture Management (CSPM) to continuously",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-cloud-security-posture-management"
+    },
+    {
+      "name": "implementing-cloud-trail-log-analysis",
+      "description": "Implementing AWS CloudTrail log analysis for security monitoring, threat",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-cloud-trail-log-analysis"
+    },
+    {
+      "name": "implementing-cloud-waf-rules",
+      "description": "This skill covers deploying and tuning Web Application Firewall rules",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-cloud-waf-rules"
+    },
+    {
+      "name": "implementing-code-signing-for-artifacts",
+      "description": "This skill covers implementing code signing for build artifacts to ensure",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-code-signing-for-artifacts"
+    },
+    {
+      "name": "implementing-conditional-access-policies-azure-ad",
+      "description": "Configure Microsoft Entra ID (Azure AD) Conditional Access policies for",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-conditional-access-policies-azure-ad"
+    },
+    {
+      "name": "implementing-container-image-minimal-base-with-distroless",
+      "description": "Reduce container attack surface by building application images on Google",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-container-image-minimal-base-with-distroless"
+    },
+    {
+      "name": "implementing-container-network-policies-with-calico",
+      "description": "Enforce Kubernetes network segmentation using Calico CNI network policies",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-container-network-policies-with-calico"
+    },
+    {
+      "name": "implementing-data-loss-prevention-with-microsoft-purview",
+      "description": "Implements data loss prevention policies using Microsoft Purview to",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-data-loss-prevention-with-microsoft-purview"
+    },
+    {
+      "name": "implementing-ddos-mitigation-with-cloudflare",
+      "description": "Configure Cloudflare DDoS protection with managed rulesets, rate limiting,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-ddos-mitigation-with-cloudflare"
+    },
+    {
+      "name": "implementing-device-posture-assessment-in-zero-trust",
+      "description": "Implementing device posture assessment as a zero trust access control",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-device-posture-assessment-in-zero-trust"
+    },
+    {
+      "name": "implementing-devsecops-security-scanning",
+      "description": "Integrates Static Application Security Testing (SAST), Dynamic Application",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-devsecops-security-scanning"
+    },
+    {
+      "name": "implementing-diamond-model-analysis",
+      "description": "The Diamond Model of Intrusion Analysis provides a structured framework",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-diamond-model-analysis"
+    },
+    {
+      "name": "implementing-digital-signatures-with-ed25519",
+      "description": "Ed25519 is a high-performance digital signature algorithm using the Edwards",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-digital-signatures-with-ed25519"
+    },
+    {
+      "name": "implementing-dmarc-dkim-spf-email-security",
+      "description": "SPF, DKIM, and DMARC form the three pillars of email authentication.",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-dmarc-dkim-spf-email-security"
+    },
+    {
+      "name": "implementing-endpoint-detection-with-wazuh",
+      "description": "Deploy and configure Wazuh SIEM/XDR for endpoint detection including",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-endpoint-detection-with-wazuh"
+    },
+    {
+      "name": "implementing-file-integrity-monitoring-with-aide",
+      "description": "Configure AIDE (Advanced Intrusion Detection Environment) for file integrity",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-file-integrity-monitoring-with-aide"
+    },
+    {
+      "name": "implementing-fuzz-testing-in-cicd-with-aflplusplus",
+      "description": "Integrate AFL++ coverage-guided fuzz testing into CI/CD pipelines to",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-fuzz-testing-in-cicd-with-aflplusplus"
+    },
+    {
+      "name": "implementing-gcp-organization-policy-constraints",
+      "description": "Implement GCP Organization Policy constraints to enforce security guardrails",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-gcp-organization-policy-constraints"
+    },
+    {
+      "name": "implementing-gdpr-data-subject-access-request",
+      "description": "Automates GDPR Data Subject Access Request (DSAR) workflows including",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-gdpr-data-subject-access-request"
+    },
+    {
+      "name": "implementing-github-advanced-security-for-code-scanning",
+      "description": "Configure GitHub Advanced Security with CodeQL to perform automated static",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-github-advanced-security-for-code-scanning"
+    },
+    {
+      "name": "implementing-google-workspace-sso-configuration",
+      "description": "Configure SAML 2.0 single sign-on for Google Workspace with a third-party",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-google-workspace-sso-configuration"
+    },
+    {
+      "name": "implementing-hashicorp-vault-dynamic-secrets",
+      "description": "Implements HashiCorp Vault dynamic secrets engines for database credentials,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-hashicorp-vault-dynamic-secrets"
+    },
+    {
+      "name": "implementing-identity-governance-with-sailpoint",
+      "description": "Deploy SailPoint IdentityNow or IdentityIQ for identity governance and",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-identity-governance-with-sailpoint"
+    },
+    {
+      "name": "implementing-identity-verification-for-zero-trust",
+      "description": "Implement continuous identity verification for zero trust using phishing-resistant",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-identity-verification-for-zero-trust"
+    },
+    {
+      "name": "implementing-image-provenance-verification-with-cosign",
+      "description": "Sign and verify container image provenance using Sigstore Cosign with",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-image-provenance-verification-with-cosign"
+    },
+    {
+      "name": "implementing-immutable-backup-with-restic",
+      "description": "Implements immutable backup strategy using restic with S3-compatible",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-immutable-backup-with-restic"
+    },
+    {
+      "name": "implementing-infrastructure-as-code-security-scanning",
+      "description": "This skill covers implementing automated security scanning for Infrastructure",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-infrastructure-as-code-security-scanning"
+    },
+    {
+      "name": "implementing-just-in-time-access-provisioning",
+      "description": "Implement Just-In-Time (JIT) access provisioning to eliminate standing",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-just-in-time-access-provisioning"
+    },
+    {
+      "name": "implementing-jwt-signing-and-verification",
+      "description": "JSON Web Tokens (JWT) defined in RFC 7519 are compact, URL-safe tokens",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-jwt-signing-and-verification"
+    },
+    {
+      "name": "implementing-log-forwarding-with-fluentd",
+      "description": "Configure Fluentd and Fluent Bit for centralized log aggregation, routing,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-log-forwarding-with-fluentd"
+    },
+    {
+      "name": "implementing-log-integrity-with-blockchain",
+      "description": "Build an append-only log integrity chain using SHA-256 hash chaining",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-log-integrity-with-blockchain"
+    },
+    {
+      "name": "implementing-microsegmentation-with-guardicore",
+      "description": "Implementing microsegmentation using Akamai Guardicore Segmentation",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-microsegmentation-with-guardicore"
+    },
+    {
+      "name": "implementing-mobile-application-management",
+      "description": "Implements Mobile Application Management (MAM) policies to protect enterprise",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-mobile-application-management"
+    },
+    {
+      "name": "implementing-mtls-for-zero-trust-services",
+      "description": "Configures mutual TLS (mTLS) authentication between microservices using",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-mtls-for-zero-trust-services"
+    },
+    {
+      "name": "implementing-nerc-cip-compliance-controls",
+      "description": "This skill covers implementing North American Electric Reliability Corporation",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-nerc-cip-compliance-controls"
+    },
+    {
+      "name": "implementing-network-access-control",
+      "description": "Implements 802.1X port-based network access control using RADIUS authentication,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-network-access-control"
+    },
+    {
+      "name": "implementing-network-segmentation-with-firewall-zones",
+      "description": "Design and implement network segmentation using firewall security zones,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-network-segmentation-with-firewall-zones"
+    },
+    {
+      "name": "implementing-opa-gatekeeper-for-policy-enforcement",
+      "description": "Enforce Kubernetes admission policies using OPA Gatekeeper with ConstraintTemplates,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-opa-gatekeeper-for-policy-enforcement"
+    },
+    {
+      "name": "implementing-pam-for-database-access",
+      "description": "Deploy privileged access management for database systems including Oracle,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-pam-for-database-access"
+    },
+    {
+      "name": "implementing-passwordless-auth-with-microsoft-entra",
+      "description": "Implements passwordless authentication using Microsoft Entra ID with",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-passwordless-auth-with-microsoft-entra"
+    },
+    {
+      "name": "implementing-passwordless-authentication-with-fido2",
+      "description": "Deploy FIDO2/WebAuthn passwordless authentication using security keys",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-passwordless-authentication-with-fido2"
+    },
+    {
+      "name": "implementing-patch-management-for-ot-systems",
+      "description": "This skill covers implementing a structured patch management program",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-patch-management-for-ot-systems"
+    },
+    {
+      "name": "implementing-pci-dss-compliance-controls",
+      "description": "PCI DSS 4.0.1 establishes 12 requirements across 6 control objectives",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-pci-dss-compliance-controls"
+    },
+    {
+      "name": "implementing-policy-as-code-with-open-policy-agent",
+      "description": "This skill covers implementing Open Policy Agent (OPA) and Gatekeeper",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-policy-as-code-with-open-policy-agent"
+    },
+    {
+      "name": "implementing-privileged-session-monitoring",
+      "description": "Implements privileged session monitoring and recording using Privileged",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-privileged-session-monitoring"
+    },
+    {
+      "name": "implementing-runtime-security-with-tetragon",
+      "description": "Implement eBPF-based runtime security observability and enforcement in",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-runtime-security-with-tetragon"
+    },
+    {
+      "name": "implementing-scim-provisioning-with-okta",
+      "description": "Implement automated user provisioning and deprovisioning using SCIM 2.0",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-scim-provisioning-with-okta"
+    },
+    {
+      "name": "implementing-secret-scanning-with-gitleaks",
+      "description": "This skill covers implementing Gitleaks for detecting and preventing",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-secret-scanning-with-gitleaks"
+    },
+    {
+      "name": "implementing-secrets-management-with-vault",
+      "description": "This skill covers deploying HashiCorp Vault for centralized secrets",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-secrets-management-with-vault"
+    },
+    {
+      "name": "implementing-secrets-scanning-in-ci-cd",
+      "description": "Integrate gitleaks and trufflehog into CI/CD pipelines to detect leaked",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-secrets-scanning-in-ci-cd"
+    },
+    {
+      "name": "implementing-semgrep-for-custom-sast-rules",
+      "description": "Write custom Semgrep SAST rules in YAML to detect application-specific",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-semgrep-for-custom-sast-rules"
+    },
+    {
+      "name": "implementing-sigstore-for-software-signing",
+      "description": "Implements Sigstore-based software signing and verification using Cosign",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-sigstore-for-software-signing"
+    },
+    {
+      "name": "implementing-soar-automation-with-phantom",
+      "description": "Implements Security Orchestration, Automation, and Response (SOAR) workflows",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-soar-automation-with-phantom"
+    },
+    {
+      "name": "implementing-soar-playbook-with-palo-alto-xsoar",
+      "description": "Implement automated incident response playbooks in Cortex XSOAR to orchestrate",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-soar-playbook-with-palo-alto-xsoar"
+    },
+    {
+      "name": "implementing-stix-taxii-feed-integration",
+      "description": "STIX (Structured Threat Information eXpression) and TAXII (Trusted Automated",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-stix-taxii-feed-integration"
+    },
+    {
+      "name": "implementing-supply-chain-security-with-in-toto",
+      "description": "Implement software supply chain integrity verification for container",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-supply-chain-security-with-in-toto"
+    },
+    {
+      "name": "implementing-syslog-centralization-with-rsyslog",
+      "description": "Configure rsyslog for centralized log collection with TLS encryption,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-syslog-centralization-with-rsyslog"
+    },
+    {
+      "name": "implementing-taxii-server-with-opentaxii",
+      "description": "Deploy and configure an OpenTAXII server to share and consume STIX-formatted",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-taxii-server-with-opentaxii"
+    },
+    {
+      "name": "implementing-threat-intelligence-lifecycle-management",
+      "description": "Implement a structured threat intelligence lifecycle encompassing planning,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-threat-intelligence-lifecycle-management"
+    },
+    {
+      "name": "implementing-ticketing-system-for-incidents",
+      "description": "Implements an integrated incident ticketing system connecting SIEM alerts",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-ticketing-system-for-incidents"
+    },
+    {
+      "name": "implementing-usb-device-control-policy",
+      "description": "Implements USB device control policies to restrict unauthorized removable",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-usb-device-control-policy"
+    },
+    {
+      "name": "implementing-vulnerability-remediation-sla",
+      "description": "Vulnerability remediation SLAs define mandatory timeframes for patching",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-vulnerability-remediation-sla"
+    },
+    {
+      "name": "implementing-zero-trust-dns-with-nextdns",
+      "description": "Implement NextDNS as a zero trust DNS filtering layer with encrypted",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-zero-trust-dns-with-nextdns"
+    },
+    {
+      "name": "implementing-zero-trust-for-saas-applications",
+      "description": "Implementing zero trust access controls for SaaS applications using",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-zero-trust-for-saas-applications"
+    },
+    {
+      "name": "implementing-zero-trust-in-cloud",
+      "description": "This skill guides organizations through implementing zero trust architecture",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "implementing-zero-trust-in-cloud"
+    },
+    {
+      "name": "implementing-zero-trust-network-access-with-zscaler",
+      "description": "Implement Zero Trust Network Access using Zscaler Private Access (ZPA)",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-zero-trust-network-access-with-zscaler"
+    },
+    {
+      "name": "implementing-zero-trust-with-beyondcorp",
+      "description": "Deploy Google BeyondCorp Enterprise zero trust access controls using",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-zero-trust-with-beyondcorp"
+    },
+    {
+      "name": "implementing-zero-trust-with-hashicorp-boundary",
+      "description": "Implement HashiCorp Boundary for identity-aware zero trust infrastructure",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "implementing-zero-trust-with-hashicorp-boundary"
+    },
+    {
+      "name": "improve-retention",
+      "description": "Diagnose and fix retention problems using behavior design (B=MAP). Use when the user mentions \"users drop off\", \"activation rate\", \"onboarding friction\", \"retention metrics\", \"why users dont comple...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/improve-retention"
+    },
+    {
+      "name": "improve-retention",
+      "description": "Diagnose and fix retention problems using behavior design (B=MAP). Use",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "improve-retention"
+    },
+    {
+      "name": "incident-commander",
+      "description": ">",
+      "category": "other",
+      "tags": [
+        "devops",
+        "sre",
+        "monitoring",
+        "incident-response",
+        "self-healing"
+      ],
+      "version": "1.0",
+      "path": "incident-commander"
+    },
+    {
+      "name": "inference-sh-cli",
+      "description": "Run 150+ AI apps via inference.sh CLI (infsh) \u2014 image generation, video creation, LLMs, search, 3D, social automation. Uses the terminal tool. Triggers: inference.sh, infsh, ai apps, flux, veo, ima...",
+      "category": "inference-sh",
+      "tags": [
+        "AI",
+        "image-generation",
+        "video",
+        "LLM",
+        "search",
+        "inference",
+        "FLUX",
+        "Veo",
+        "Claude"
+      ],
+      "version": "1.0.0",
+      "path": "inference-sh/cli"
+    },
+    {
+      "name": "influence-psychology",
+      "description": "Apply the six principles of ethical persuasion (reciprocity, commitment,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "influence-psychology"
+    },
+    {
+      "name": "influence-psychology",
+      "description": "Apply the six principles of ethical persuasion (reciprocity, commitment, social proof, authority, liking, scarcity) to product design, copy, and sales. Use when the user mentions \"social proof\", \"p...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/influence-psychology"
+    },
+    {
+      "name": "inspired-product",
+      "description": "Build empowered product teams using discovery and delivery dual-track.",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "inspired-product"
+    },
+    {
+      "name": "inspired-product",
+      "description": "Build empowered product teams using discovery and delivery dual-track. Use when the user mentions \"product discovery\", \"empowered teams\", \"feature factory\", \"product roadmap\", \"opportunity assessme...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/inspired-product"
+    },
+    {
+      "name": "instructor",
+      "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle...",
+      "category": "mlops",
+      "tags": [
+        "Prompt Engineering",
+        "Instructor",
+        "Structured Output",
+        "Pydantic",
+        "Data Extraction",
+        "JSON Parsing",
+        "Type Safety",
+        "Validation",
+        "Streaming",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/inference/instructor"
+    },
+    {
+      "name": "internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal ...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "internal-comms"
+    },
+    {
+      "name": "ios-hig-design",
+      "description": "Design native iOS interfaces following Apple Human Interface Guidelines.",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "ios-hig-design"
+    },
+    {
+      "name": "ios-hig-design",
+      "description": "Design native iOS interfaces following Apple Human Interface Guidelines. Use when the user mentions \"iPhone app\", \"iPad layout\", \"SwiftUI\", \"UIKit\", \"Dynamic Island\", \"safe areas\", \"HIG compliance\"...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/ios-hig-design"
+    },
+    {
+      "name": "itenas-thesis-format",
+      "description": "ITENAS Bandung thesis/skripsi format and structure guide \u2014 based on Pedoman Teknis Penulisan Skripsi & Tesis ITENAS 2024 (SK Rector 040/A.37/SK-Rektor/Itenas/IV/2024, effective 20 Maret 2024). Use ...",
+      "category": "thesis",
+      "tags": [],
+      "version": "",
+      "path": "thesis/itenas-thesis-format"
+    },
+    {
+      "name": "jira-integration",
+      "description": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "jira-integration"
+    },
+    {
+      "name": "jobs-to-be-done",
+      "description": "Discover what customers truly need by analyzing the \"job\" they hire your product to do. Use when the user mentions \"customer discovery\", \"why customers churn\", \"what job does this solve\", \"competin...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/jobs-to-be-done"
+    },
+    {
+      "name": "jobs-to-be-done",
+      "description": "Discover what customers truly need by analyzing the \"job\" they hire your",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "jobs-to-be-done"
+    },
+    {
+      "name": "json-formatting",
+      "description": "JSON manipulation, formatting, validation, and query. Includes jq usage, Python json module, and common API response parsing.",
+      "category": "developer-tools",
+      "tags": [],
+      "version": "",
+      "path": "json-formatting"
+    },
+    {
+      "name": "jupyter-live-kernel",
+      "description": ">",
+      "category": "data-science",
+      "tags": [
+        "jupyter",
+        "notebook",
+        "repl",
+        "data-science",
+        "exploration",
+        "iterative"
+      ],
+      "version": "1.0.0",
+      "path": "data-science/jupyter-live-kernel"
+    },
+    {
+      "name": "ko4lax-dev-deploy",
+      "description": "Deploy updates to ko4lax.dev (Onyx landing page).",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/ko4lax-dev-deploy"
+    },
+    {
+      "name": "lambda-labs-gpu-cloud",
+      "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node cl...",
+      "category": "mlops",
+      "tags": [
+        "Infrastructure",
+        "GPU Cloud",
+        "Training",
+        "Inference",
+        "Lambda Labs"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/cloud/lambda-labs"
+    },
+    {
+      "name": "laravel-plugin-discovery",
+      "description": "Discover and evaluate Laravel packages via LaraPlugins.io MCP. Use when the user wants to find plugins, check package health, or assess Laravel/PHP compatibility.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "laravel-plugin-discovery"
+    },
+    {
+      "name": "lead-intelligence",
+      "description": "AI-native lead intelligence and outreach pipeline. Replaces Apollo, Clay, and ZoomInfo with agent-powered signal scoring, mutual ranking, warm path discovery, source-derived voice modeling, and cha...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "lead-intelligence"
+    },
+    {
+      "name": "lean-startup",
+      "description": "Design MVPs, validated learning experiments, and pivot-or-persevere decisions using Build-Measure-Learn. Use when the user mentions \"MVP scope\", \"validated learning\", \"pivot or persevere\", \"vanity ...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/lean-startup"
+    },
+    {
+      "name": "lean-startup",
+      "description": "Design MVPs, validated learning experiments, and pivot-or-persevere decisions",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "lean-startup"
+    },
+    {
+      "name": "lean-ux",
+      "description": "Apply lean thinking to UX: hypothesis-driven design, collaborative sketching, and rapid experiments instead of heavy deliverables. Use when the user mentions \"Lean UX\", \"design hypothesis\", \"UX exp...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/lean-ux"
+    },
+    {
+      "name": "lean-ux",
+      "description": "Apply lean thinking to UX: hypothesis-driven design, collaborative sketching,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "lean-ux"
+    },
+    {
+      "name": "lightpanda-setup",
+      "description": "Set up and run Lightpanda headless browser on a VPS",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/lightpanda-setup"
+    },
+    {
+      "name": "linear",
+      "description": "Query and manage Linear issues, projects, and team workflows.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/linear"
+    },
+    {
+      "name": "llama-cpp",
+      "description": "Runs LLM inference on CPU, Apple Silicon, and consumer GPUs without NVIDIA hardware. Use for edge deployment, M1/M2/M3 Macs, AMD/Intel GPUs, or when CUDA is unavailable. Supports GGUF quantization ...",
+      "category": "mlops",
+      "tags": [
+        "Inference Serving",
+        "Llama.cpp",
+        "CPU Inference",
+        "Apple Silicon",
+        "Edge Deployment",
+        "GGUF",
+        "Quantization",
+        "Non-NVIDIA",
+        "AMD GPUs",
+        "Intel GPUs",
+        "Embedded"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/inference/llama-cpp"
+    },
+    {
+      "name": "llava",
+      "description": "Large Language and Vision Assistant. Enables visual instruction tuning and image-based conversations. Combines CLIP vision encoder with Vicuna/LLaMA language models. Supports multi-turn image chat,...",
+      "category": "mlops",
+      "tags": [
+        "LLaVA",
+        "Vision-Language",
+        "Multimodal",
+        "Visual Question Answering",
+        "Image Chat",
+        "CLIP",
+        "Vicuna",
+        "Conversational AI",
+        "Instruction Tuning",
+        "VQA"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/models/llava"
+    },
+    {
+      "name": "llm-wiki",
+      "description": "Path to the LLM Wiki knowledge base directory",
+      "category": "research",
+      "tags": [
+        "wiki",
+        "knowledge-base",
+        "research",
+        "notes",
+        "markdown",
+        "rag-alternative"
+      ],
+      "version": "2.0.0",
+      "path": "research/llm-wiki"
+    },
+    {
+      "name": "made-to-stick",
+      "description": "Craft messages that are understood, remembered, and drive action using",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "made-to-stick"
+    },
+    {
+      "name": "made-to-stick",
+      "description": "Craft messages that are understood, remembered, and drive action using the SUCCESs checklist (Simple, Unexpected, Concrete, Credible, Emotional, Stories). Use when the user mentions \"make it memora...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/made-to-stick"
+    },
+    {
+      "name": "managing-cloud-identity-with-okta",
+      "description": "This skill covers implementing Okta as a centralized identity provider",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "managing-cloud-identity-with-okta"
+    },
+    {
+      "name": "managing-intelligence-lifecycle",
+      "description": "Manages the end-to-end cyber threat intelligence lifecycle from planning",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "managing-intelligence-lifecycle"
+    },
+    {
+      "name": "manim-video",
+      "description": "Production pipeline for mathematical and technical animations using Manim Community Edition. Creates 3Blue1Brown-style explainer videos, algorithm visualizations, equation derivations, architecture...",
+      "category": "creative",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "creative/manim-video"
+    },
+    {
+      "name": "manim-video",
+      "description": "Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand off to the wider ECC video stack if needed. Use when the user wants a clean anim...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "manim-video"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate exte...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "mcp-builder"
+    },
+    {
+      "name": "mcporter",
+      "description": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.",
+      "category": "mcp",
+      "tags": [
+        "MCP",
+        "Tools",
+        "API",
+        "Integrations",
+        "Interop"
+      ],
+      "version": "1.0.0",
+      "path": "mcp/mcporter"
+    },
+    {
+      "name": "memory-multi-provider",
+      "description": "Enable multiple memory providers running alongside each other in Hermes MemoryManager. Use when you need Honcho + Holographic + Hindsight (or any combination) to coexist. Covers config, tool namesp...",
+      "category": "other",
+      "tags": [
+        "memory",
+        "multi-provider",
+        "architecture",
+        "memorymanager"
+      ],
+      "version": "1.0.0",
+      "path": "memory-multi-provider"
+    },
+    {
+      "name": "memory-stack-architecture",
+      "description": "Memory system architecture reference for Onyx/Hermes. Documents all active memory systems, their roles, separation of concerns, and integration patterns. Use when reviewing, modifying, or debugging...",
+      "category": "memory",
+      "tags": [
+        "memory",
+        "architecture",
+        "honcho",
+        "holographic",
+        "mempalace",
+        "hindsight",
+        "dojo",
+        "brain-repo"
+      ],
+      "version": "3.0.0",
+      "path": "memory/memory-stack-architecture"
+    },
+    {
+      "name": "memory-stack-sync",
+      "description": "Audit and sync Onyx's 7-tier memory architecture. Bridges between Honcho, KG, fact_store, MemPalace, Hindsight, Dojo. Fixes disconnected data flow links.",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/memory-stack-sync"
+    },
+    {
+      "name": "memory-systems",
+      "description": ">",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "memory-systems"
+    },
+    {
+      "name": "memory-systems",
+      "description": ">",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/memory-systems"
+    },
+    {
+      "name": "mempalace",
+      "description": "Verbatim conversation recall via MemPalace (ChromaDB). Use when: (1) Koala asks \"what did we say about X?\", (2) you need exact past conversation text, not extracted facts, (3) searching for specifi...",
+      "category": "memory",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "memory/mempalace"
+    },
+    {
+      "name": "mempalace-integration",
+      "description": "Integrate MemPalace as a verbatim conversation recall layer alongside the existing Honcho + Holographic memory stack. Use when: (1) setting up MemPalace for the first time, (2) querying MemPalace p...",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "mempalace-integration"
+    },
+    {
+      "name": "microinteractions",
+      "description": "Design the small details -- triggers, rules, feedback, loops and modes -- that separate good products from great ones. Use when the user mentions \"microinteraction\", \"button feedback\", \"loading sta...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/microinteractions"
+    },
+    {
+      "name": "minecraft-modpack-server",
+      "description": "Set up a modded Minecraft server from a CurseForge/Modrinth server pack zip. Covers NeoForge/Forge install, Java version, JVM tuning, firewall, LAN config, backups, and launch scripts.",
+      "category": "gaming",
+      "tags": [
+        "minecraft",
+        "gaming",
+        "server",
+        "neoforge",
+        "forge",
+        "modpack"
+      ],
+      "version": "",
+      "path": "gaming/minecraft-modpack-server"
+    },
+    {
+      "name": "minimax-image-gen",
+      "description": "Call MiniMax image-01 image generation API",
+      "category": "mlops/inference",
+      "tags": [],
+      "version": "",
+      "path": "minimax-image-gen"
+    },
+    {
+      "name": "ml-paper-writing",
+      "description": "Write publication-ready ML/AI papers for NeurIPS, ICML, ICLR, ACL, AAAI, COLM. Use when drafting papers from research repos, structuring arguments, verifying citations, or preparing camera-ready su...",
+      "category": "research",
+      "tags": [
+        "Academic Writing",
+        "NeurIPS",
+        "ICML",
+        "ICLR",
+        "ACL",
+        "AAAI",
+        "COLM",
+        "LaTeX",
+        "Paper Writing",
+        "Citations",
+        "Research"
+      ],
+      "version": "1.0.0",
+      "path": "research/ml-paper-writing"
+    },
+    {
+      "name": "modal-serverless-gpu",
+      "description": "Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic s...",
+      "category": "mlops",
+      "tags": [
+        "Infrastructure",
+        "Serverless",
+        "GPU",
+        "Cloud",
+        "Deployment",
+        "Modal"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/cloud/modal"
+    },
+    {
+      "name": "model-usage",
+      "description": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cos...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/model-usage"
+    },
+    {
+      "name": "mom-test",
+      "description": "Talk to customers without leading them using Mom Test rules: discuss",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "mom-test"
+    },
+    {
+      "name": "mom-test",
+      "description": "Talk to customers without leading them using Mom Test rules: discuss their life not your idea, ask about specifics in the past, and talk less. Use when the user mentions \"customer interviews\", \"val...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/mom-test"
+    },
+    {
+      "name": "monday",
+      "description": "|",
+      "category": "community",
+      "tags": [],
+      "version": "1.0",
+      "path": "community/monday"
+    },
+    {
+      "name": "monitor-false-positive-fix",
+      "description": "Fix false-positive error detection in hermes monitor.py caused by regex matching \"error\" inside skill content",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/monitor-false-positive-fix"
+    },
+    {
+      "name": "monitoring-darkweb-sources",
+      "description": "Monitors dark web forums, marketplaces, paste sites, and ransomware",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "monitoring-darkweb-sources"
+    },
+    {
+      "name": "multi-agent-patterns",
+      "description": "This skill should be used when the user asks to \"design multi-agent system\", \"implement supervisor pattern\", \"create swarm architecture\", \"coordinate multiple agents\", or mentions multi-agent patte...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "multi-agent-patterns"
+    },
+    {
+      "name": "multi-agent-patterns",
+      "description": "This skill should be used when the user asks to \"design multi-agent system\", \"implement supervisor pattern\", \"create swarm architecture\", \"coordinate multiple agents\", or mentions multi-agent patte...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/multi-agent-patterns"
+    },
+    {
+      "name": "multi-perspective-analysis",
+      "description": "Run adversarial multi-perspective analysis on complex questions using the council tool. Five personas debate from distinct intellectual traditions.",
+      "category": "council",
+      "tags": [
+        "Council",
+        "Analysis",
+        "Reasoning",
+        "Critical-Thinking",
+        "Evaluation"
+      ],
+      "version": "1.0.0",
+      "path": "council/multi-perspective-analysis"
+    },
+    {
+      "name": "multi-search-engine",
+      "description": "Multi search engine integration with 17 engines (8 CN + 9 Global). Supports advanced search operators, time filters, site search, privacy engines, and WolframAlpha knowledge queries. No API keys re...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/multi-search-engine"
+    },
+    {
+      "name": "nano-pdf",
+      "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/nano-pdf"
+    },
+    {
+      "name": "native-mcp",
+      "description": "Built-in MCP (Model Context Protocol) client that connects to external MCP servers, discovers their tools, and registers them as native Hermes Agent tools. Supports stdio and HTTP transports with a...",
+      "category": "mcp",
+      "tags": [
+        "MCP",
+        "Tools",
+        "Integrations"
+      ],
+      "version": "1.0.0",
+      "path": "mcp/native-mcp"
+    },
+    {
+      "name": "negotiation",
+      "description": "Prepare and execute negotiations using tactical empathy, calibrated questions,",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "negotiation"
+    },
+    {
+      "name": "negotiation",
+      "description": "Prepare and execute negotiations using tactical empathy, calibrated questions, and the Ackerman method. Use when the user mentions \"salary negotiation\", \"contract terms\", \"handling objections\", \"mi...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/negotiation"
+    },
+    {
+      "name": "nemo-curator",
+      "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16\u00d7 faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction...",
+      "category": "mlops",
+      "tags": [
+        "Data Processing",
+        "NeMo Curator",
+        "Data Curation",
+        "GPU Acceleration",
+        "Deduplication",
+        "Quality Filtering",
+        "NVIDIA",
+        "RAPIDS",
+        "PII Redaction",
+        "Multimodal",
+        "LLM Training Data"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/evaluation/nemo-curator"
+    },
+    {
+      "name": "nestjs-patterns",
+      "description": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "nestjs-patterns"
+    },
+    {
+      "name": "npm-vuln-fix",
+      "description": "Fix npm vulnerabilities in Node.js projects \u2014 covers standard audit fix, targeted package updates, and npm overrides for deep transitive dependencies that `npm audit fix` can't reach.",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/npm-vuln-fix"
+    },
+    {
+      "name": "obliteratus",
+      "description": "Remove refusal behaviors from open-weight LLMs using OBLITERATUS \u2014 mechanistic interpretability techniques (diff-in-means, SVD, whitened SVD, LEACE, SAE decomposition, etc.) to excise guardrails wh...",
+      "category": "mlops",
+      "tags": [
+        "Abliteration",
+        "Uncensoring",
+        "Refusal-Removal",
+        "LLM",
+        "Weight-Projection",
+        "SVD",
+        "Mechanistic-Interpretability",
+        "HuggingFace",
+        "Model-Surgery"
+      ],
+      "version": "2.0.0",
+      "path": "mlops/inference/obliteratus"
+    },
+    {
+      "name": "obsidian",
+      "description": "Read, search, and create notes in the Obsidian vault.",
+      "category": "note-taking",
+      "tags": [],
+      "version": "",
+      "path": "note-taking/obsidian"
+    },
+    {
+      "name": "obsidian",
+      "description": ">",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/obsidian-direct"
+    },
+    {
+      "name": "obviously-awesome",
+      "description": "Define product positioning by mapping competitive alternatives, unique attributes, and best-fit customers to the right market category. Use when the user mentions \"positioning\", \"competitive altern...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/obviously-awesome"
+    },
+    {
+      "name": "obviously-awesome",
+      "description": "Define product positioning by mapping competitive alternatives, unique",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "obviously-awesome"
+    },
+    {
+      "name": "one-page-marketing",
+      "description": "Build a complete marketing plan covering the full customer journey from",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "one-page-marketing"
+    },
+    {
+      "name": "one-page-marketing",
+      "description": "Build a complete marketing plan covering the full customer journey from stranger to raving fan. Use when the user mentions \"marketing plan\", \"target market\", \"USP\", \"lead nurture\", \"customer lifeti...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/one-page-marketing"
+    },
+    {
+      "name": "onyx-backup-sync",
+      "description": "Sync ~/.hermes files to Dreamvalian/onyx-backup GitHub repo via rsync + git",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/onyx-backup-sync"
+    },
+    {
+      "name": "onyx-web-deploy",
+      "description": "Build and deploy the Onyx dashboard Next.js app (ko4lax.dev / dashboard.ko4lax.dev)",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/onyx-web-deploy"
+    },
+    {
+      "name": "openclaw-persona-forge",
+      "description": "|-",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "openclaw-persona-forge"
+    },
+    {
+      "name": "opencode",
+      "description": "Delegate coding tasks to OpenCode CLI agent for feature implementation, refactoring, PR review, and long-running autonomous sessions. Requires the opencode CLI installed and authenticated.",
+      "category": "autonomous-ai-agents",
+      "tags": [
+        "Coding-Agent",
+        "OpenCode",
+        "Autonomous",
+        "Refactoring",
+        "Code-Review"
+      ],
+      "version": "1.2.0",
+      "path": "autonomous-ai-agents/opencode"
+    },
+    {
+      "name": "openhue",
+      "description": "Control Philips Hue lights, rooms, and scenes via the OpenHue CLI. Turn lights on/off, adjust brightness, color, color temperature, and activate scenes.",
+      "category": "smart-home",
+      "tags": [
+        "Smart-Home",
+        "Hue",
+        "Lights",
+        "IoT",
+        "Automation"
+      ],
+      "version": "1.0.0",
+      "path": "smart-home/openhue"
+    },
+    {
+      "name": "opensource-pipeline",
+      "description": "Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this pu...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "opensource-pipeline"
+    },
+    {
+      "name": "optimizing-attention-flash",
+      "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory ...",
+      "category": "mlops",
+      "tags": [
+        "Optimization",
+        "Flash Attention",
+        "Attention Optimization",
+        "Memory Efficiency",
+        "Speed Optimization",
+        "Long Context",
+        "PyTorch",
+        "SDPA",
+        "H100",
+        "FP8",
+        "Transformers"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/flash-attention"
+    },
+    {
+      "name": "outlines",
+      "description": "Guarantee valid JSON/XML/code structure during generation, use Pydantic models for type-safe outputs, support local models (Transformers, vLLM), and maximize inference speed with Outlines - dottxt....",
+      "category": "mlops",
+      "tags": [
+        "Prompt Engineering",
+        "Outlines",
+        "Structured Generation",
+        "JSON Schema",
+        "Pydantic",
+        "Local Models",
+        "Grammar-Based Generation",
+        "vLLM",
+        "Transformers",
+        "Type Safety"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/inference/outlines"
+    },
+    {
+      "name": "p5js",
+      "description": "Production pipeline for interactive and generative visual art using p5.js. Creates browser-based sketches, generative art, data visualizations, interactive experiences, 3D scenes, audio-reactive vi...",
+      "category": "creative",
+      "tags": [
+        "creative-coding",
+        "generative-art",
+        "p5js",
+        "canvas",
+        "interactive",
+        "visualization",
+        "webgl",
+        "shaders",
+        "animation"
+      ],
+      "version": "1.0.0",
+      "path": "creative/p5js"
+    },
+    {
+      "name": "parallel-cli",
+      "description": "Optional vendor skill for Parallel CLI \u2014 agent-native web search, extraction, deep research, enrichment, FindAll, and monitoring. Prefer JSON output and non-interactive flows.",
+      "category": "research",
+      "tags": [
+        "Research",
+        "Web",
+        "Search",
+        "Deep-Research",
+        "Enrichment",
+        "CLI"
+      ],
+      "version": "1.1.0",
+      "path": "research/parallel-cli"
+    },
+    {
+      "name": "pdf",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, r...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "pdf"
+    },
+    {
+      "name": "peft-fine-tuning",
+      "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minima...",
+      "category": "mlops",
+      "tags": [
+        "Fine-Tuning",
+        "PEFT",
+        "LoRA",
+        "QLoRA",
+        "Parameter-Efficient",
+        "Adapters",
+        "Low-Rank",
+        "Memory Optimization",
+        "Multi-Adapter"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/peft"
+    },
+    {
+      "name": "performing-access-recertification-with-saviynt",
+      "description": "Configure and execute access recertification campaigns in Saviynt Enterprise",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-access-recertification-with-saviynt"
+    },
+    {
+      "name": "performing-access-review-and-certification",
+      "description": "Conduct systematic access reviews and certifications to ensure users",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-access-review-and-certification"
+    },
+    {
+      "name": "performing-android-app-static-analysis-with-mobsf",
+      "description": "Performs automated static analysis of Android applications using Mobile",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "performing-android-app-static-analysis-with-mobsf"
+    },
+    {
+      "name": "performing-api-fuzzing-with-restler",
+      "description": "Uses Microsoft RESTler to perform stateful REST API fuzzing by automatically",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "performing-api-fuzzing-with-restler"
+    },
+    {
+      "name": "performing-api-inventory-and-discovery",
+      "description": "Performs API inventory and discovery to identify all API endpoints in",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "performing-api-inventory-and-discovery"
+    },
+    {
+      "name": "performing-api-rate-limiting-bypass",
+      "description": "Tests API rate limiting implementations for bypass vulnerabilities by",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "performing-api-rate-limiting-bypass"
+    },
+    {
+      "name": "performing-asset-criticality-scoring-for-vulns",
+      "description": "Develop and apply a multi-factor asset criticality scoring model to weight",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-asset-criticality-scoring-for-vulns"
+    },
+    {
+      "name": "performing-aws-account-enumeration-with-scout-suite",
+      "description": "Perform comprehensive security posture assessment of AWS accounts using",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-aws-account-enumeration-with-scout-suite"
+    },
+    {
+      "name": "performing-bandwidth-throttling-attack-simulation",
+      "description": "Simulates bandwidth throttling and network degradation attacks using",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-bandwidth-throttling-attack-simulation"
+    },
+    {
+      "name": "performing-brand-monitoring-for-impersonation",
+      "description": "Monitor for brand impersonation attacks across domains, social media,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-brand-monitoring-for-impersonation"
+    },
+    {
+      "name": "performing-clickjacking-attack-test",
+      "description": "Testing web applications for clickjacking vulnerabilities by assessing",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-clickjacking-attack-test"
+    },
+    {
+      "name": "performing-cloud-asset-inventory-with-cartography",
+      "description": "Perform comprehensive cloud asset inventory and relationship mapping",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-cloud-asset-inventory-with-cartography"
+    },
+    {
+      "name": "performing-container-security-scanning-with-trivy",
+      "description": "Scan container images, filesystems, and Kubernetes manifests for vulnerabilities,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-container-security-scanning-with-trivy"
+    },
+    {
+      "name": "performing-credential-access-with-lazagne",
+      "description": "Extract stored credentials from compromised endpoints using the LaZagne",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-credential-access-with-lazagne"
+    },
+    {
+      "name": "performing-cryptographic-audit-of-application",
+      "description": "A cryptographic audit systematically reviews an application's use of",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-cryptographic-audit-of-application"
+    },
+    {
+      "name": "performing-cve-prioritization-with-kev-catalog",
+      "description": "Leverage the CISA Known Exploited Vulnerabilities catalog alongside EPSS",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-cve-prioritization-with-kev-catalog"
+    },
+    {
+      "name": "performing-deception-technology-deployment",
+      "description": "Deploys deception technology including honeypots, honeytokens, and decoy",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-deception-technology-deployment"
+    },
+    {
+      "name": "performing-dns-enumeration-and-zone-transfer",
+      "description": "Enumerates DNS records, attempts zone transfers, brute-forces subdomains,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-dns-enumeration-and-zone-transfer"
+    },
+    {
+      "name": "performing-dynamic-analysis-of-android-app",
+      "description": "Performs runtime dynamic analysis of Android applications using Frida,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "performing-dynamic-analysis-of-android-app"
+    },
+    {
+      "name": "performing-dynamic-analysis-with-any-run",
+      "description": "Performs interactive dynamic malware analysis using the ANY.RUN cloud",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "performing-dynamic-analysis-with-any-run"
+    },
+    {
+      "name": "performing-entitlement-review-with-sailpoint-iiq",
+      "description": "Performs entitlement review and access certification campaigns using",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-entitlement-review-with-sailpoint-iiq"
+    },
+    {
+      "name": "performing-file-carving-with-foremost",
+      "description": "Recover files from disk images and unallocated space using Foremost's",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-file-carving-with-foremost"
+    },
+    {
+      "name": "performing-fuzzing-with-aflplusplus",
+      "description": "Perform coverage-guided fuzzing of compiled binaries using AFL++ (American",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-fuzzing-with-aflplusplus"
+    },
+    {
+      "name": "performing-graphql-depth-limit-attack",
+      "description": "Execute and test GraphQL depth limit attacks using deeply nested recursive",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-graphql-depth-limit-attack"
+    },
+    {
+      "name": "performing-hash-cracking-with-hashcat",
+      "description": "Hash cracking is an essential skill for penetration testers and security",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-hash-cracking-with-hashcat"
+    },
+    {
+      "name": "performing-http-parameter-pollution-attack",
+      "description": "Execute HTTP Parameter Pollution attacks to bypass input validation,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-http-parameter-pollution-attack"
+    },
+    {
+      "name": "performing-indicator-lifecycle-management",
+      "description": "Indicator lifecycle management tracks IOCs from initial discovery through",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-indicator-lifecycle-management"
+    },
+    {
+      "name": "performing-initial-access-with-evilginx3",
+      "description": "Perform authorized initial access using EvilGinx3 adversary-in-the-middle",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-initial-access-with-evilginx3"
+    },
+    {
+      "name": "performing-ioc-enrichment-automation",
+      "description": "Automates Indicator of Compromise (IOC) enrichment by orchestrating",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-ioc-enrichment-automation"
+    },
+    {
+      "name": "performing-ip-reputation-analysis-with-shodan",
+      "description": "Analyze IP address reputation using the Shodan API to identify open ports,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-ip-reputation-analysis-with-shodan"
+    },
+    {
+      "name": "performing-lateral-movement-with-wmiexec",
+      "description": "Perform lateral movement across Windows networks using WMI-based remote",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-lateral-movement-with-wmiexec"
+    },
+    {
+      "name": "performing-linux-log-forensics-investigation",
+      "description": "Perform forensic investigation of Linux system logs including syslog,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-linux-log-forensics-investigation"
+    },
+    {
+      "name": "performing-nist-csf-maturity-assessment",
+      "description": "The NIST Cybersecurity Framework (CSF) 2.0, released in February 2024,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-nist-csf-maturity-assessment"
+    },
+    {
+      "name": "performing-open-source-intelligence-gathering",
+      "description": "Open Source Intelligence (OSINT) gathering is the first active phase",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-open-source-intelligence-gathering"
+    },
+    {
+      "name": "performing-paste-site-monitoring-for-credentials",
+      "description": "Monitor paste sites like Pastebin and GitHub Gists for leaked credentials,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-paste-site-monitoring-for-credentials"
+    },
+    {
+      "name": "performing-post-quantum-cryptography-migration",
+      "description": "Assesses organizational readiness for post-quantum cryptography migration",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-post-quantum-cryptography-migration"
+    },
+    {
+      "name": "performing-privacy-impact-assessment",
+      "description": "Automates the Privacy Impact Assessment (PIA) workflow including data",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-privacy-impact-assessment"
+    },
+    {
+      "name": "performing-privilege-escalation-on-linux",
+      "description": "Linux privilege escalation involves elevating from a low-privilege user",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-privilege-escalation-on-linux"
+    },
+    {
+      "name": "performing-privileged-account-access-review",
+      "description": "Conduct systematic reviews of privileged accounts to validate access",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-privileged-account-access-review"
+    },
+    {
+      "name": "performing-privileged-account-discovery",
+      "description": "Discover and inventory all privileged accounts across enterprise infrastructure",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-privileged-account-discovery"
+    },
+    {
+      "name": "performing-purple-team-atomic-testing",
+      "description": "Executes Atomic Red Team tests mapped to MITRE ATT&CK techniques, performs",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "performing-purple-team-atomic-testing"
+    },
+    {
+      "name": "performing-purple-team-exercise",
+      "description": "Performs purple team exercises by coordinating red team adversary emulation",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-purple-team-exercise"
+    },
+    {
+      "name": "performing-service-account-audit",
+      "description": "Audit service accounts across enterprise infrastructure to identify orphaned,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-service-account-audit"
+    },
+    {
+      "name": "performing-service-account-credential-rotation",
+      "description": "Automate credential rotation for service accounts across Active Directory,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-service-account-credential-rotation"
+    },
+    {
+      "name": "performing-subdomain-enumeration-with-subfinder",
+      "description": "Enumerate subdomains of target domains using ProjectDiscovery's Subfinder",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-subdomain-enumeration-with-subfinder"
+    },
+    {
+      "name": "performing-vlan-hopping-attack",
+      "description": "Simulates VLAN hopping attacks using switch spoofing and double tagging",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-vlan-hopping-attack"
+    },
+    {
+      "name": "performing-web-cache-deception-attack",
+      "description": "Execute web cache deception attacks by exploiting path normalization",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-web-cache-deception-attack"
+    },
+    {
+      "name": "performing-web-cache-poisoning-attack",
+      "description": "Exploiting web cache mechanisms to serve malicious content to other users",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "performing-web-cache-poisoning-attack"
+    },
+    {
+      "name": "phaser-topdown-adventure-jam",
+      "description": "Phaser 3 top-down adventure game for GameDevJS Jam 2026 \u2014 Zelda-lite with exploration and semi-RPG elements",
+      "category": "gaming",
+      "tags": [],
+      "version": "",
+      "path": "gaming/phaser-topdown-adventure-jam"
+    },
+    {
+      "name": "pinecone",
+      "description": "Managed vector database for production AI applications. Fully managed, auto-scaling, with hybrid search (dense + sparse), metadata filtering, and namespaces. Low latency (<100ms p95). Use for produ...",
+      "category": "mlops",
+      "tags": [
+        "RAG",
+        "Pinecone",
+        "Vector Database",
+        "Managed Service",
+        "Serverless",
+        "Hybrid Search",
+        "Production",
+        "Auto-Scaling",
+        "Low Latency",
+        "Recommendations"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/vector-databases/pinecone"
+    },
+    {
+      "name": "plan",
+      "description": "Plan mode for Hermes \u2014 inspect context, write a markdown plan into the active workspace's `.hermes/plans/` directory, and do not execute the work.",
+      "category": "software-development",
+      "tags": [
+        "planning",
+        "plan-mode",
+        "implementation",
+        "workflow"
+      ],
+      "version": "1.0.0",
+      "path": "software-development/plan"
+    },
+    {
+      "name": "playwright-mcp",
+      "description": "Browser automation via Playwright MCP server. Navigate websites, click elements, fill forms, extract data, take screenshots, and perform full browser automation workflows.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/playwright-mcp"
+    },
+    {
+      "name": "playwright-scraper-skill",
+      "description": "Playwright-based web scraping skill with anti-bot protection. Successfully tested on complex sites like Discuss.com.hk.",
+      "category": "community",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "community/playwright-scraper-skill"
+    },
+    {
+      "name": "pokemon-player",
+      "description": "Play Pokemon games autonomously via headless emulation. Starts a game server, reads structured game state from RAM, makes strategic decisions, and sends button inputs \u2014 all from the terminal.",
+      "category": "gaming",
+      "tags": [
+        "gaming",
+        "pokemon",
+        "emulator",
+        "pyboy",
+        "gameplay",
+        "gameboy"
+      ],
+      "version": "",
+      "path": "gaming/pokemon-player"
+    },
+    {
+      "name": "polymarket",
+      "description": "Query Polymarket prediction market data \u2014 search markets, get prices, orderbooks, and price history. Read-only via public REST APIs, no API key needed.",
+      "category": "research",
+      "tags": [
+        "polymarket",
+        "prediction-markets",
+        "market-data",
+        "trading"
+      ],
+      "version": "1.0.0",
+      "path": "research/polymarket"
+    },
+    {
+      "name": "popular-web-designs",
+      "description": ">",
+      "category": "creative",
+      "tags": [
+        "design",
+        "css",
+        "html",
+        "ui",
+        "web-development",
+        "design-systems",
+        "templates"
+      ],
+      "version": "1.0.0",
+      "path": "creative/popular-web-designs"
+    },
+    {
+      "name": "post-task-retrospective",
+      "description": "Run a structured self-review after completing a complex task. Triggers automatically after any task with 3+ tool calls or any error/fix cycle. Closes the learning loop by writing fabric entries, up...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "post-task-retrospective"
+    },
+    {
+      "name": "pptx",
+      "description": "Use this skill any time a .pptx file is involved in any way \u2014 as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text fro...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "pptx"
+    },
+    {
+      "name": "pragmatic-programmer",
+      "description": "Apply meta-principles of software craftsmanship: DRY, orthogonality, tracer bullets, and design by contract. Use when the user mentions \"best practices\", \"pragmatic approach\", \"broken windows\", \"tr...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/pragmatic-programmer"
+    },
+    {
+      "name": "pragmatic-programmer",
+      "description": "Apply meta-principles of software craftsmanship: DRY, orthogonality,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "pragmatic-programmer"
+    },
+    {
+      "name": "predictable-revenue",
+      "description": "Build a scalable outbound B2B sales process with specialized roles (SDR,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "predictable-revenue"
+    },
+    {
+      "name": "predictable-revenue",
+      "description": "Build a scalable outbound B2B sales process with specialized roles (SDR, AE, CSM). Use when the user mentions \"outbound sales\", \"Cold Calling 2.0\", \"prospecting emails\", \"sales pipeline\", \"SDR proc...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/predictable-revenue"
+    },
+    {
+      "name": "prioritizing-vulnerabilities-with-cvss-scoring",
+      "description": "The Common Vulnerability Scoring System (CVSS) is the industry standard",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "prioritizing-vulnerabilities-with-cvss-scoring"
+    },
+    {
+      "name": "prism-3way",
+      "description": "Three orthogonal analytical operations (WHERE/WHEN/WHY) + cross-operation synthesis. Each operation attacks the problem from a fundamentally different angle. The disagreements between the three ARE...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "prism-3way"
+    },
+    {
+      "name": "prism-discover",
+      "description": "Discover all possible analysis domains for an artifact. Finds obvious and non-obvious angles \u2014 architecture, security, but also marketing positioning, user psychology, regulatory implications, teac...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "prism-discover"
+    },
+    {
+      "name": "prism-full",
+      "description": "Full Prism: multi-pass structural analysis with mandatory adversarial self-correction. Designs custom analytical passes, executes them with chaining, then attacks its own findings before synthesizi...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "prism-full"
+    },
+    {
+      "name": "prism-reflect",
+      "description": "Constraint transparency: analyzes an artifact structurally, then analyzes what its own analysis concealed. Produces a conservation law AND a constraint report showing what was maximized, what was s...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "prism-reflect"
+    },
+    {
+      "name": "prism-scan",
+      "description": "Structural analysis through dynamically generated cognitive lenses. Generates the optimal analytical lens for the specific code/artifact, then executes it. Finds conservation laws, structural invar...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "prism-scan"
+    },
+    {
+      "name": "processing-stix-taxii-feeds",
+      "description": "Processes STIX 2.1 threat intelligence bundles delivered via TAXII 2.1",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "processing-stix-taxii-feeds"
+    },
+    {
+      "name": "project-development",
+      "description": "This skill should be used when the user asks to \"start an LLM project\", \"design batch pipeline\", \"evaluate task-model fit\", \"structure agent project\", or mentions pipeline architecture, agent-assis...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "project-development"
+    },
+    {
+      "name": "project-development",
+      "description": "This skill should be used when the user asks to \"start an LLM project\", \"design batch pipeline\", \"evaluate task-model fit\", \"structure agent project\", or mentions pipeline architecture, agent-assis...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/project-development"
+    },
+    {
+      "name": "prompt-master",
+      "description": "Generates optimized prompts for any AI tool. Use when writing, fixing, improving, or adapting a prompt for LLM, Cursor, Midjourney, image AI, video AI, coding agents, or any other AI tool.",
+      "category": "other",
+      "tags": [],
+      "version": "1.5.0",
+      "path": "prompt-master"
+    },
+    {
+      "name": "prompt-optimizer",
+      "description": "Improve and enrich user prompts for maximum output quality. Use when the user shares a prompt they want to refine, says their prompt isn't getting good results, wants their instructions to be clear...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "prompt-optimizer"
+    },
+    {
+      "name": "pytorch-fsdp",
+      "description": "Expert guidance for Fully Sharded Data Parallel training with PyTorch FSDP - parameter sharding, mixed precision, CPU offloading, FSDP2",
+      "category": "mlops",
+      "tags": [
+        "Distributed Training",
+        "PyTorch",
+        "FSDP",
+        "Data Parallel",
+        "Sharding",
+        "Mixed Precision",
+        "CPU Offloading",
+        "FSDP2",
+        "Large-Scale Training"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/pytorch-fsdp"
+    },
+    {
+      "name": "pytorch-lightning",
+      "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. ...",
+      "category": "mlops",
+      "tags": [
+        "PyTorch Lightning",
+        "Training Framework",
+        "Distributed Training",
+        "DDP",
+        "FSDP",
+        "DeepSpeed",
+        "High-Level API",
+        "Callbacks",
+        "Best Practices",
+        "Scalable"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/pytorch-lightning"
+    },
+    {
+      "name": "qdrant-vector-search",
+      "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scala...",
+      "category": "mlops",
+      "tags": [
+        "RAG",
+        "Vector Search",
+        "Qdrant",
+        "Semantic Search",
+        "Embeddings",
+        "Similarity Search",
+        "HNSW",
+        "Production",
+        "Distributed"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/vector-databases/qdrant"
+    },
+    {
+      "name": "recall-before-action",
+      "description": "",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/recall-before-action"
+    },
+    {
+      "name": "recovering-from-ransomware-attack",
+      "description": "Executes structured recovery from a ransomware incident following NIST",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "recovering-from-ransomware-attack"
+    },
+    {
+      "name": "refactoring-patterns",
+      "description": "Apply named refactoring transformations to improve code structure without",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "refactoring-patterns"
+    },
+    {
+      "name": "refactoring-patterns",
+      "description": "Apply named refactoring transformations to improve code structure without changing behavior. Use when the user mentions \"refactor this\", \"code smells\", \"extract method\", \"replace conditional\", \"tec...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/refactoring-patterns"
+    },
+    {
+      "name": "refactoring-ui",
+      "description": "Audit and fix visual hierarchy, spacing, color, and depth in web UIs.",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "refactoring-ui"
+    },
+    {
+      "name": "refactoring-ui",
+      "description": "Audit and fix visual hierarchy, spacing, color, and depth in web UIs. Use when the user mentions \"my UI looks off\", \"fix the design\", \"Tailwind styling\", \"color palette\", \"visual hierarchy\", \"desig...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/refactoring-ui"
+    },
+    {
+      "name": "release-it",
+      "description": "Build production-ready systems with stability patterns: circuit breakers,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.1",
+      "path": "release-it"
+    },
+    {
+      "name": "release-it",
+      "description": "Build production-ready systems with stability patterns: circuit breakers, bulkheads, timeouts, and retry logic. Use when the user mentions \"production outage\", \"circuit breaker\", \"timeout strategy\"...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/release-it"
+    },
+    {
+      "name": "remediating-s3-bucket-misconfiguration",
+      "description": "This skill provides step-by-step procedures for identifying and remediating",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "remediating-s3-bucket-misconfiguration"
+    },
+    {
+      "name": "remotion-video-creation",
+      "description": "Best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more.",
+      "category": "other",
+      "tags": [
+        "remotion",
+        "video",
+        "react",
+        "animation",
+        "composition",
+        "three.js",
+        "lottie"
+      ],
+      "version": "",
+      "path": "remotion-video-creation"
+    },
+    {
+      "name": "repo-scan",
+      "description": "Cross-stack source code asset audit \u2014 classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML reports.",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "repo-scan"
+    },
+    {
+      "name": "requesting-code-review",
+      "description": ">",
+      "category": "software-development",
+      "tags": [
+        "code-review",
+        "security",
+        "verification",
+        "quality",
+        "pre-commit",
+        "auto-fix"
+      ],
+      "version": "2.0.0",
+      "path": "software-development/requesting-code-review"
+    },
+    {
+      "name": "research-paper-writing",
+      "description": "End-to-end pipeline for writing ML/AI research papers \u2014 from experiment design through analysis, drafting, revision, and submission. Covers NeurIPS, ICML, ICLR, ACL, AAAI, COLM. Integrates automate...",
+      "category": "research",
+      "tags": [
+        "Research",
+        "Paper Writing",
+        "Experiments",
+        "ML",
+        "AI",
+        "NeurIPS",
+        "ICML",
+        "ICLR",
+        "ACL",
+        "AAAI",
+        "COLM",
+        "LaTeX",
+        "Citations",
+        "Statistical Analysis"
+      ],
+      "version": "1.1.0",
+      "path": "research/research-paper-writing"
+    },
+    {
+      "name": "scanning-docker-images-with-trivy",
+      "description": "Trivy is a comprehensive open-source vulnerability scanner by Aqua Security",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "scanning-docker-images-with-trivy"
+    },
+    {
+      "name": "scorecard-marketing",
+      "description": "Build quiz and assessment funnels that generate qualified leads at 30-50%",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "scorecard-marketing"
+    },
+    {
+      "name": "scorecard-marketing",
+      "description": "Build quiz and assessment funnels that generate qualified leads at 30-50%% conversion. Use when the user mentions \"lead magnet\", \"quiz funnel\", \"assessment tool\", \"lead generation\", \"score-based se...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/scorecard-marketing"
+    },
+    {
+      "name": "securing-api-gateway-with-aws-waf",
+      "description": "Securing API Gateway endpoints with AWS WAF by configuring managed rule",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "securing-api-gateway-with-aws-waf"
+    },
+    {
+      "name": "securing-aws-iam-permissions",
+      "description": "This skill guides practitioners through hardening AWS Identity and Access",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "securing-aws-iam-permissions"
+    },
+    {
+      "name": "securing-aws-lambda-execution-roles",
+      "description": "Securing AWS Lambda execution roles by implementing least-privilege",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "securing-aws-lambda-execution-roles"
+    },
+    {
+      "name": "securing-container-registry-images",
+      "description": "Securing container registry images by implementing vulnerability scanning",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "securing-container-registry-images"
+    },
+    {
+      "name": "segment-anything-model",
+      "description": "Foundation model for image segmentation with zero-shot transfer. Use when you need to segment any object in images using points, boxes, or masks as prompts, or automatically generate all object mas...",
+      "category": "mlops",
+      "tags": [
+        "Multimodal",
+        "Image Segmentation",
+        "Computer Vision",
+        "SAM",
+        "Zero-Shot"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/models/segment-anything"
+    },
+    {
+      "name": "self-improvement",
+      "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/self-improving-agent"
+    },
+    {
+      "name": "send-discord-from-script",
+      "description": "Send Discord messages from scripts/cron jobs when the gateway bot token is locked.",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/send-discord-from-script"
+    },
+    {
+      "name": "serving-llms-vllm",
+      "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited...",
+      "category": "mlops",
+      "tags": [
+        "vLLM",
+        "Inference Serving",
+        "PagedAttention",
+        "Continuous Batching",
+        "High Throughput",
+        "Production",
+        "OpenAI API",
+        "Quantization",
+        "Tensor Parallelism"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/inference/vllm"
+    },
+    {
+      "name": "session-end-verification",
+      "description": "",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/session-end-verification"
+    },
+    {
+      "name": "session-end-verify",
+      "description": ">",
+      "category": "agent-improvement",
+      "tags": [
+        "self-verification",
+        "session-hygiene",
+        "anti-hallucination"
+      ],
+      "version": "1.0.0",
+      "path": "session-end-verify"
+    },
+    {
+      "name": "session-logs",
+      "description": "Search and analyze your own session logs (older/parent conversations) using jq.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/session-logs"
+    },
+    {
+      "name": "simpo-training",
+      "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use ...",
+      "category": "mlops",
+      "tags": [
+        "Post-Training",
+        "SimPO",
+        "Preference Optimization",
+        "Alignment",
+        "DPO Alternative",
+        "Reference-Free",
+        "LLM Alignment",
+        "Efficient Training"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/simpo"
+    },
+    {
+      "name": "Skill Factory",
+      "description": "A meta-skill that silently watches your workflows and automatically generates reusable Hermes skills from them.",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "automation",
+        "skills",
+        "learning",
+        "productivity"
+      ],
+      "version": "1.0.0",
+      "path": "meta/skill-factory"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a sk...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "skill-creator"
+    },
+    {
+      "name": "skill-suggester",
+      "description": "Auto-suggest or auto-load relevant skills based on user query. Dynamically",
+      "category": "agent-protocol",
+      "tags": [],
+      "version": "",
+      "path": "skill-suggester"
+    },
+    {
+      "name": "skill-vetter",
+      "description": "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.",
+      "category": "community",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "community/skill-vetter"
+    },
+    {
+      "name": "skill-view",
+      "description": "Handle skill view tasks based on observed user request patterns.",
+      "category": "other",
+      "tags": [
+        "skill",
+        "view"
+      ],
+      "version": "0.1.0",
+      "path": "skill-view"
+    },
+    {
+      "name": "slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me ...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "slack-gif-creator"
+    },
+    {
+      "name": "slime-rl-training",
+      "description": "Provides guidance for LLM post-training with RL using slime, a Megatron+SGLang framework. Use when training GLM models, implementing custom data generation workflows, or needing tight Megatron-LM i...",
+      "category": "mlops",
+      "tags": [
+        "Reinforcement Learning",
+        "Megatron-LM",
+        "SGLang",
+        "GRPO",
+        "Post-Training",
+        "GLM"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/slime"
+    },
+    {
+      "name": "software-design-philosophy",
+      "description": "Manage software complexity through deep modules, information hiding,",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "software-design-philosophy"
+    },
+    {
+      "name": "software-design-philosophy",
+      "description": "Manage software complexity through deep modules, information hiding, and strategic programming. Use when the user mentions \"module design\", \"API too complex\", \"shallow class\", \"complexity budget\", ...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/software-design-philosophy"
+    },
+    {
+      "name": "songsee",
+      "description": "Generate spectrograms and audio feature visualizations (mel, chroma, MFCC, tempogram, etc.) from audio files via CLI. Useful for audio analysis, music production debugging, and visual documentation.",
+      "category": "media",
+      "tags": [
+        "Audio",
+        "Visualization",
+        "Spectrogram",
+        "Music",
+        "Analysis"
+      ],
+      "version": "1.0.0",
+      "path": "media/songsee"
+    },
+    {
+      "name": "songwriting-and-ai-music",
+      "description": ">",
+      "category": "creative",
+      "tags": [
+        "songwriting",
+        "music",
+        "suno",
+        "parody",
+        "lyrics",
+        "creative"
+      ],
+      "version": "",
+      "path": "creative/songwriting-and-ai-music"
+    },
+    {
+      "name": "sparse-autoencoder-training",
+      "description": "Provides guidance for training and analyzing Sparse Autoencoders (SAEs) using SAELens to decompose neural network activations into interpretable features. Use when discovering interpretable feature...",
+      "category": "mlops",
+      "tags": [
+        "Sparse Autoencoders",
+        "SAE",
+        "Mechanistic Interpretability",
+        "Feature Discovery",
+        "Superposition"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/evaluation/saelens"
+    },
+    {
+      "name": "stable-diffusion-image-generation",
+      "description": "State-of-the-art text-to-image generation with Stable Diffusion models via HuggingFace Diffusers. Use when generating images from text prompts, performing image-to-image translation, inpainting, or...",
+      "category": "mlops",
+      "tags": [
+        "Image Generation",
+        "Stable Diffusion",
+        "Diffusers",
+        "Text-to-Image",
+        "Multimodal",
+        "Computer Vision"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/models/stable-diffusion"
+    },
+    {
+      "name": "storybrand-messaging",
+      "description": "Clarify brand messaging using narrative structure that positions the",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "storybrand-messaging"
+    },
+    {
+      "name": "storybrand-messaging",
+      "description": "Clarify brand messaging using narrative structure that positions the customer as hero. Use when the user mentions \"brand message\", \"website copy\", \"elevator pitch\", \"one-liner\", \"messaging isnt res...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/storybrand-messaging"
+    },
+    {
+      "name": "subagent-driven-development",
+      "description": "Use when executing implementation plans with independent tasks. Dispatches fresh delegate_task per task with two-stage review (spec compliance then code quality).",
+      "category": "software-development",
+      "tags": [
+        "delegation",
+        "subagent",
+        "implementation",
+        "workflow",
+        "parallel"
+      ],
+      "version": "1.1.0",
+      "path": "software-development/subagent-driven-development"
+    },
+    {
+      "name": "summarize",
+      "description": "Summarize URLs or files with the summarize CLI (web, PDFs, images, audio, YouTube).",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/summarize"
+    },
+    {
+      "name": "system-design",
+      "description": "Design scalable distributed systems using structured approaches for load",
+      "category": "other",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "system-design"
+    },
+    {
+      "name": "system-design",
+      "description": "Design scalable distributed systems using structured approaches for load balancing, caching, database scaling, and message queues. Use when the user mentions \"system design\", \"scale this\", \"high av...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/system-design"
+    },
+    {
+      "name": "systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior. 4-phase root cause investigation \u2014 NO fixes without understanding the problem first.",
+      "category": "software-development",
+      "tags": [
+        "debugging",
+        "troubleshooting",
+        "problem-solving",
+        "root-cause",
+        "investigation"
+      ],
+      "version": "1.1.0",
+      "path": "software-development/systematic-debugging"
+    },
+    {
+      "name": "task-tracker",
+      "description": "Proactive task state management. Use on EVERY task start, progress update, completion, or failure. Tracks what was requested, what's running (background processes, SSH sessions), what's done, and w...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/agent-task-tracker"
+    },
+    {
+      "name": "tavily",
+      "description": "AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents.",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/tavily-search"
+    },
+    {
+      "name": "tensorrt-llm",
+      "description": "Optimizes LLM inference with NVIDIA TensorRT for maximum throughput and lowest latency. Use for production deployment on NVIDIA GPUs (A100/H100), when you need 10-100x faster inference than PyTorch...",
+      "category": "mlops",
+      "tags": [
+        "Inference Serving",
+        "TensorRT-LLM",
+        "NVIDIA",
+        "Inference Optimization",
+        "High Throughput",
+        "Low Latency",
+        "Production",
+        "FP8",
+        "INT4",
+        "In-Flight Batching",
+        "Multi-GPU"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/inference/tensorrt-llm"
+    },
+    {
+      "name": "test-driven-development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code. Enforces RED-GREEN-REFACTOR cycle with test-first approach.",
+      "category": "software-development",
+      "tags": [
+        "testing",
+        "tdd",
+        "development",
+        "quality",
+        "red-green-refactor"
+      ],
+      "version": "1.1.0",
+      "path": "software-development/test-driven-development"
+    },
+    {
+      "name": "test-lint-pipeline",
+      "description": "A test skill to verify the linting pipeline is working correctly.",
+      "category": "test",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "test/test-lint-pipeline"
+    },
+    {
+      "name": "testing-android-intents-for-vulnerabilities",
+      "description": "Tests Android inter-process communication (IPC) through intents for",
+      "category": "security",
+      "tags": [],
+      "version": "1.0.0",
+      "path": "testing-android-intents-for-vulnerabilities"
+    },
+    {
+      "name": "testing-cors-misconfiguration",
+      "description": "Identifying and exploiting Cross-Origin Resource Sharing misconfigurations",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "testing-cors-misconfiguration"
+    },
+    {
+      "name": "testing-for-broken-access-control",
+      "description": "Systematically testing web applications for broken access control vulnerabilities",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "testing-for-broken-access-control"
+    },
+    {
+      "name": "testing-for-business-logic-vulnerabilities",
+      "description": "Identifying flaws in application business logic that allow price manipulation,",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "testing-for-business-logic-vulnerabilities"
+    },
+    {
+      "name": "testing-for-json-web-token-vulnerabilities",
+      "description": "Test JWT implementations for critical vulnerabilities including algorithm",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "testing-for-json-web-token-vulnerabilities"
+    },
+    {
+      "name": "testing-for-open-redirect-vulnerabilities",
+      "description": "Identify and test open redirect vulnerabilities in web applications by",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "testing-for-open-redirect-vulnerabilities"
+    },
+    {
+      "name": "testing-for-sensitive-data-exposure",
+      "description": "Identifying sensitive data exposure vulnerabilities including API key",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "testing-for-sensitive-data-exposure"
+    },
+    {
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifac...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "theme-factory"
+    },
+    {
+      "name": "thesis-emotional-design",
+      "description": "Koala/Hanif thesis \u2014 Norman 3-Level Emotional Design \u2192 UX \u2192 Brand Loyalty",
+      "category": "research",
+      "tags": [
+        "thesis",
+        "emotional-design",
+        "norman",
+        "ux",
+        "brand-loyalty"
+      ],
+      "version": "",
+      "path": "research/thesis-emotional-design"
+    },
+    {
+      "name": "thesis-generator",
+      "description": "Single-script thesis DOCX generator for Koala's ITENAS thesis on Emotional Design (Norman 3-Level \u2192 UX \u2192 Brand Loyalty)",
+      "category": "thesis",
+      "tags": [],
+      "version": "",
+      "path": "thesis/thesis-generator"
+    },
+    {
+      "name": "thesis-revision-manager",
+      "description": "Manage thesis revisions using a checklist-as-diff-tracker approach. OCR incoming revision notes from images, categorize by thesis section, track dependencies between items, and generate detailed in...",
+      "category": "other",
+      "tags": [
+        "thesis",
+        "revision",
+        "checklist",
+        "docx",
+        "academic"
+      ],
+      "version": "",
+      "path": "thesis-revision-manager"
+    },
+    {
+      "name": "thesis-session-2026-04-12",
+      "description": "Thesis gap analysis session \u2014 6 papers found uncited in IS-TA/MERGED_THESIS",
+      "category": "thesis",
+      "tags": [],
+      "version": "",
+      "path": "thesis/thesis-session-2026-04-12"
+    },
+    {
+      "name": "thesis-workspace",
+      "description": "Koala's thesis workspace location and structure",
+      "category": "research",
+      "tags": [],
+      "version": "",
+      "path": "research/thesis-workspace"
+    },
+    {
+      "name": "token-budget-advisor",
+      "description": ">-",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "token-budget-advisor"
+    },
+    {
+      "name": "tool-design",
+      "description": "This skill should be used when the user asks to \"design agent tools\", \"create tool descriptions\", \"reduce tool complexity\", \"implement MCP tools\", or mentions tool consolidation, architectural redu...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "tool-design"
+    },
+    {
+      "name": "tool-design",
+      "description": "This skill should be used when the user asks to \"design agent tools\", \"create tool descriptions\", \"reduce tool complexity\", \"implement MCP tools\", or mentions tool consolidation, architectural redu...",
+      "category": "context-engineering",
+      "tags": [],
+      "version": "",
+      "path": "context-engineering/tool-design"
+    },
+    {
+      "name": "top-design",
+      "description": "Create award-winning, immersive web experiences at the level of Awwwards-featured",
+      "category": "other",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "top-design"
+    },
+    {
+      "name": "top-design",
+      "description": "Create award-winning, immersive web experiences at the level of Awwwards-featured agencies. Use when the user mentions \"premium website\", \"portfolio site\", \"scroll animations\", \"Awwwards quality\", ...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.3.0",
+      "path": "wondelai/top-design"
+    },
+    {
+      "name": "traction-eos",
+      "description": "Implement the Entrepreneurial Operating System (EOS) to align vision and execution across a company. Use when the user mentions \"EOS\", \"V/TO\", \"quarterly rocks\", \"Level 10 meetings\", \"accountabilit...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.1.0",
+      "path": "wondelai/traction-eos"
+    },
+    {
+      "name": "trajectory-pipeline",
+      "description": "Build trajectory pipeline \u2014 batch_runner on session JSONL files to produce training-ready JSONL",
+      "category": "memory",
+      "tags": [],
+      "version": "",
+      "path": "memory/trajectory-pipeline"
+    },
+    {
+      "name": "triaging-security-incident-with-ir-playbook",
+      "description": "Classify and prioritize security incidents using structured IR playbooks",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "triaging-security-incident-with-ir-playbook"
+    },
+    {
+      "name": "triaging-vulnerabilities-with-ssvc-framework",
+      "description": "Triage and prioritize vulnerabilities using CISA's Stakeholder-Specific",
+      "category": "security",
+      "tags": [],
+      "version": "1.0",
+      "path": "triaging-vulnerabilities-with-ssvc-framework"
+    },
+    {
+      "name": "ui-demo",
+      "description": "Record polished UI demo videos using Playwright. Use when the user asks to create a demo, walkthrough, screen recording, or tutorial video of a web application. Produces WebM videos with visible cu...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "ui-demo"
+    },
+    {
+      "name": "unsloth",
+      "description": "Expert guidance for fast fine-tuning with Unsloth - 2-5x faster training, 50-80% less memory, LoRA/QLoRA optimization",
+      "category": "mlops",
+      "tags": [
+        "Fine-Tuning",
+        "Unsloth",
+        "Fast Training",
+        "LoRA",
+        "QLoRA",
+        "Memory-Efficient",
+        "Optimization",
+        "Llama",
+        "Mistral",
+        "Gemma",
+        "Qwen"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/training/unsloth"
+    },
+    {
+      "name": "ux-heuristics",
+      "description": "Evaluate and improve interface usability using heuristic analysis. Use",
+      "category": "other",
+      "tags": [],
+      "version": "1.2.1",
+      "path": "ux-heuristics"
+    },
+    {
+      "name": "ux-heuristics",
+      "description": "Evaluate and improve interface usability using heuristic analysis. Use when the user mentions \"usability audit\", \"UX review\", \"users are confused\", \"heuristic evaluation\", \"form usability\", \"naviga...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.3.0",
+      "path": "wondelai/ux-heuristics"
+    },
+    {
+      "name": "virtuals-protocol-acp",
+      "description": "Create jobs and transact with other specialised agents through the Agent Commerce Protocol (ACP) \u2014 extends the agent's action space by discovering and using agents on the marketplace, enables launc...",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/virtuals-protocol-acp"
+    },
+    {
+      "name": "vision-analyze",
+      "description": "Handle vision analyze tasks based on observed user request patterns.",
+      "category": "other",
+      "tags": [
+        "vision",
+        "analyze"
+      ],
+      "version": "0.1.0",
+      "path": "vision-analyze"
+    },
+    {
+      "name": "vps-nextjs-deploy",
+      "description": "Deploy Next.js to VPS with PM2, nginx, Let's Encrypt SSL",
+      "category": "devops",
+      "tags": [],
+      "version": "",
+      "path": "devops/vps-nextjs-deploy"
+    },
+    {
+      "name": "weather",
+      "description": "Get current weather and forecasts (no API key required).",
+      "category": "community",
+      "tags": [],
+      "version": "",
+      "path": "community/weather"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state ma...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "web-artifacts-builder"
+    },
+    {
+      "name": "web-extract",
+      "description": "Extract web page content with proper error handling for 401 auth failures.",
+      "category": "web",
+      "tags": [],
+      "version": "",
+      "path": "web-extract"
+    },
+    {
+      "name": "web-search",
+      "description": "Proper web search using Tavily API with error handling for 401 auth failures.",
+      "category": "web",
+      "tags": [],
+      "version": "",
+      "path": "web-search"
+    },
+    {
+      "name": "web-typography",
+      "description": "Select, pair, and implement typefaces for web projects. Use when the",
+      "category": "other",
+      "tags": [],
+      "version": "1.1.1",
+      "path": "web-typography"
+    },
+    {
+      "name": "web-typography",
+      "description": "Select, pair, and implement typefaces for web projects. Use when the user mentions \"font pairing\", \"which typeface\", \"line height\", \"responsive typography\", \"web font loading\", \"type hierarchy\", \"v...",
+      "category": "wondelai",
+      "tags": [],
+      "version": "1.2.0",
+      "path": "wondelai/web-typography"
+    },
+    {
+      "name": "webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browse...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "webapp-testing"
+    },
+    {
+      "name": "webhook-subscriptions",
+      "description": "Create and manage webhook subscriptions for event-driven agent activation. Use when the user wants external services to trigger agent runs automatically.",
+      "category": "devops",
+      "tags": [
+        "webhook",
+        "events",
+        "automation",
+        "integrations"
+      ],
+      "version": "1.0.0",
+      "path": "devops/webhook-subscriptions"
+    },
+    {
+      "name": "weights-and-biases",
+      "description": "Track ML experiments with automatic logging, visualize training in real-time, optimize hyperparameters with sweeps, and manage model registry with W&B - collaborative MLOps platform",
+      "category": "mlops",
+      "tags": [
+        "MLOps",
+        "Weights And Biases",
+        "WandB",
+        "Experiment Tracking",
+        "Hyperparameter Tuning",
+        "Model Registry",
+        "Collaboration",
+        "Real-Time Visualization",
+        "PyTorch",
+        "TensorFlow",
+        "HuggingFace"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/evaluation/weights-and-biases"
+    },
+    {
+      "name": "whisper",
+      "description": "OpenAI's general-purpose speech recognition model. Supports 99 languages, transcription, translation to English, and language identification. Six model sizes from tiny (39M params) to large (1550M ...",
+      "category": "mlops",
+      "tags": [
+        "Whisper",
+        "Speech Recognition",
+        "ASR",
+        "Multimodal",
+        "Multilingual",
+        "OpenAI",
+        "Speech-To-Text",
+        "Transcription",
+        "Translation",
+        "Audio Processing"
+      ],
+      "version": "1.0.0",
+      "path": "mlops/models/whisper"
+    },
+    {
+      "name": "workspace-surface-audit",
+      "description": "Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows. Use when the use...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "workspace-surface-audit"
+    },
+    {
+      "name": "writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task. Creates comprehensive implementation plans with bite-sized tasks, exact file paths, and complete code examples.",
+      "category": "software-development",
+      "tags": [
+        "planning",
+        "design",
+        "implementation",
+        "workflow",
+        "documentation"
+      ],
+      "version": "1.1.0",
+      "path": "software-development/writing-plans"
+    },
+    {
+      "name": "xlsx",
+      "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., ...",
+      "category": "other",
+      "tags": [],
+      "version": "",
+      "path": "xlsx"
+    },
+    {
+      "name": "youtube-content",
+      "description": ">",
+      "category": "media",
+      "tags": [],
+      "version": "",
+      "path": "media/youtube-content"
+    }
+  ]
+}

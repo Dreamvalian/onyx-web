@@ -4,40 +4,40 @@ import { cn } from "@/lib/utils"
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn(
-        "rounded-xl border border-neutral-200 bg-white text-neutral-950 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50",
-        className
-      )}
-      {...props}
-    />
-  )
+ ({ className, ...props }, ref) => (
+ <div
+ ref={ref}
+ className={cn(
+ "rounded-xl border border-[#2a2520] bg-[#0d0b08] text-[#e8e0d4]",
+ className
+ )}
+ {...props}
+ />
+ )
 )
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+ HTMLDivElement,
+ React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("flex flex-col p-6", className)} {...props} />
+ <div ref={ref} className={cn("flex flex-col p-6", className)} {...props} />
 ))
 CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
+ HTMLParagraphElement,
+ React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-  <h3 ref={ref} className={cn("font-semibold leading-none tracking-tight", className)} {...props} />
+ <h3 ref={ref} className={cn("font-semibold leading-none tracking-tight", className)} {...props} />
 ))
 CardTitle.displayName = "CardTitle"
 
 const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+ HTMLDivElement,
+ React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+ <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 

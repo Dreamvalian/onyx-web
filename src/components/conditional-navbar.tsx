@@ -7,10 +7,10 @@ import { Navbar } from "@/components/landing/navbar"
 const DASHBOARD_ROUTES = ["/", "/memory", "/logs", "/settings", "/servers", "/prompts"]
 
 export function ConditionalNavbar() {
-  const pathname = usePathname()
+ const pathname = usePathname()
 
-  // Don't render landing navbar on dashboard pages
-  if (DASHBOARD_ROUTES.includes(pathname)) return null
+ // Don't render landing navbar on dashboard pages
+ if (DASHBOARD_ROUTES.includes(pathname)) return null
 
-  return <Navbar />
+ return <Navbar />
 }

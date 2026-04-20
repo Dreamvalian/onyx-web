@@ -1,22 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-}
+/* ═══════════════════════════════════════════
+   ONYX BRAND — Warm Dark Palette
+   Last updated: 2026-04-17
+   ═══════════════════════════════════════════ */
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
+:root {
+  /* Backgrounds */
+  --brand-bg: #0d0b08;
+  --brand-surface: #13110e;
+  --brand-elevated: #1a1714;
+
+  /* Borders */
+  --brand-border: #2a2520;
+  --brand-border-hover: #3a352e;
+
+  /* Text */
+  --brand-text: #e8e0d4;
+  --brand-secondary: #a89e8f;
+  --brand-muted: #7a7068;
+  --brand-muted-dark: #5c5449;
+
+  /* Accent */
+  --brand-accent: #94a99b;
+  --brand-accent-hover: #a3b5aa;
+
+  /* Warm highlight */
+  --brand-warm: #c4a35a;
+
+  /* Semantic */
+  --brand-danger: #8b3a3a;
+  --brand-danger-hover: #a04444;
+  --brand-success: #94a99b;
+  --brand-warning: #c4a35a;
+
+  /* Light mode (minimal, just for fallback) */
+  --brand-light: #faf6f0;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Type Scale — 1.25 Major Third */
+:root {
+  --text-caption: 0.64rem;   /* 10.24px — fine print only */
+  --text-small: 0.8rem;      /* 12.8px — labels, metadata */
+  --text-base: 1rem;         /* 16px — body text */
+  --text-h3: 1.25rem;        /* 20px — section headings */
+  --text-h2: 1.563rem;       /* 25px — page headings */
+  --text-h1: 1.953rem;       /* 31.25px — hero headings */
+  --text-display: 2.441rem;  /* 39px — display/hero text */
+}
+
+/* Serif display font for headings */
+.font-serif-display {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  z-index: 1;
 }

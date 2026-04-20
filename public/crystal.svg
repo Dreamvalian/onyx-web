@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="320 100 160 200" width="256" height="256">
+  <!-- Main crystal body -->
+  <polygon
+    points="400,120 460,160 460,240 400,280 340,240 340,160"
+    fill="#1A1714"
+    stroke="#94A99B"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  <!-- Facet lines -->
+  <polyline
+    points="340,160 400,200 460,160"
+    fill="none"
+    stroke="#94A99B"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <polyline
+    points="340,240 400,200 460,240"
+    fill="none"
+    stroke="#94A99B"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <polyline
+    points="400,120 400,200 400,280"
+    fill="none"
+    stroke="#94A99B"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Accent facet (top) -->
+  <polygon
+    points="380,130 420,145 420,165 400,180 380,165 380,145"
+    fill="#A3B5AA"
+    fill-opacity="0.3"
+    stroke="#A3B5AA"
+    stroke-width="1"
+    stroke-linejoin="round"
+  />
+</svg>
