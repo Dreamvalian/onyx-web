@@ -124,11 +124,36 @@ async function getHermesData(): Promise<HermesData> {
       }
     })(),
 
-    // Heartbeat from Redis
+    // Heartbeat — built live from system metrics
     (async () => {
       try {
-        const raw = await redis.get("hermes:heartbeat")
-        return raw ? JSON.parse(raw) : null
+        // Memory
+        let memUsed = 0
+        let memTotal = 0
+        try {
+          const meminfo = await readFile("/proc/meminfo", "utf8")
+          const totalMatch = meminfo.match(/MemTotal:\s+(\d+)/)
+          const availMatch = meminfo.match(/MemAvailable:\s+(\d+)/)
+          if (totalMatch && availMatch) {
+            memTotal = parseInt(totalMatch[1], 10) / 1024
+            const memAvailable = parseInt(availMatch[1], 10) / 1024
+            memUsed = Math.round(memTotal - memAvailable)
+          }
+        } catch { /* ignore */ }
+
+        // Redis connectivity
+        let redisConnected = false
+        try {
+          await redis.ping()
+          redisConnected = true
+        } catch { /* ignore */ }
+
+        return {
+          status: "healthy",
+          redis: { connected: redisConnected },
+          memory: { used: memUsed, total: Math.round(memTotal) },
+          timestamp: new Date().toISOString(),
+        }
       } catch {
         return null
       }

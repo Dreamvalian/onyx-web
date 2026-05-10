@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation"
 import { Navbar } from "@/components/landing/navbar"
 
 // Dashboard routes that should NOT show the landing navbar
-const DASHBOARD_ROUTES = ["/", "/memory", "/logs", "/settings", "/servers", "/prompts"]
+const DASHBOARD_ROUTES = ["/", "/memory", "/uptime"]
 
 export function ConditionalNavbar() {
  const pathname = usePathname()

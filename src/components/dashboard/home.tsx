@@ -5,595 +5,625 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { SkillsExplorer } from "@/components/dashboard/skills-explorer"
+import UsageDashboard from "@/components/dashboard/usage-dashboard"
+import VpsHealthCard from "@/components/dashboard/vps-health-card"
 import {
- Activity,
- Clock,
- Cpu,
- Zap,
- Terminal,
- RefreshCw,
- CheckCircle2,
- XCircle,
- AlertCircle,
- Search,
- MessageSquare,
- User,
- Wifi,
- WifiOff,
+  Activity,
+  Clock,
+  Cpu,
+  Zap,
+  Terminal,
+  RefreshCw,
+  CheckCircle2,
+  XCircle,
+  AlertCircle,
+  Search,
+  MessageSquare,
+  User,
+  Wifi,
+  WifiOff,
+  BarChart3,
+  Server,
 } from "lucide-react"
 
 interface HermesData {
- uptime: string
- uptime_seconds: number
- hermes_uptime: string
- model: string
- provider: string
- toolsets: string[]
- skills: { name: string; source: string }[]
- plugins: { name: string }[]
- cron_jobs: CronJob[]
- heartbeat: Record<string, unknown> | null
+  uptime: string
+  uptime_seconds: number
+  hermes_uptime: string
+  model: string
+  provider: string
+  toolsets: string[]
+  skills: { name: string; source: string }[]
+  plugins: { name: string }[]
+  cron_jobs: CronJob[]
+  heartbeat: Record<string, unknown> | null
 }
 
 interface CronJob {
- id: string
- name: string
- schedule: string
- next_run: string
- last_run: string
- last_status: string
- enabled: boolean
+  id: string
+  name: string
+  schedule: string
+  next_run: string
+  last_run: string
+  last_status: string
+  enabled: boolean
 }
 
 interface ActiveSession {
- session_key: string
- session_id: string
- display_name: string
- platform: string
- chat_type: string
- user_name: string
- chat_id: string
- created_at: string
- updated_at: string
- age_minutes: number
- is_cron: boolean
- is_current: boolean
- input_tokens: number
- output_tokens: number
- total_tokens: number
+  session_key: string
+  session_id: string
+  display_name: string
+  platform: string
+  chat_type: string
+  user_name: string
+  chat_id: string
+  created_at: string
+  updated_at: string
+  age_minutes: number
+  is_cron: boolean
+  is_current: boolean
+  input_tokens: number
+  output_tokens: number
+  total_tokens: number
 }
 
 interface SystemLog {
- id: string
- command?: string
- response?: string
- message?: string
- timestamp: string
- server?: string
- _index: number
+  id: string
+  command?: string
+  response?: string
+  message?: string
+  timestamp: string
+  server?: string
+  _index: number
 }
 
+const TABS = [
+  { id: "hermes" as const, label: "Hermes Status", icon: Zap },
+  { id: "vps" as const, label: "VPS Health", icon: Server },
+  { id: "tokens" as const, label: "Token Stats", icon: BarChart3 },
+]
+
+type TabId = (typeof TABS)[number]["id"]
+
 function StatusBadge({ status }: { status: string }) {
- if (status === "ok" || status === "success" || status === "completed")
- return <Badge className="bg-green-500/10 text-green-500 hover:bg-green-500/10 gap-1"><CheckCircle2 className="h-3 w-3" /> {status}</Badge>
- if (status === "error" || status === "failed")
- return <Badge className="bg-red-500/10 text-red-500 hover:bg-red-500/10 gap-1"><XCircle className="h-3 w-3" /> {status}</Badge>
- return <Badge className="bg-yellow-500/10 text-yellow-500 hover:bg-yellow-500/10 gap-1"><AlertCircle className="h-3 w-3" /> {status}</Badge>
+  if (status === "ok" || status === "success" || status === "completed")
+    return <Badge className="bg-green-500/10 text-green-500 hover:bg-green-500/10 gap-1"><CheckCircle2 className="h-3 w-3" /> {status}</Badge>
+  if (status === "error" || status === "failed")
+    return <Badge className="bg-red-500/10 text-red-500 hover:bg-red-500/10 gap-1"><XCircle className="h-3 w-3" /> {status}</Badge>
+  return <Badge className="bg-yellow-500/10 text-yellow-500 hover:bg-yellow-500/10 gap-1"><AlertCircle className="h-3 w-3" /> {status}</Badge>
 }
 
 function PlatformIcon({ platform, chatType }: { platform: string; chatType: string }) {
- if (platform === "discord") {
- if (chatType === "dm") return <Badge variant="secondary" className="text-xs">DM</Badge>
- if (chatType === "thread") return <Badge variant="secondary" className="text-xs">Thread</Badge>
- return <Badge variant="secondary" className="text-xs">Discord</Badge>
- }
- return <Badge variant="secondary" className="text-xs">{platform}</Badge>
+  if (platform === "discord") {
+    if (chatType === "dm") return <Badge variant="secondary" className="text-xs">DM</Badge>
+    if (chatType === "thread") return <Badge variant="secondary" className="text-xs">Thread</Badge>
+    return <Badge variant="secondary" className="text-xs">Discord</Badge>
+  }
+  return <Badge variant="secondary" className="text-xs">{platform}</Badge>
 }
 
 function timeAgo(ts: string): string {
- const diff = Date.now() - new Date(ts).getTime()
- const m = Math.floor(diff / 60000)
- if (m < 1) return "just now"
- if (m < 60) return `${m}m ago`
- const h = Math.floor(m / 60)
- if (h < 24) return `${h}h ago`
- return `${Math.floor(h / 24)}d ago`
+  const diff = Date.now() - new Date(ts).getTime()
+  const m = Math.floor(diff / 60000)
+  if (m < 1) return "just now"
+  if (m < 60) return `${m}m ago`
+  const h = Math.floor(m / 60)
+  if (h < 24) return `${h}h ago`
+  return `${Math.floor(h / 24)}d ago`
 }
 
 export default function DashboardHome() {
- const [data, setData] = useState<HermesData | null>(null)
- const [sessions, setSessions] = useState<{ active: ActiveSession[]; cron: ActiveSession[] } | null>(null)
- const [logs, setLogs] = useState<SystemLog[]>([])
- const [loading, setLoading] = useState(true)
- const [sessionLoading, setSessionLoading] = useState(true)
- const [logFilter, setLogFilter] = useState<"all" | "today" | "hour">("all")
- const [logSearch, setLogSearch] = useState("")
- const [connected, setConnected] = useState({ hermes: false, sessions: false, logs: false })
- const [mcpServers, setMcpServers] = useState<{ name: string; status: string; transport: string }[]>([])
+  const [activeTab, setActiveTab] = useState<TabId>("hermes")
+  const [data, setData] = useState<HermesData | null>(null)
+  const [sessions, setSessions] = useState<{ active: ActiveSession[]; cron: ActiveSession[] } | null>(null)
+  const [logs, setLogs] = useState<SystemLog[]>([])
+  const [loading, setLoading] = useState(true)
+  const [sessionLoading, setSessionLoading] = useState(true)
+  const [logFilter, setLogFilter] = useState<"all" | "today" | "hour">("all")
+  const [logSearch, setLogSearch] = useState("")
+  const [connected, setConnected] = useState({ hermes: false, sessions: false, logs: false })
+  const [mcpServers, setMcpServers] = useState<{ name: string; status: string; transport: string }[]>([])
 
- // SSE event sources
- const hermesES = useRef<EventSource | null>(null)
- const sessionsES = useRef<EventSource | null>(null)
- const logsPoll = useRef<ReturnType<typeof setInterval> | null>(null)
+  const hermesES = useRef<EventSource | null>(null)
+  const sessionsES = useRef<EventSource | null>(null)
+  const logsPoll = useRef<ReturnType<typeof setInterval> | null>(null)
 
- // Cleanup all EventSources
- const cleanup = useCallback(() => {
- hermesES.current?.close()
- sessionsES.current?.close()
- logsPoll.current && clearInterval(logsPoll.current)
- hermesES.current = null
- sessionsES.current = null
- logsPoll.current = null
- }, [])
+  const cleanup = useCallback(() => {
+    hermesES.current?.close()
+    sessionsES.current?.close()
+    logsPoll.current && clearInterval(logsPoll.current)
+    hermesES.current = null
+    sessionsES.current = null
+    logsPoll.current = null
+  }, [])
 
- // Connect SSE for hermes data
- useEffect(() => {
- if (hermesES.current) hermesES.current.close()
+  useEffect(() => {
+    if (hermesES.current) hermesES.current.close()
+    const es = new EventSource("/api/stream/hermes")
+    hermesES.current = es
+    es.onopen = () => setConnected((c) => ({ ...c, hermes: true }))
+    es.onmessage = (e) => {
+      try {
+        const payload = JSON.parse(e.data)
+        if (payload.type === "hermes") {
+          setData((prev) => ({
+            uptime: payload.uptime,
+            uptime_seconds: payload.uptime_seconds,
+            hermes_uptime: payload.hermes_uptime,
+            model: payload.model,
+            provider: payload.provider,
+            toolsets: payload.toolsets,
+            skills: (payload.skills && payload.skills.length > 0) ? payload.skills : (prev?.skills ?? []),
+            plugins: (payload.plugins && payload.plugins.length > 0) ? payload.plugins : (prev?.plugins ?? []),
+            cron_jobs: payload.cron_jobs,
+            heartbeat: payload.heartbeat,
+          }))
+          setLoading(false)
+        }
+      } catch {
+        // ignore
+      }
+    }
+    es.onerror = () => {
+      setConnected((c) => ({ ...c, hermes: false }))
+      setLoading(false)
+    }
+    return () => es.close()
+  }, [])
 
- const es = new EventSource("/api/stream/hermes")
- hermesES.current = es
+  useEffect(() => {
+    if (sessionsES.current) sessionsES.current.close()
+    const es = new EventSource("/api/stream/sessions")
+    sessionsES.current = es
+    es.onopen = () => setConnected((c) => ({ ...c, sessions: true }))
+    es.onmessage = (e) => {
+      try {
+        const payload = JSON.parse(e.data)
+        if (payload.type === "sessions") {
+          setSessions({ active: payload.active, cron: payload.cron })
+          setSessionLoading(false)
+        }
+      } catch {
+        // ignore
+      }
+    }
+    es.onerror = () => {
+      setConnected((c) => ({ ...c, sessions: false }))
+      setSessionLoading(false)
+    }
+    return () => es.close()
+  }, [])
 
- es.onopen = () => setConnected((c) => ({ ...c, hermes: true }))
+  useEffect(() => {
+    async function fetchLogs() {
+      try {
+        const res = await fetch("/api/stream/logs")
+        if (!res.ok) throw new Error("fetch failed")
+        const payload = await res.json()
+        if (payload.type === "logs") {
+          setLogs(payload.logs ?? [])
+          setConnected((c) => ({ ...c, logs: true }))
+        }
+      } catch {
+        setConnected((c) => ({ ...c, logs: false }))
+      }
+    }
+    fetchLogs()
+    logsPoll.current = setInterval(fetchLogs, 5000)
+    return () => {
+      if (logsPoll.current) clearInterval(logsPoll.current)
+    }
+  }, [])
 
- es.onmessage = (e) => {
- try {
- const payload = JSON.parse(e.data)
- if (payload.type === "hermes") {
- setData((prev) => ({
- uptime: payload.uptime,
- uptime_seconds: payload.uptime_seconds,
- hermes_uptime: payload.hermes_uptime,
- model: payload.model,
- provider: payload.provider,
- toolsets: payload.toolsets,
- skills: (payload.skills && payload.skills.length > 0) ? payload.skills : (prev?.skills ?? []),
- plugins: (payload.plugins && payload.plugins.length > 0) ? payload.plugins : (prev?.plugins ?? []),
- cron_jobs: payload.cron_jobs,
- heartbeat: payload.heartbeat,
- }))
- setLoading(false)
- }
- } catch {
- // ignore parse errors
- }
- }
+  useEffect(() => {
+    async function fetchMcp() {
+      try {
+        const res = await fetch("/api/mcp")
+        if (res.ok) {
+          const d = await res.json()
+          setMcpServers(d.servers ?? [])
+        }
+      } catch { /* ignore */ }
+    }
+    fetchMcp()
+    const interval = setInterval(fetchMcp, 30000)
+    return () => clearInterval(interval)
+  }, [])
 
- es.onerror = () => {
- setConnected((c) => ({ ...c, hermes: false }))
- setLoading(false)
- }
+  useEffect(() => {
+    return () => cleanup()
+  }, [cleanup])
 
- return () => es.close()
- }, [])
+  const handleRefresh = useCallback(() => {
+    if (hermesES.current) {
+      hermesES.current.close()
+      setConnected((c) => ({ ...c, hermes: false }))
+      setTimeout(() => {
+        const es = new EventSource("/api/stream/hermes")
+        hermesES.current = es
+        es.onmessage = hermesES.current.onmessage
+        es.onerror = hermesES.current.onerror
+      }, 100)
+    }
+  }, [])
 
- // Connect SSE for sessions
- useEffect(() => {
- if (sessionsES.current) sessionsES.current.close()
+  const filteredLogs = logs.filter((l) => {
+    const q = logSearch.toLowerCase()
+    if (!q) return true
+    return (
+      (l.command ?? "").toLowerCase().includes(q) ||
+      (l.response ?? "").toLowerCase().includes(q) ||
+      (l.message ?? "").toLowerCase().includes(q)
+    )
+  })
 
- const es = new EventSource("/api/stream/sessions")
- sessionsES.current = es
+  const activeCrons = data?.cron_jobs.filter((j) => j.enabled) ?? []
+  const totalCrons = activeCrons.length
+  const okCrons = activeCrons.filter((j) => j.last_status === "ok").length
+  const totalConnected = connected.hermes && connected.sessions && connected.logs
 
- es.onopen = () => setConnected((c) => ({ ...c, sessions: true }))
+  const heartbeatRedis = ((data?.heartbeat as Record<string, unknown>)?.redis as Record<string, unknown>)?.connected
+  const heartbeatMemory = ((data?.heartbeat as Record<string, unknown>)?.memory as Record<string, number>)?.used
+  const heartbeatStatus = String((data?.heartbeat as Record<string, unknown>)?.status ?? "—")
 
- es.onmessage = (e) => {
- try {
- const payload = JSON.parse(e.data)
- if (payload.type === "sessions") {
- setSessions({ active: payload.active, cron: payload.cron })
- setSessionLoading(false)
- }
- } catch {
- // ignore
- }
- }
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold">Dashboard</h1>
+          <p className="mt-1 text-sm flex items-center gap-2">
+            Real-time — updates instantly
+            <span className={`flex items-center gap-1 text-xs font-medium ${totalConnected ? "text-green-500" : "text-orange-500"}`}>
+              {totalConnected ? (
+                <><Wifi className="h-3 w-3" /> Live</>
+              ) : (
+                <><WifiOff className="h-3 w-3" /> Reconnecting...</>
+              )}
+            </span>
+          </p>
+        </div>
+        <Button variant="outline" size="sm" onClick={handleRefresh}>
+          <RefreshCw className="h-4 w-4" />
+          Refresh
+        </Button>
+      </div>
 
- es.onerror = () => {
- setConnected((c) => ({ ...c, sessions: false }))
- setSessionLoading(false)
- }
+      {/* Tabs */}
+      <div className="flex gap-1 rounded-lg border border-[#2a2520] bg-[#0d0b08] p-1">
+        {TABS.map((tab) => {
+          const Icon = tab.icon
+          const isActive = activeTab === tab.id
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-all ${
+                isActive
+                  ? "bg-neutral-800 text-white"
+                  : "text-neutral-400 hover:text-neutral-200 hover:bg-neutral-900"
+              }`}
+            >
+              <Icon className="h-4 w-4" />
+              {tab.label}
+            </button>
+          )
+        })}
+      </div>
 
- return () => es.close()
- }, [])
+      {/* === HERMES STATUS TAB === */}
+      {activeTab === "hermes" && (
+        <div className="space-y-6">
+          {/* Heartbeat */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-sm font-medium">Heartbeat</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {!data?.heartbeat ? (
+                <p className="text-sm text-[#7a7068] text-center py-4">Loading heartbeat...</p>
+              ) : (
+                <div className="grid gap-3 md:grid-cols-3">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-500" />
+                    <span className="text-sm text-[#7a7068]">Redis</span>
+                    <span className="ml-auto text-sm font-medium">
+                      {heartbeatRedis ? "Connected" : "Disconnected"}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Cpu className="h-4 w-4 text-blue-500" />
+                    <span className="text-sm text-[#7a7068]">Memory</span>
+                    <span className="ml-auto text-sm font-medium">
+                      {heartbeatMemory ?? "—"} MB
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Activity className="h-4 w-4 text-purple-500" />
+                    <span className="text-sm text-[#7a7068]">Status</span>
+                    <span className="ml-auto text-sm font-medium">
+                      {heartbeatStatus}
+                    </span>
+                  </div>
+                </div>
+              )}
+            </CardContent>
+          </Card>
 
- // Poll logs every 5s
- useEffect(() => {
- async function fetchLogs() {
- try {
- const res = await fetch("/api/stream/logs")
- if (!res.ok) throw new Error("fetch failed")
- const payload = await res.json()
- if (payload.type === "logs") {
- setLogs(payload.logs ?? [])
- setConnected((c) => ({ ...c, logs: true }))
- }
- } catch {
- setConnected((c) => ({ ...c, logs: false }))
- }
- }
+          {/* Top Stats Row */}
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
+                <CardTitle className="text-sm font-medium text-[#7a7068]">Hermes Uptime</CardTitle>
+                <Zap className="h-4 w-4 text-green-500" />
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{loading ? "—" : (data?.hermes_uptime ?? "—")}</p>
+                <p className="text-xs text-[#5c5449]">Dashboard process</p>
+              </CardContent>
+            </Card>
 
- fetchLogs()
- logsPoll.current = setInterval(fetchLogs, 5000)
- return () => {
- if (logsPoll.current) clearInterval(logsPoll.current)
- }
- }, [])
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
+                <CardTitle className="text-sm font-medium text-[#7a7068]">System Uptime</CardTitle>
+                <Cpu className="h-4 w-4 text-blue-500" />
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{loading ? "—" : (data?.uptime ?? "—")}</p>
+                <p className="text-xs text-[#5c5449]">Server up since last boot</p>
+              </CardContent>
+            </Card>
 
- // Fetch MCP servers
- useEffect(() => {
- async function fetchMcp() {
- try {
- const res = await fetch("/api/mcp")
- if (res.ok) {
- const d = await res.json()
- setMcpServers(d.servers ?? [])
- }
- } catch { /* ignore */ }
- }
- fetchMcp()
- const interval = setInterval(fetchMcp, 30000)
- return () => clearInterval(interval)
- }, [])
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
+                <CardTitle className="text-sm font-medium text-[#7a7068]">Active Model</CardTitle>
+                <Activity className="h-4 w-4 text-purple-500" />
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold truncate">{loading ? "—" : (data?.model ?? "—")}</p>
+                <p className="text-xs text-[#5c5449]">{loading ? "" : (data?.provider ?? "—")}</p>
+              </CardContent>
+            </Card>
 
- // Cleanup on unmount
- useEffect(() => {
- return () => cleanup()
- }, [cleanup])
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
+                <CardTitle className="text-sm font-medium text-[#7a7068]">Active Crons</CardTitle>
+                <Clock className="h-4 w-4 text-orange-500" />
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">
+                  {loading ? "—" : `${okCrons}/${totalCrons}`}
+                </p>
+                <p className="text-xs text-[#5c5449]">
+                  {loading ? "" : `${totalCrons} scheduled`}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
 
- // Manual refresh
- const handleRefresh = useCallback(() => {
- // Force reconnect by closing and reopening
- if (hermesES.current) {
- hermesES.current.close()
- setConnected((c) => ({ ...c, hermes: false }))
- setTimeout(() => {
- const es = new EventSource("/api/stream/hermes")
- hermesES.current = es
- es.onmessage = hermesES.current.onmessage
- es.onerror = hermesES.current.onerror
- }, 100)
- }
- }, [])
+          {/* Cron Jobs */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-sm font-medium">Scheduled Cron Jobs</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {loading ? (
+                <div className="flex justify-center py-6">
+                  <RefreshCw className="h-5 w-5 animate-spin text-[#5c5449]" />
+                </div>
+              ) : activeCrons.length === 0 ? (
+                <p className="text-sm py-4 text-center">No active cron jobs</p>
+              ) : (
+                <div className="space-y-2">
+                  {activeCrons.slice(0, 20).map((job) => (
+                    <div key={job.id} className="flex items-center justify-between rounded-md border px-3 py-2 border-[#2a2520]">
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium truncate">{job.name}</p>
+                        <p className="text-xs font-mono">{job.schedule}</p>
+                      </div>
+                      <div className="ml-2 flex flex-col items-end gap-1 shrink-0">
+                        <StatusBadge status={job.last_status} />
+                        <p className="text-xs text-[#7a7068]">
+                          {job.next_run ? `Next: ${new Date(job.next_run).toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta" })}` : "—"}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
 
- const filteredLogs = logs.filter((l) => {
- const q = logSearch.toLowerCase()
- if (!q) return true
- return (
- (l.command ?? "").toLowerCase().includes(q) ||
- (l.response ?? "").toLowerCase().includes(q) ||
- (l.message ?? "").toLowerCase().includes(q)
- )
- })
+          {/* Active Sessions */}
+          <Card>
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-sm font-medium flex items-center gap-2">
+                  <MessageSquare className="h-4 w-4" />
+                  Active Sessions
+                  <span className={`ml-1 flex items-center gap-1 ${connected.sessions ? "text-green-500" : "text-orange-400"}`}>
+                    {connected.sessions ? <Wifi className="h-3 w-3" /> : <WifiOff className="h-3 w-3" />}
+                  </span>
+                </CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {sessionLoading ? (
+                <div className="flex justify-center py-6">
+                  <RefreshCw className="h-5 w-5 animate-spin text-[#5c5449]" />
+                </div>
+              ) : !sessions || sessions.active.length === 0 ? (
+                <p className="text-sm py-4 text-center">No active sessions</p>
+              ) : (
+                <div className="space-y-2">
+                  {sessions.active.filter((s) => s.is_current).length > 0 && (
+                    <div className="space-y-1.5">
+                      <p className="text-xs font-semibold text-green-500 uppercase tracking-widest mb-2">
+                        ● Current — Active Now
+                      </p>
+                      {sessions.active.filter((s) => s.is_current).map((s) => (
+                        <div key={s.session_key} className="flex items-center gap-3 rounded-md border border-green-800 bg-green-900/10 px-3 py-2.5">
+                          <div className="flex flex-col min-w-0 flex-1">
+                            <div className="flex items-center gap-2">
+                              <span className="h-2 w-2 rounded-full bg-green-500 shrink-0 animate-pulse" />
+                              <p className="text-sm font-semibold truncate">{s.display_name}</p>
+                              <PlatformIcon platform={s.platform} chatType={s.chat_type} />
+                            </div>
+                            <div className="flex items-center gap-3 mt-0.5">
+                              <span className="text-xs text-green-400 flex items-center gap-1">
+                                <User className="h-3 w-3" /> {s.user_name}
+                              </span>
+                              <span className="text-xs text-green-500 font-mono">{timeAgo(s.updated_at)}</span>
+                              <span className="text-xs font-mono">{s.total_tokens.toLocaleString()} tokens</span>
+                            </div>
+                          </div>
+                          <div className="shrink-0 text-right">
+                            <p className="text-xs font-mono">{s.session_id.split("_").slice(0, 2).join("_")}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
- const activeCrons = data?.cron_jobs.filter((j) => j.enabled) ?? []
- const totalCrons = activeCrons.length
- const okCrons = activeCrons.filter((j) => j.last_status === "ok").length
- const totalConnected = connected.hermes && connected.sessions && connected.logs
+                  {sessions.active.filter((s) => !s.is_current).length > 0 && (
+                    <div className="space-y-1.5">
+                      <p className="text-xs font-semibold uppercase tracking-widest mb-1">
+                        ○ Inactive — Past Sessions
+                      </p>
+                      {sessions.active.filter((s) => !s.is_current).map((s) => (
+                        <div key={s.session_key} className="flex items-center gap-3 rounded-md border px-3 py-2 border-[#2a2520] opacity-60 hover:opacity-100 transition-opacity">
+                          <div className="flex flex-col min-w-0 flex-1">
+                            <div className="flex items-center gap-2">
+                              <p className="text-sm font-medium truncate">{s.display_name}</p>
+                              <PlatformIcon platform={s.platform} chatType={s.chat_type} />
+                            </div>
+                            <div className="flex items-center gap-3 mt-0.5">
+                              <span className="text-xs flex items-center gap-1">
+                                <User className="h-3 w-3" /> {s.user_name}
+                              </span>
+                              <span className="text-xs text-[#7a7068]">{timeAgo(s.updated_at)}</span>
+                              <span className="text-xs font-mono">{s.total_tokens.toLocaleString()} tokens</span>
+                            </div>
+                          </div>
+                          <div className="shrink-0 text-right">
+                            <p className="text-xs font-mono">{s.session_id.split("_").slice(0, 2).join("_")}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+            </CardContent>
+          </Card>
 
- return (
- <div className="space-y-6">
- {/* Header */}
- <div className="flex items-center justify-between">
- <div>
- <h1 className="text-2xl font-bold">Hermes Status</h1>
- <p className="mt-1 text-sm flex items-center gap-2">
- Real-time — updates instantly
- <span className={`flex items-center gap-1 text-xs font-medium ${totalConnected ? "text-green-500" : "text-orange-500"}`}>
- {totalConnected ? (
- <><Wifi className="h-3 w-3" /> Live</>
- ) : (
- <><WifiOff className="h-3 w-3" /> Reconnecting...</>
- )}
- </span>
- </p>
- </div>
- <Button variant="outline" size="sm" onClick={handleRefresh}>
- <RefreshCw className={`h-4 w-4`} />
- Refresh
- </Button>
- </div>
+          {/* Skills & Plugins */}
+          <SkillsExplorer skills={data?.skills ?? []} plugins={data?.plugins ?? []} loading={loading} />
 
- {/* Top Stats Row */}
- <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
- <Card>
- <CardHeader className="flex flex-row items-center justify-between pb-2">
- <CardTitle className="text-sm font-medium text-[#7a7068]">Hermes Uptime</CardTitle>
- <Zap className="h-4 w-4 text-green-500" />
- </CardHeader>
- <CardContent>
- <p className="text-2xl font-bold">{loading ? "—" : (data?.hermes_uptime ?? "—")}</p>
- <p className="text-xs text-[#5c5449]">Dashboard process</p>
- </CardContent>
- </Card>
+          {/* MCP Servers */}
+          <Card>
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-sm font-medium">MCP Servers</CardTitle>
+                <span className="text-xs text-[#5c5449]">
+                  {mcpServers.length} configured
+                </span>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {mcpServers.length === 0 ? (
+                <p className="text-sm text-[#7a7068]">No MCP servers configured</p>
+              ) : (
+                <div className="space-y-2">
+                  {mcpServers.map((srv) => (
+                    <div key={srv.name} className="flex items-center justify-between rounded-md border border-[#2a2520] px-3 py-2">
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium truncate">{srv.name}</p>
+                        <p className="text-xs text-[#5c5449]">{srv.transport}</p>
+                      </div>
+                      <Badge className={`shrink-0 text-xs ${srv.status === "running" ? "bg-green-500/10 text-green-500" : "bg-yellow-500/10 text-yellow-500"}`}>
+                        {srv.status}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
 
- <Card>
- <CardHeader className="flex flex-row items-center justify-between pb-2">
- <CardTitle className="text-sm font-medium text-[#7a7068]">System Uptime</CardTitle>
- <Cpu className="h-4 w-4 text-blue-500" />
- </CardHeader>
- <CardContent>
- <p className="text-2xl font-bold">{loading ? "—" : (data?.uptime ?? "—")}</p>
- <p className="text-xs text-[#5c5449]">Server up since last boot</p>
- </CardContent>
- </Card>
+          {/* System Logs */}
+          <Card>
+            <CardHeader>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <CardTitle className="text-sm font-medium flex items-center gap-2">
+                  <Terminal className="h-4 w-4" />
+                  System Logs
+                  <span className={`ml-1 flex items-center gap-1 ${connected.logs ? "text-green-500" : "text-orange-400"}`}>
+                    {connected.logs ? <Wifi className="h-3 w-3" /> : <WifiOff className="h-3 w-3" />}
+                  </span>
+                </CardTitle>
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-[#5c5449]" />
+                    <input
+                      placeholder="Search logs..."
+                      value={logSearch}
+                      onChange={(e) => setLogSearch(e.target.value)}
+                      className="pl-8 h-8 text-xs w-40 rounded-md border bg-transparent px-3 py-1 text-sm placeholder:focus-visible:outline-none focus-visible:ring-1 border-[#2a2520] bg-[#0d0b08]"
+                    />
+                  </div>
+                  <div className="flex gap-1">
+                    {(["all", "today", "hour"] as const).map((f) => (
+                      <Button
+                        key={f}
+                        variant={logFilter === f ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setLogFilter(f)}
+                        className="h-8 text-xs px-2"
+                      >
+                        {f === "all" ? "All" : f === "today" ? "Today" : "1h"}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {logs.length === 0 ? (
+                <div className="flex flex-col items-center justify-center py-10 text-center">
+                  <Terminal className="h-8 w-8 text-[#a89e8f]" />
+                  <p className="mt-3 text-sm text-[#7a7068]">No logs found</p>
+                </div>
+              ) : (
+                <div className="space-y-1.5 max-h-96 overflow-y-auto">
+                  {filteredLogs.map((log) => (
+                    <div
+                      key={log.id ?? log._index}
+                      className="flex items-start gap-3 rounded-md border px-3 py-2 border-[#2a2520]"
+                    >
+                      <div className="mt-0.5 shrink-0 rounded-md px-2 py-1 font-mono text-xs bg-[#1a1714]">
+                        {log.command ?? "—"}
+                      </div>
+                      <p className="flex-1 truncate text-sm text-[#6a7a72]">
+                        {log.response ?? log.message ?? ""}
+                      </p>
+                      <p className="shrink-0 text-xs text-[#5c5449]">
+                        {log.timestamp ? new Date(log.timestamp).toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta" }) : "—"}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      )}
 
- <Card>
- <CardHeader className="flex flex-row items-center justify-between pb-2">
- <CardTitle className="text-sm font-medium text-[#7a7068]">Active Model</CardTitle>
- <Activity className="h-4 w-4 text-purple-500" />
- </CardHeader>
- <CardContent>
- <p className="text-2xl font-bold truncate">{loading ? "—" : (data?.model ?? "—")}</p>
- <p className="text-xs text-[#5c5449]">{loading ? "" : (data?.provider ?? "—")}</p>
- </CardContent>
- </Card>
+      {/* === VPS HEALTH TAB === */}
+      {activeTab === "vps" && <VpsHealthCard />}
 
- <Card>
- <CardHeader className="flex flex-row items-center justify-between pb-2">
- <CardTitle className="text-sm font-medium text-[#7a7068]">Active Crons</CardTitle>
- <Clock className="h-4 w-4 text-orange-500" />
- </CardHeader>
- <CardContent>
- <p className="text-2xl font-bold">
- {loading ? "—" : `${okCrons}/${totalCrons}`}
- </p>
- <p className="text-xs text-[#5c5449]">
- {loading ? "" : `${totalCrons} scheduled`}
- </p>
- </CardContent>
- </Card>
- </div>
-
- {/* Active Sessions */}
- <Card>
- <CardHeader>
- <div className="flex items-center justify-between">
- <CardTitle className="text-sm font-medium flex items-center gap-2">
- <MessageSquare className="h-4 w-4" />
- Active Sessions
- <span className={`ml-1 flex items-center gap-1 ${connected.sessions ? "text-green-500" : "text-orange-400"}`}>
- {connected.sessions ? <Wifi className="h-3 w-3" /> : <WifiOff className="h-3 w-3" />}
- </span>
- </CardTitle>
- </div>
- </CardHeader>
- <CardContent>
- {sessionLoading ? (
- <div className="flex justify-center py-6">
- <RefreshCw className="h-5 w-5 animate-spin text-[#5c5449]" />
- </div>
- ) : !sessions || sessions.active.length === 0 ? (
- <p className="text-sm py-4 text-center">No active sessions</p>
- ) : (
- <div className="space-y-2">
- {/* Current sessions — highlighted */}
- {sessions.active.filter((s) => s.is_current).length > 0 && (
- <div className="space-y-1.5">
- <p className="text-xs font-semibold text-green-500 uppercase tracking-widest mb-2">
- ● Current — Active Now
- </p>
- {sessions.active.filter((s) => s.is_current).map((s) => (
- <div key={s.session_key} className="flex items-center gap-3 rounded-md border border-green-200 bg-green-50/50 px-3 py-2.5 border-green-800 bg-green-900/10">
- <div className="flex flex-col min-w-0 flex-1">
- <div className="flex items-center gap-2">
- <span className="h-2 w-2 rounded-full bg-green-500 shrink-0 animate-pulse" />
- <p className="text-sm font-semibold truncate">{s.display_name}</p>
- <PlatformIcon platform={s.platform} chatType={s.chat_type} />
- </div>
- <div className="flex items-center gap-3 mt-0.5">
- <span className="text-xs text-green-600 text-green-400 flex items-center gap-1">
- <User className="h-3 w-3" /> {s.user_name}
- </span>
- <span className="text-xs text-green-500 font-mono">{timeAgo(s.updated_at)}</span>
- <span className="text-xs font-mono">{s.total_tokens.toLocaleString()} tokens</span>
- </div>
- </div>
- <div className="shrink-0 text-right">
- <p className="text-xs font-mono">{s.session_id.split("_").slice(0, 2).join("_")}</p>
- </div>
- </div>
- ))}
- </div>
- )}
-
- {/* Inactive sessions — dimmed */}
- {sessions.active.filter((s) => !s.is_current).length > 0 && (
- <div className="space-y-1.5">
- <p className="text-xs font-semibold uppercase tracking-widest mb-1">
- ○ Inactive — Past Sessions
- </p>
- {sessions.active.filter((s) => !s.is_current).map((s) => (
- <div key={s.session_key} className="flex items-center gap-3 rounded-md border px-3 py-2 border-[#2a2520] opacity-60 hover:opacity-100 transition-opacity">
- <div className="flex flex-col min-w-0 flex-1">
- <div className="flex items-center gap-2">
- <p className="text-sm font-medium truncate">{s.display_name}</p>
- <PlatformIcon platform={s.platform} chatType={s.chat_type} />
- </div>
- <div className="flex items-center gap-3 mt-0.5">
- <span className="text-xs flex items-center gap-1">
- <User className="h-3 w-3" /> {s.user_name}
- </span>
- <span className="text-xs text-[#7a7068]">{timeAgo(s.updated_at)}</span>
- <span className="text-xs font-mono">{s.total_tokens.toLocaleString()} tokens</span>
- </div>
- </div>
- <div className="shrink-0 text-right">
- <p className="text-xs font-mono">{s.session_id.split("_").slice(0, 2).join("_")}</p>
- </div>
- </div>
- ))}
- </div>
- )}
- </div>
- )}
- </CardContent>
- </Card>
-
- {/* Cron Jobs */}
- <Card>
- <CardHeader>
- <CardTitle className="text-sm font-medium">Scheduled Cron Jobs</CardTitle>
- </CardHeader>
- <CardContent>
- {loading ? (
- <div className="flex justify-center py-6">
- <RefreshCw className="h-5 w-5 animate-spin text-[#5c5449]" />
- </div>
- ) : activeCrons.length === 0 ? (
- <p className="text-sm py-4 text-center">No active cron jobs</p>
- ) : (
- <div className="space-y-2">
- {activeCrons.slice(0, 20).map((job) => (
- <div key={job.id} className="flex items-center justify-between rounded-md border px-3 py-2 border-[#2a2520]">
- <div className="min-w-0">
- <p className="text-sm font-medium truncate">{job.name}</p>
- <p className="text-xs font-mono">{job.schedule}</p>
- </div>
- <div className="ml-2 flex flex-col items-end gap-1 shrink-0">
- <StatusBadge status={job.last_status} />
- <p className="text-xs text-[#7a7068]">
- {job.next_run ? `Next: ${new Date(job.next_run).toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta" })}` : "—"}
- </p>
- </div>
- </div>
- ))}
- </div>
- )}
- </CardContent>
- </Card>
-
- {/* Skills & Plugins */}
- <SkillsExplorer skills={data?.skills ?? []} plugins={data?.plugins ?? []} loading={loading} />
-
- {/* MCP Servers */}
- <Card>
- <CardHeader>
- <div className="flex items-center justify-between">
- <CardTitle className="text-sm font-medium">MCP Servers</CardTitle>
- <span className="text-xs text-[#5c5449]">
- {mcpServers.length} configured
- </span>
- </div>
- </CardHeader>
- <CardContent>
- {mcpServers.length === 0 ? (
- <p className="text-sm text-[#7a7068]">No MCP servers configured</p>
- ) : (
- <div className="space-y-2">
- {mcpServers.map((srv) => (
- <div key={srv.name} className="flex items-center justify-between rounded-md border border-[#2a2520] px-3 py-2">
- <div className="min-w-0">
- <p className="text-sm font-medium truncate">{srv.name}</p>
- <p className="text-xs text-[#5c5449]">{srv.transport}</p>
- </div>
- <Badge className={`shrink-0 text-xs ${srv.status === "running" ? "bg-green-500/10 text-green-500" : "bg-yellow-500/10 text-yellow-500"}`}>
- {srv.status}
- </Badge>
- </div>
- ))}
- </div>
- )}
- </CardContent>
- </Card>
-
- {/* Heartbeat */}
- {data?.heartbeat && (
- <Card>
- <CardHeader>
- <CardTitle className="text-sm font-medium">Last Heartbeat</CardTitle>
- </CardHeader>
- <CardContent>
- <div className="grid gap-3 md:grid-cols-3">
- <div className="flex items-center gap-2">
- <CheckCircle2 className="h-4 w-4 text-green-500" />
- <span className="text-sm text-[#7a7068]">Redis</span>
- <span className="ml-auto text-sm font-medium">
- {((data.heartbeat as Record<string, unknown>)?.redis as Record<string, unknown>)?.connected ? "Connected" : "—"}
- </span>
- </div>
- <div className="flex items-center gap-2">
- <Cpu className="h-4 w-4 text-blue-500" />
- <span className="text-sm text-[#7a7068]">Memory</span>
- <span className="ml-auto text-sm font-medium">
- {((data.heartbeat as Record<string, unknown>)?.memory as Record<string, number>)?.used ?? "—"} MB
- </span>
- </div>
- <div className="flex items-center gap-2">
- <Activity className="h-4 w-4 text-purple-500" />
- <span className="text-sm text-[#7a7068]">Status</span>
- <span className="ml-auto text-sm font-medium">
- {(data.heartbeat as Record<string, unknown>)?.status ?? "—"}
- </span>
- </div>
- </div>
- </CardContent>
- </Card>
- )}
-
- {/* System Logs */}
- <Card>
- <CardHeader>
- <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
- <CardTitle className="text-sm font-medium flex items-center gap-2">
- <Terminal className="h-4 w-4" />
- System Logs
- <span className={`ml-1 flex items-center gap-1 ${connected.logs ? "text-green-500" : "text-orange-400"}`}>
- {connected.logs ? <Wifi className="h-3 w-3" /> : <WifiOff className="h-3 w-3" />}
- </span>
- </CardTitle>
- <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
- <div className="relative">
- <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-[#5c5449]" />
- <input
- placeholder="Search logs..."
- value={logSearch}
- onChange={(e) => setLogSearch(e.target.value)}
- className="pl-8 h-8 text-xs w-40 rounded-md border bg-transparent px-3 py-1 text-sm placeholder:focus-visible:outline-none focus-visible:ring-1 border-[#2a2520] bg-[#0d0b08]"
- />
- </div>
- <div className="flex gap-1">
- {(["all", "today", "hour"] as const).map((f) => (
- <Button
- key={f}
- variant={logFilter === f ? "default" : "outline"}
- size="sm"
- onClick={() => setLogFilter(f)}
- className="h-8 text-xs px-2"
- >
- {f === "all" ? "All" : f === "today" ? "Today" : "1h"}
- </Button>
- ))}
- </div>
- </div>
- </div>
- </CardHeader>
- <CardContent>
- {logs.length === 0 ? (
- <div className="flex flex-col items-center justify-center py-10 text-center">
- <Terminal className="h-8 w-8 text-[#a89e8f]" />
- <p className="mt-3 text-sm text-[#7a7068]">No logs found</p>
- </div>
- ) : (
- <div className="space-y-1.5 max-h-96 overflow-y-auto">
- {filteredLogs.map((log) => (
- <div
- key={log.id ?? log._index}
- className="flex items-start gap-3 rounded-md border px-3 py-2 border-[#2a2520]"
- >
- <div className="mt-0.5 shrink-0 rounded-md px-2 py-1 font-mono text-xs bg-[#1a1714]">
- {log.command ?? "—"}
- </div>
- <p className="flex-1 truncate text-sm text-[#6a7a72]">
- {log.response ?? log.message ?? ""}
- </p>
- <p className="shrink-0 text-xs text-[#5c5449]">
- {log.timestamp ? new Date(log.timestamp).toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta" }) : "—"}
- </p>
- </div>
- ))}
- </div>
- )}
- </CardContent>
- </Card>
- </div>
- )
+      {/* === TOKEN STATS TAB === */}
+      {activeTab === "tokens" && <UsageDashboard />}
+    </div>
+  )
 }

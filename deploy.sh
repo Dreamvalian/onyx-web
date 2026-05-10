@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-APP="/root/onyx-web"
+APP="/root/projects/onyx-web"
 
 echo "[$(date)] Starting deploy..."
 
@@ -16,14 +16,18 @@ cd "$APP"
 npm run build 2>&1 | tail -5
 echo "     Build complete."
 
-# 3. Start server via PM2
-echo "[3/4] Starting server..."
+# 3. Copy static assets to standalone
+echo "[3/4] Copying static assets..."
+cp -r public .next/standalone/ 2>/dev/null
+cp -r .next/static .next/standalone/.next/ 2>/dev/null
+
+# 4. Start server via PM2
+echo "[4/4] Starting server..."
 pm2 delete hermes-web 2>/dev/null || true
-cd "$APP/.next/standalone"
-pm2 start server.js --name hermes-web -i 1 --time
+pm2 start ecosystem.config.js
 sleep 4
 
-# 4. Verify
+# 5. Verify
 HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "http://localhost:3000/home")
 if [ "$HTTP_CODE" = "200" ]; then
     echo "[OK] Deploy successful. Site live at ko4lax.dev (HTTP $HTTP_CODE)"

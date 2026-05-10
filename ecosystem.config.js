@@ -1,21 +1,19 @@
 module.exports = {
-  apps: [
+  "apps": [
     {
-      name: "hermes-web",
-      script: "server.js",
-      cwd: "/root/onyx-web/.next/standalone",
-      env: {
-        NODE_ENV: "production",
-        PORT: "3000",
-        DISCORD_CLIENT_ID: "1321426941059792956",
-        DISCORD_CLIENT_SECRET: "G61uOF3TewM88dEs5jxAh-8j8WC9ZzPK",
-        DISCORD_REDIRECT_URI: "https://ko4lax.dev/api/auth/discord/callback",
-        REDIS_HOST: "localhost",
-        REDIS_PORT: "6379",
-        NEXT_PUBLIC_BASE_URL: "https://ko4lax.dev",
-        NEXT_PUBLIC_DASHBOARD_URL: "https://dashboard.ko4lax.dev",
-        DEPLOY_WEBHOOK_SECRET: "hermes_deploy_secret_change_me",
-      },
-    },
-  ],
+      "name": "hermes-web",
+      "script": "server.js",
+      "cwd": "/root/projects/onyx-web/.next/standalone",
+      "env_file": "/root/projects/onyx-web/.env.local",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "3001",
+        "DISCORD_CLIENT_ID": "1321426941059792956",
+        "DISCORD_REDIRECT_URI": "https://ko4lax.dev/api/auth/discord/callback",
+        "NEXT_PUBLIC_BASE_URL": "https://ko4lax.dev",
+        "NEXT_PUBLIC_DASHBOARD_URL": "https://dashboard.ko4lax.dev",
+        "DISCORD_CLIENT_SECRET": "G61uOF3TewM88dEs5jxAh-8j8WC9ZzPK"
+      }
+    }
+  ]
 };

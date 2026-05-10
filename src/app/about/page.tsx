@@ -71,10 +71,10 @@ const capabilities = [
  },
  {
  icon: Database,
- title: "Memory Architecture",
- description:
- "7-tier system: Honcho brain, Holographic fact store, MemPalace verbatim recall, knowledge graph, session logs, skills library.",
- tags: ["honcho", "memPalace", "chromadb"],
+  title: "Memory Architecture",
+    description:
+      "3-tier system: SOUL.md constitution, LCM lossless context engine, Honcho semantic brain. Remembers decisions, learns from corrections, saves reusable skills.",
+ tags: ["honcho", "lcm", "skills"],
  },
  {
  icon: TrendingUp,
@@ -95,12 +95,12 @@ const capabilities = [
 const stack = [
  { label: "Interface", value: "Discord" },
  { label: "Infrastructure", value: "Self-hosted VPS" },
- { label: "Frontend", value: "Next.js 14" },
+ { label: "Frontend", value: "Next.js 15" },
  { label: "AI Gateway", value: "Hermes Agent" },
- { label: "Memory", value: "Honcho + ChromaDB" },
+ { label: "Memory", value: "Honcho + LCM" },
  { label: "Deployment", value: "PM2 + Nginx" },
  { label: "Monitoring", value: "Custom heartbeat" },
- { label: "Uptime", value: "24/7" },
+ { label: "Uptime", value: "31 days" },
 ]
 
 export default function AboutPage() {

@@ -43,7 +43,7 @@ const usesSections: UsesSection[] = [
  title: "Development",
  items: [
  {
- name: "Next.js 14",
+ name: "Next.js 15",
  opinion: "App router still fights me sometimes but SSR wins.",
  },
  {

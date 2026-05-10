@@ -5,8 +5,12 @@ const WEBHOOK_SECRET = process.env.DEPLOY_WEBHOOK_SECRET ?? ""
 
 export async function POST(req: NextRequest) {
   try {
+    if (!WEBHOOK_SECRET) {
+      return NextResponse.json({ error: "deploy not configured" }, { status: 503 })
+    }
+
     const authHeader = req.headers.get("authorization")
-    if (WEBHOOK_SECRET && authHeader !== `Bearer ${WEBHOOK_SECRET}`) {
+    if (authHeader !== `Bearer ${WEBHOOK_SECRET}`) {
       return NextResponse.json({ error: "unauthorized" }, { status: 401 })
     }
 

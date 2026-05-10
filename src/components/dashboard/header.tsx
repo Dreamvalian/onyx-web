@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Sheet } from "@/components/ui/sheet"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { LayoutDashboard, Terminal, Settings, LogOut } from "lucide-react"
+import { LayoutDashboard, Terminal, LogOut, Globe } from "lucide-react"
 import { signOut } from "@/lib/actions"
 import { cn } from "@/lib/utils"
 import type { DiscordUser } from "@/lib/discord-auth"
@@ -16,10 +16,9 @@ interface HeaderProps {
 }
 
 const navItems = [
- { href: "/", label: "Command Center", icon: LayoutDashboard },
- { href: "/memory", label: "Memory Stack", icon: Brain },
- { href: "/logs", label: "System Logs", icon: Terminal },
- { href: "/settings", label: "Settings", icon: Settings },
+  { href: "/", label: "Command Center", icon: LayoutDashboard },
+  { href: "/memory", label: "Memory Stack", icon: Brain },
+  { href: "/uptime", label: "Uptime", icon: Globe },
 ]
 
 export function DashboardHeader({ user }: HeaderProps) {

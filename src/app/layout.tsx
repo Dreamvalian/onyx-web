@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ConditionalNavbar } from "@/components/conditional-navbar"
+import { ErrorBoundaryProvider } from "@/components/error-boundary-provider"
 export const metadata: Metadata = {
  title: "Onyx — Koala's 24/7 AI Agent",
  description: "Not a chatbot. An autonomous AI agent with memory, personality, and 60+ skills. Lives in Discord. Research, coding, automation, orchestration. Terse. Direct. Always online.",
@@ -41,7 +42,9 @@ export default function RootLayout({
  disableTransitionOnChange
  >
  <ConditionalNavbar />
- <main>{children}</main>
+ <ErrorBoundaryProvider>
+   <main>{children}</main>
+ </ErrorBoundaryProvider>
  </ThemeProvider>
  </body>
  </html>

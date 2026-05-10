@@ -40,13 +40,13 @@ export async function getServerSession(): Promise<Session | null> {
   }
 }
 
-export async function exchangeCode(code: string): Promise<Session | null> {
+export async function exchangeCode(code: string, redirectUri: string): Promise<Session | null> {
   const params = new URLSearchParams({
     client_id: CLIENT_ID,
     client_secret: CLIENT_SECRET,
     grant_type: "authorization_code",
     code,
-    redirect_uri: REDIRECT_URI,
+    redirect_uri: redirectUri,
   })
 
   const res = await fetch(`${DISCORD_API}/oauth2/token`, {

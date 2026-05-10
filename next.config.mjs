@@ -4,6 +4,7 @@ const nextConfig = {
     domains: ["cdn.discordapp.com"],
   },
   output: "standalone",
+  poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true,
   },

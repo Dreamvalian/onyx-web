@@ -10,27 +10,35 @@ export async function GET(req: NextRequest) {
   const code = searchParams.get("code")
   const error = searchParams.get("error")
 
+  // Detect calling domain first for all redirects
+  const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host") ?? ""
+  const isDashboard = host.includes("dashboard")
+  const baseUrl = isDashboard ? "https://dashboard.ko4lax.dev" : "https://ko4lax.dev"
+
   if (error || !code) {
-    return NextResponse.redirect(new URL("/?auth_error=1", BASE_URL))
+    return NextResponse.redirect(new URL("/?auth_error=1", baseUrl))
   }
 
-  const session = await exchangeCode(code)
+  const redirectUri = `${baseUrl}/api/auth/discord/callback`
+  const session = await exchangeCode(code, redirectUri)
 
   if (!session) {
-    return NextResponse.redirect(new URL("/?auth_error=1", BASE_URL))
+    return NextResponse.redirect(new URL("/?auth_error=1", baseUrl))
   }
 
   const cookieStore = await cookies()
   // Set cookie on root domain so dashboard subdomain can read it
+  const IS_SECURE = Boolean(true)
+
   cookieStore.set("discord_session", JSON.stringify(session), {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 60 * 60 * 24 * 7, // 1 week
+    secure: IS_SECURE,
+    sameSite: "none",
+    maxAge: 60 * 60 * 24 * 7,
     path: "/",
     domain: ".ko4lax.dev",
   })
 
-  // Redirect to dashboard subdomain
-  return NextResponse.redirect(new URL("/", DASHBOARD_URL))
+  // Redirect to dashboard subdomain after successful auth
+  return NextResponse.redirect(new URL("/", baseUrl))
 }
