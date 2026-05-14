@@ -7,7 +7,7 @@ module.exports = {
       "env_file": "/root/projects/onyx-web/.env.local",
       "env": {
         "NODE_ENV": "production",
-        "PORT": "3001",
+        "PORT": "3000",
         "DISCORD_CLIENT_ID": "1321426941059792956",
         "DISCORD_REDIRECT_URI": "https://ko4lax.dev/api/auth/discord/callback",
         "NEXT_PUBLIC_BASE_URL": "https://ko4lax.dev",

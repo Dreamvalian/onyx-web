@@ -79,3 +79,21 @@ html {
   background-size: 256px 256px;
   z-index: 1;
 }
+
+
+
+.animate-pet-idle {
+  width: 148px;
+  height: 182px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  animation: pet-idle 2.7s steps(9) infinite;
+}
+
+.animate-pet-idle {
+  width: 148px;
+  height: 182px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  animation: pet-idle 2.7s steps(9) infinite;
+}

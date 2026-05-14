@@ -52,9 +52,22 @@ export function Hero() {
  <p className="mt-2 text-xs tracking-widest uppercase text-[#7a7068]">
  From Onyx SOUL.md
  </p>
- </motion.blockquote>
+        </motion.blockquote>
 
- <div className="mt-8 flex flex-col items-center justify-center gap-3 md:mt-10 md:flex-row md:gap-4">
+        {/* Onyx pet gif */}
+        <div className="relative mx-auto mt-10 flex justify-center">
+          <img
+            src="/pets/onyx-pet.gif"
+            alt="Onyx pet companion"
+            className="h-auto w-[148px]"
+            style={{ imageRendering: 'pixelated' }}
+          />
+          <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-[#7a7068]">
+            Shard — always nearby
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 md:mt-10 md:flex-row md:gap-4">
  <Link href="/projects">
  <Button size="lg" className="w-full bg-[#94a99b] font-semibold text-[#0d0b08] hover:bg-[#a3b5aa] md:w-auto">
  View My Work
