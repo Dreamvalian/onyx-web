@@ -63,7 +63,7 @@ export function Hero() {
             style={{ imageRendering: 'pixelated' }}
           />
           <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-[#7a7068]">
-            Shard — always nearby
+            Onyx — always nearby
           </p>
         </div>
 
