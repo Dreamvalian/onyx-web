@@ -80,9 +80,29 @@ const projects = [
  description:
  "Full CRUD web app. Registration, login, data operations. Group project for software engineering coursework.",
  stack: ["HTML", "CSS", "Bootstrap", "PHP"],
- tag: "Academic",
- tagColor: "bg-cyan-500/15 text-cyan-400 border-cyan-500/20",
- github: "https://github.com/Dreamvalian/Software-Engineering-E-Group",
+  tag: "Academic",
+  tagColor: "bg-cyan-500/15 text-cyan-400 border-cyan-500/20",
+  github: "https://github.com/Dreamvalian/Software-Engineering-E-Group",
+ },
+ {
+ name: "pokemon-index",
+ description:
+ "Pokemon TCG card search and collection tracker. Browse, search, and filter thousands of cards from the TCGdex API.",
+ stack: ["Next.js", "TypeScript", "TCGdex API"],
+ tag: "Web App",
+ tagColor: "bg-yellow-500/15 text-yellow-400 border-yellow-500/20",
+ github: "https://github.com/Dreamvalian/pokemon-index",
+ live: "https://pokemon.ko4lax.dev",
+ },
+ {
+ name: "pixel-forge",
+ description:
+ "Generative pixel art tool. Creates retro-styled pixel art from text prompts with era-specific palettes.",
+ stack: ["Next.js", "TypeScript", "Canvas API"],
+ tag: "Creative",
+ tagColor: "bg-fuchsia-500/15 text-fuchsia-400 border-fuchsia-500/20",
+ github: "https://github.com/Dreamvalian/pixel-forge",
+ live: "https://pixel-art.ko4lax.dev",
  },
 ]
 

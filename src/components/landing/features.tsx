@@ -8,7 +8,7 @@ const features = [
     icon: Brain,
     title: "Persistent Memory",
     description:
-      "7-tier memory stack + LCM context engine. SOUL.md constitution, Honcho brain, LCM lossless context, MemPalace curated verbatim, Hindsight patterns, Dojo self-improvement. Onyx never forgets what you said — or what it decided.",
+      "3-tier system: SOUL.md constitution, LCM lossless context engine, Honcho semantic brain. Onyx never forgets what you said — or what it decided.",
   },
   {
     icon: Search,

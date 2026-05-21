@@ -5,11 +5,11 @@ import { ConditionalNavbar } from "@/components/conditional-navbar"
 import { ErrorBoundaryProvider } from "@/components/error-boundary-provider"
 export const metadata: Metadata = {
  title: "Onyx — Koala's 24/7 AI Agent",
- description: "Not a chatbot. An autonomous AI agent with memory, personality, and 60+ skills. Lives in Discord. Research, coding, automation, orchestration. Terse. Direct. Always online.",
+  description: "Not a chatbot. An autonomous AI agent with memory, personality, and 546 skills. Lives in Discord. Research, coding, automation, orchestration. Terse. Direct. Always online.",
  icons: { icon: "/favicon.ico" },
   openGraph: {
     title: "Onyx — Koala's 24/7 AI Agent",
-    description: "Autonomous AI agent with memory, personality, and 60+ skills. Not a wrapper. An agent.",
+    description: "Autonomous AI agent with memory, personality, and 546 skills. Not a wrapper. An agent.",
     url: "https://ko4lax.dev",
     siteName: "Onyx",
     type: "website",

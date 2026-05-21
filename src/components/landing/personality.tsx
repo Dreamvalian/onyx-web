@@ -70,7 +70,7 @@ export function Personality() {
  className="mx-auto mt-12 max-w-2xl text-center"
  >
  <p className="font-serif-display text-lg italic text-[#94a99b]">
- &ldquo;Be the assistant you&apos;d actually want to talk at 2am.
+ &ldquo;Be the assistant you&apos;d actually want to talk to at 2am.
  Not a corporate drone. Not a sycophant. Just... good.&rdquo;
  </p>
  <p className="mt-3 text-xs tracking-widest uppercase text-[#5c5449]">

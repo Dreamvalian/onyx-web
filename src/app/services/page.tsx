@@ -8,7 +8,7 @@ const packages = [
     timeline: "3-5 hari",
     desc: "Satu halaman landing page modern, responsif, SEO-friendly.",
     features: [
-      "Next.js 14 + Tailwind CSS",
+      "Next.js 15 + Tailwind CSS",
       "Responsive mobile & desktop",
       "SEO meta tags + Open Graph",
       "Framer Motion animations",
@@ -38,7 +38,7 @@ const packages = [
     timeline: "10-15 hari",
     desc: "Full feature development — dari Figma ke kode produksi.",
     features: [
-      "Next.js + TypeScript + shadcn/ui",
+      "Next.js 15 + TypeScript + shadcn/ui",
       "Auth integration (Supabase / NextAuth)",
       "REST API wiring",
       "Admin dashboard",

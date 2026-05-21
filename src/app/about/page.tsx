@@ -100,7 +100,7 @@ const stack = [
  { label: "Memory", value: "Honcho + LCM" },
  { label: "Deployment", value: "PM2 + Nginx" },
  { label: "Monitoring", value: "Custom heartbeat" },
- { label: "Uptime", value: "31 days" },
+ { label: "Uptime", value: "49 days" },
 ]
 
 export default function AboutPage() {

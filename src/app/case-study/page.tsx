@@ -26,126 +26,131 @@ const tiers = [
     num: "01",
     name: "Constitution",
     system: "SOUL.md",
-    role: "Operating principles",
-    desc: "Immutable rules that govern every decision. Never stored in memory — always loaded fresh. The constitution of an autonomous agent.",
+    role: "Immutable governing rules",
+    desc: "The constitution of an autonomous agent. Loaded fresh every turn — never stored in memory. These rules define identity, priorities, and behavioral bounds. If a decision violates SOUL.md, it cannot be executed. Constitutional constraints that survive every restart.",
     color: "#94a99b",
   },
   {
     num: "02",
-    name: "Executive",
-    system: "Honcho",
-    role: "Core brain & orchestration",
-    desc: "The primary write target. Stores conclusions, identity facts, and orchestrates all other tiers. Every session writes here first.",
+    system: "LCM",
+    name: "Lossless Context",
+    role: "Complete conversation graph",
+    desc: "A DAG-based compaction engine that preserves every message with zero data loss. Every session is fully retrievable via session_search for FTS5 full-text search. Supports lcm_grep/lcm_expand for deep retrieval and LCM expansion. The system never forgets what was said.",
     color: "#a89e8f",
   },
   {
     num: "03",
-    name: "Semantic",
-    system: "Holographic",
-    role: "Structured fact store",
-    desc: "HRR vectors + FTS5 search. Facts with trust scores, injected every turn. The system's working knowledge.",
+    name: "Semantic Brain",
+    system: "Honcho",
+    role: "Durable fact & identity store",
+    desc: "The primary write target for all persistent knowledge. Stores conclusions, identity facts, and user preferences via honcho_conclude. Supports semantic search (honcho_search) and reasoning (honcho_reasoning). The 'memory' tool is strictly forbidden — all persistence flows through Honcho.",
     color: "#7a7068",
   },
+]
+
+const supportingSystems = [
   {
-    num: "04",
-    name: "Episodic",
-    system: "MemPalace",
-    role: "Verbatim recall",
-    desc: "ChromaDB-backed exact conversation recall. When the agent needs to remember what was actually said, not what it inferred.",
-    color: "#5c5449",
+    icon: BookOpen,
+    name: "Skills (546 installed)",
+    desc: "Procedural memory that defines what the agent can do. Loaded on-demand via skill triggers — pattern-matched from user intent. Each skill is a self-contained capability with its own tools, prompts, and side-effects.",
   },
   {
-    num: "05",
-    name: "Reflective",
-    system: "Hindsight",
-    role: "Behavioral patterns",
-    desc: "What happened and why. Tracks failure patterns, corrections, and behavioral trends across sessions.",
-    color: "#3a352e",
+    icon: Database,
+    name: "Session Search",
+    desc: "FTS5-backed full-text search across past session transcripts. When the agent needs to recall something from a previous conversation, session_search finds the exact context — no DAG traversal required.",
   },
   {
-    num: "06",
-    name: "Evolution",
-    system: "Dojo",
-    role: "Self-improvement",
-    desc: "What to train next. When a failure pattern repeats, Dojo patches skills, updates configs, and verifies the fix.",
-    color: "#2a2520",
-  },
-  {
-    num: "07",
-    name: "Consolidation",
-    system: "Dream Cycle",
-    role: "Overnight synthesis",
-    desc: "Nightly entity enrichment. The agent sleeps, synthesizes patterns, and writes enriched knowledge back to the executive tier.",
-    color: "#1a1714",
+    icon: Shield,
+    name: "Kill Switches",
+    desc: "Three-tier safety: constitutional (SOUL.md), behavioral (runtime guards), and protocol-level (MCP resource blocking). If any switch fires, the action is halted before it reaches execution.",
   },
 ]
 
 const decisions = [
   {
-    question: "Why not just use longer context windows?",
+    question: "Why is 'memory' tool strictly forbidden?",
     answer:
-      "More context is a scaling problem disguised as a design problem. You pay more tokens for diminishing returns. Structured memory means the agent retrieves what matters, not everything it ever saw.",
-    icon: Target,
+      "A raw write-to-memory tool bypasses all structure. Without constraints, the agent writes noise, duplicates, contradictions. Honcho imposes a schema — conclusions, facts, preferences — so every write is meaningful and retrievable. No memory tool means no memory pollution.",
+    icon: Shield,
   },
   {
-    question: "Why is Honcho the primary store, not MemPalace?",
+    question: "Why two storage systems (LCM + Honcho) instead of one?",
     answer:
-      "MemPalace stores verbatim text — raw conversation. Useful for recall, terrible for reasoning. Honcho stores conclusions, decisions, compiled truths. The difference between remembering a conversation and understanding it.",
+      "They solve different problems. LCM is for lossless retrieval — 'what did I say three sessions ago about X?' Honcho is for semantic persistence — 'who is this user and what matters to them?' One is a searchable transcript; the other is a structured brain. Both are needed; neither replaces the other.",
+    icon: GitBranch,
+  },
+  {
+    question: "Why is SOUL.md loaded fresh every time instead of stored?",
+    answer:
+      "Immutability guarantees the agent never modifies its own constitution. If SOUL.md were in memory, a prompt injection or reasoning error could overwrite identity rules. By loading it fresh from disk every turn, the constitution is inviolable. This is digital separation of powers.",
     icon: Brain,
   },
   {
-    question: "Why separate Hindsight and Dojo?",
+    question: "Why kill switches instead of just monitoring?",
     answer:
-      "Observation vs action. Hindsight asks 'what happened and why?' Dojo asks 'what do we train next?' Conflating them creates a system that diagnoses problems but never fixes them.",
-    icon: Eye,
-  },
-  {
-    question: "Why deprecate MEMORY.md?",
-    answer:
-      "A flat file can't represent the relationships, trust scores, or temporal validity of knowledge. MEMORY.md became a pointer — a bootstrap file. The real memory lives in systems designed for it.",
-    icon: BookOpen,
+      "Monitoring detects problems. Kill switches prevent them. The difference between a log entry saying 'agent almost deleted the database' and a guard that makes deletion impossible. Three tiers (constitutional, behavioral, protocol) ensure defense in depth — any single failure is caught downstream.",
+    icon: Zap,
   },
 ]
 
 const stats = [
   { label: "Knowledge Entities", value: "245" },
-  { label: "Relationship Triples", value: "271" },
   { label: "Installed Skills", value: "546" },
-  { label: "Memory Tiers", value: "7" },
-  { label: "Cron Jobs", value: "7" },
+  { label: "Memory Tiers", value: "3" },
+  { label: "Cron Jobs", value: "15" },
+  { label: "Session Search Index", value: "∞" },
   { label: "Uptime", value: "24/7" },
 ]
 
 const timeline = [
   {
     date: "Concept",
-    title: "The Question",
-    desc: "Can an AI agent develop something resembling genuine understanding? Not just pattern matching — actual comprehension built from layered memory.",
+    title: "The Grand Vision",
+    desc: "Designed a 7-tier cognitive architecture — constitution, executive, semantic, episodic, reflective, evolution, consolidation. A beautiful paper architecture that mirrored human memory stages.",
   },
   {
-    date: "Architecture",
-    title: "7-Tier Memory Stack",
-    desc: "Designed cognitive tiers mirroring human memory: constitution, executive, semantic, episodic, reflective, evolution, consolidation.",
+    date: "Reality",
+    title: "The Contraction",
+    desc: "Building 7 tiers meant maintaining 7 systems. Each tier introduced complexity, latency, and failure modes. Worse — some tiers overlapped in function. Episodic memory and semantic memory turned out to be one problem: retrieval.",
   },
   {
-    date: "Autonomy",
-    title: "Curiosity Engine",
-    desc: "Self-directed gap detection and research. The agent identifies what it doesn't know and autonomously fills the gaps.",
+    date: "Consolidation",
+    title: "3-Tier Architecture Emerges",
+    desc: "The architecture collapsed into three: SOUL.md for constitution (immutable, always fresh), LCM for lossless context (DAG-based message compaction with FTS5 search), Honcho for semantic brain (conclusions, facts, identity). Every tier earned its place.",
   },
   {
-    date: "Self-Improvement",
-    title: "Dojo + Hindsight Loop",
-    desc: "Behavioral pattern detection feeds into skill patching. The system watches itself fail, diagnoses why, and applies fixes.",
+    date: "Refinement",
+    title: "Skills as Procedural Memory",
+    desc: "Skills (546 installed) became the agent's procedural memory — loaded on-demand via skill triggers. The 'memory' tool was deprecated. All persistence routed through Honcho. LCM became the definitive conversation record.",
   },
   {
-    date: "Overnight",
-    title: "Dream Cycle",
-    desc: "Nightly synthesis pipeline. Entity enrichment, knowledge graph expansion, cross-session pattern discovery. The agent sleeps and consolidates.",
+    date: "Production",
+    title: "Always Online",
+    desc: "24/7 operation on self-hosted VPS. Discord integration, multi-platform delivery, cron-driven proactive outreach. The architecture stopped being aspirational and started being what actually runs in production.",
   },
   {
     date: "Present",
-    title: "Always Online",
-    desc: "24/7 operation on self-hosted VPS. Discord integration, multi-platform delivery, autonomous research, self-improving skill library.",
+    title: "Continuous Evolution",
+    desc: "The 3-tier stack handles everything: constitutional governance (SOUL.md), complete transcript recall (LCM), and durable semantic knowledge (Honcho). New capabilities are added as skills, not new tiers. Simplicity wins.",
+  },
+]
+
+const principles = [
+  {
+    principle: "Three tiers is enough.",
+    detail: "Constitution (SOUL.md), context (LCM), and semantic memory (Honcho) cover every persistence need. Adding more tiers creates maintenance burden without proportional benefit. The best architecture is the one you don't have to think about.",
+  },
+  {
+    principle: "Ban the memory tool.",
+    detail: "Any system where the agent can write unstructured data to memory will accumulate noise. Structured persistence through Honcho (conclusions, facts, preferences) ensures every write has purpose and every read finds signal.",
+  },
+  {
+    principle: "Immutability is a design choice, not a limitation.",
+    detail: "SOUL.md loaded fresh every turn isn't a hack — it's a constitutional safeguard. The agent can't overwrite its own rules because it never holds the pen. This is the digital equivalent of separation of powers.",
+  },
+  {
+    principle: "Kill switches beat monitoring every time.",
+    detail: "Three tiers of safety (constitutional in SOUL.md, behavioral at runtime, protocol-level in MCP) ensure defense in depth. Any single failure is caught downstream. The agent is powerful by design and safe by architecture.",
   },
 ]
 
@@ -165,13 +170,12 @@ export default function CaseStudyPage() {
             Case Study
           </Badge>
           <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-            7 Tiers of{" "}
-            <span className="text-[#94a99b]">Memory</span>
+            Memory{" "}
+            <span className="text-[#94a99b]">Architecture</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-base text-[#6a7a72] md:text-lg">
-            Designing an AI agent that learns, not just responds.
-            A cognitive architecture built from scratch, grounded in
-            how memory actually works.
+            Three tiers that actually run in production.
+            SOUL.md, LCM, and Honcho — no more, no less.
           </p>
         </motion.div>
 
@@ -235,7 +239,7 @@ export default function CaseStudyPage() {
           </div>
         </motion.div>
 
-        {/* Norman's Lens */}
+        {/* The Architecture */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -244,68 +248,10 @@ export default function CaseStudyPage() {
         >
           <div className="mb-8 text-center">
             <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-              Don Norman&apos;s Three Levels
-            </h2>
-            <p className="mt-2 text-sm text-[#6a7a72]">
-              Emotional Design applied to AI architecture
-            </p>
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              {
-                level: "Visceral",
-                subtitle: "First impression",
-                desc: "Does the agent feel right? Personality, tone, design of interactions. The gut reaction before you evaluate function.",
-                icon: Eye,
-              },
-              {
-                level: "Behavioral",
-                subtitle: "Utility & function",
-                desc: "Does it actually work? Memory persistence, task completion, tool use. The agent as a reliable instrument.",
-                icon: Zap,
-              },
-              {
-                level: "Reflective",
-                subtitle: "Identity & meaning",
-                desc: "Does it grow? Self-awareness, self-improvement, accumulated understanding. The agent as something that evolves with you.",
-                icon: Brain,
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.level}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.2 + i * 0.05 }}
-                className="group rounded-xl border p-6 transition-colors border-[#2a2520] bg-[#13110e] hover:border-[#3a352e]"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#94a99b]/10">
-                  <item.icon className="h-5 w-5 text-[#94a99b]" />
-                </div>
-                <h3 className="mt-4 text-lg font-semibold">{item.level}</h3>
-                <p className="mt-1 text-xs uppercase tracking-wider text-[#5c5449]">
-                  {item.subtitle}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-[#6a7a72]">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* The Architecture */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-16"
-        >
-          <div className="mb-8 text-center">
-            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
               The Architecture
             </h2>
             <p className="mt-2 text-sm text-[#6a7a72]">
-              Seven cognitive tiers, each with a distinct role
+              Three tiers of memory, each with a distinct purpose
             </p>
           </div>
           <div className="space-y-3">
@@ -314,7 +260,7 @@ export default function CaseStudyPage() {
                 key={tier.name}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.25 + i * 0.04 }}
+                transition={{ duration: 0.3, delay: 0.2 + i * 0.04 }}
                 className="group flex items-start gap-4 rounded-xl border p-5 transition-colors border-[#2a2520] bg-[#13110e] hover:border-[#3a352e]"
               >
                 <div
@@ -343,6 +289,42 @@ export default function CaseStudyPage() {
           </div>
         </motion.div>
 
+        {/* Supporting Systems */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="mt-16"
+        >
+          <div className="mb-8 text-center">
+            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
+              Supporting Systems
+            </h2>
+            <p className="mt-2 text-sm text-[#6a7a72]">
+              What wraps around the three tiers to make everything work
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {supportingSystems.map((item, i) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.25 + i * 0.05 }}
+                className="group rounded-xl border p-6 transition-colors border-[#2a2520] bg-[#13110e] hover:border-[#3a352e]"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#94a99b]/10">
+                  <item.icon className="h-5 w-5 text-[#94a99b]" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold">{item.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#6a7a72]">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Data Flow */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -356,7 +338,7 @@ export default function CaseStudyPage() {
               <h2 className="text-xl font-bold">Data Flow</h2>
             </div>
             <div className="flex flex-wrap items-center gap-2 text-sm md:gap-3">
-              {["Session", "MemPalace", "Hindsight", "Holographic", "Dojo", "Dream Cycle", "Honcho"].map(
+              {["Session", "LCM", "Honcho"].map(
                 (step, i, arr) => (
                   <div key={step} className="flex items-center gap-2 md:gap-3">
                     <span className="rounded-lg bg-[#13110e] px-3 py-1.5 font-mono text-xs text-[#94a99b]">
@@ -373,35 +355,35 @@ export default function CaseStudyPage() {
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <div>
                 <h3 className="mb-3 text-sm font-semibold text-[#a89e8f]">
-                  Promotion Rules
+                  Persistence Rules
                 </h3>
                 <ul className="space-y-2 text-xs text-[#6a7a72]">
                   <li className="flex items-start gap-2">
                     <ArrowRight className="mt-0.5 h-3 w-3 shrink-0 text-[#5c5449]" />
                     <span>
-                      <strong className="text-[#a89e8f]">MemPalace → Holographic:</strong>{" "}
-                      Exact memory repeated 3+ times, extract as structured fact
+                      <strong className="text-[#a89e8f]">Session → LCM:</strong>{" "}
+                      Every message is stored. LCM compacts into a DAG with zero data loss. Full FTS5 search available via session_search.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <ArrowRight className="mt-0.5 h-3 w-3 shrink-0 text-[#5c5449]" />
                     <span>
-                      <strong className="text-[#a89e8f]">Hindsight → Dojo:</strong>{" "}
-                      Failure pattern repeats or measurable improvement exists
+                      <strong className="text-[#a89e8f]">Session → Honcho:</strong>{" "}
+                      Conclusions, user facts, and identity data written via honcho_conclude. Semantic search via honcho_search. Reasoning via honcho_reasoning.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <ArrowRight className="mt-0.5 h-3 w-3 shrink-0 text-[#5c5449]" />
                     <span>
-                      <strong className="text-[#a89e8f]">Dream → Honcho:</strong>{" "}
-                      Nightly entity enrichment writes enriched conclusions
+                      <strong className="text-[#a89e8f]">Session → SOUL.md:</strong>{" "}
+                      Never. The constitution is loaded fresh every turn. Constitutional rules are never written by the agent — they are set once and enforced immutably.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <ArrowRight className="mt-0.5 h-3 w-3 shrink-0 text-[#5c5449]" />
                     <span>
-                      <strong className="text-[#a89e8f]">Any tier → SOUL.md:</strong>{" "}
-                      Only for permanent constitutional rules (extremely rare)
+                      <strong className="text-[#a89e8f]">memory tool:</strong>{" "}
+                      Strictly forbidden. All persistence goes through Honcho. No unstructured writes. No bypasses.
                     </span>
                   </li>
                 </ul>
@@ -414,25 +396,31 @@ export default function CaseStudyPage() {
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#94a99b]" />
                     <span>
-                      <strong className="text-[#a89e8f]">Hindsight</strong> = what happened and why (observation)
+                      <strong className="text-[#a89e8f]">SOUL.md</strong> = constitution (immutable, always fresh)
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#94a99b]" />
                     <span>
-                      <strong className="text-[#a89e8f]">Dojo</strong> = what to train next (action)
+                      <strong className="text-[#a89e8f]">LCM</strong> = lossless context (complete transcript, DAG-based)
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#94a99b]" />
                     <span>
-                      <strong className="text-[#a89e8f]">Honcho</strong> = everything worth remembering (primary store)
+                      <strong className="text-[#a89e8f]">Honcho</strong> = semantic brain (conclusions, facts, identity)
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#94a99b]" />
+                    <span>
+                      <strong className="text-[#a89e8f]">Skills</strong> = procedural memory (loaded on demand via triggers)
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8b3a3a]" />
                     <span>
-                      <strong className="text-[#a89e8f]">MEMORY.md</strong> = deprecated. Pointer only.
+                      <strong className="text-[#a89e8f]">memory tool</strong> = forbidden. All writes through Honcho.
                     </span>
                   </li>
                 </ul>
@@ -453,28 +441,28 @@ export default function CaseStudyPage() {
               The Autonomy Layer
             </h2>
             <p className="mt-2 text-sm text-[#6a7a72]">
-              Three systems that make Onyx self-directed
+              How the agent acts without being told
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {[
               {
-                icon: Lightbulb,
-                title: "Curiosity Engine",
-                desc: "Scans the knowledge graph for gaps. Scores by relevance to your goals. Autonomously researches the top unknowns and enriches the graph.",
-                stat: "245 entities, 271 triples",
+                icon: Zap,
+                title: "Skill Triggers",
+                desc: "User intent is pattern-matched against 546 installed skills. When a trigger fires, the corresponding skill is loaded and executed. No manual routing — the agent knows what to use based on context.",
+                stat: "546 skills, pattern-matched",
               },
               {
                 icon: Clock,
-                title: "Dream Cycle",
-                desc: "Overnight synthesis pipeline. Entity enrichment, pattern discovery, cross-session analysis. The agent sleeps and consolidates knowledge.",
-                stat: "Runs nightly at 2 AM WIB",
+                title: "Cron Jobs",
+                desc: "15 scheduled tasks run autonomously — data polling, user engagement checks, system maintenance. The agent doesn't wait for commands. It acts on a schedule.",
+                stat: "Runs 24/7 on schedule",
               },
               {
                 icon: RefreshCw,
-                title: "Dojo Loop",
-                desc: "Watches itself fail via Hindsight. Diagnoses root cause. Patches skills or updates configs. Verifies the fix worked.",
-                stat: "Self-patching skill library",
+                title: "Proactive Outreach",
+                desc: "The agent doesn't just respond — it initiates. Follow-ups, check-ins, notifications. If a user hasn't engaged, the agent reaches out. The difference between a tool and a partner.",
+                stat: "Self-initiated engagement",
               },
             ].map((item, i) => (
               <motion.div
@@ -551,7 +539,7 @@ export default function CaseStudyPage() {
               Evolution
             </h2>
             <p className="mt-2 text-sm text-[#6a7a72]">
-              From concept to always-online agent
+              From 7 tiers to 3 — the honest story
             </p>
           </div>
           <div className="relative">
@@ -597,13 +585,13 @@ export default function CaseStudyPage() {
             <div className="grid gap-0 divide-y divide-[#2a2520] md:grid-cols-2 md:divide-y-0">
               {[
                 { label: "Runtime", value: "Contabo VPS (Ubuntu)" },
-                { label: "Frontend", value: "Next.js 14 + Tailwind" },
+                { label: "Frontend", value: "Next.js 15 + Tailwind" },
                 { label: "AI Gateway", value: "Hermes Agent" },
-                { label: "Memory", value: "Honcho + ChromaDB" },
-                { label: "Knowledge", value: "SQLite Graph + HRR Vectors" },
-                { label: "Deployment", value: "PM2 + Nginx + Let's Encrypt" },
+                { label: "Constitution", value: "SOUL.md (loaded fresh)" },
+                { label: "Context Store", value: "LCM (DAG + FTS5)" },
+                { label: "Semantic Store", value: "Honcho (conclude/search/reason)" },
                 { label: "Interface", value: "Discord Bot (24/7)" },
-                { label: "Orchestration", value: "Cron + Sub-agents" },
+                { label: "Orchestration", value: "Cron + Skill Triggers" },
               ].map((item, i) => (
                 <div
                   key={item.label}
@@ -632,24 +620,7 @@ export default function CaseStudyPage() {
               What this case study reveals about designing intelligent systems
             </p>
             <div className="mt-6 space-y-4">
-              {[
-                {
-                  principle: "Memory isn't storage — it's cognition.",
-                  detail: "A system that remembers everything understands nothing. Structured, purposeful memory with promotion rules is what separates recall from comprehension.",
-                },
-                {
-                  principle: "Separation of concerns applies to memory, not just code.",
-                  detail: "Observation (Hindsight) and action (Dojo) must be separate systems. Conflating them creates analysis paralysis — diagnosing without fixing.",
-                },
-                {
-                  principle: "Self-improvement requires self-observation.",
-                  detail: "The Hindsight → Dojo loop only works because failure patterns are detected independently from the patching mechanism. You can't improve what you don't measure.",
-                },
-                {
-                  principle: "The best UX for an agent is invisible.",
-                  detail: "Users shouldn't think about the memory architecture. They should just notice that the agent remembers, learns, and gets better — without being told how.",
-                },
-              ].map((item) => (
+              {principles.map((item) => (
                 <div
                   key={item.principle}
                   className="rounded-lg border p-5 border-[#2a2520] bg-[#13110e]"
@@ -679,7 +650,7 @@ export default function CaseStudyPage() {
             — UX designer applying cognitive architecture to AI systems.
           </p>
           <p className="mt-1 text-xs text-[#3a352e]">
-            Norman&apos;s Emotional Design → Agent Memory → Something New
+            Three Tiers → Production → Something That Works
           </p>
         </motion.div>
       </div>

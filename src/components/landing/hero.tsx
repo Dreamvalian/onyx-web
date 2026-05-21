@@ -90,8 +90,8 @@ export function Hero() {
  >
  <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
  {[
- { value: "31d", label: "Uptime" },
- { value: "300+", label: "Skills loaded" },
+ { value: "49d", label: "Uptime" },
+ { value: "546", label: "Skills loaded" },
  { value: "3-tier", label: "Memory system" },
  { value: "0", label: "Sycophancy" },
  ].map((stat) => (
